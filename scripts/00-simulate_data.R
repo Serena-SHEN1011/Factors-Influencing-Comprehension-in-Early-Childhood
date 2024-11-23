@@ -1,9 +1,9 @@
 #### Preamble ####
-# Purpose: Simulates a dataset of Australian electoral divisions, including the 
-  #state and party that won each division.
+# Purpose: Simulates a dataset of of early childhood language development, 
+  #including the variables such as age, comprehension, production, norming status, birth order, caregiver education, race, sex, and monolingual status.
 # Author: Ziyuan Shen
 # Date: 23 November 2024 
-# Contact: rohan.alexander@utoronto.ca
+# Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: The `tidyverse` package must be installed
 # Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
