@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 26 September 2024 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Author: Ziyuan Shen
+# Date: 23 November 2024 
+# Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
@@ -12,33 +12,33 @@
 library(tidyverse)
 library(testthat)
 
-data <- read_csv("data/02-analysis_data/analysis_data.csv")
+analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
 
 
 #### Test data ####
-# Test that the dataset has 151 rows - there are 151 divisions in Australia
-test_that("dataset has 151 rows", {
-  expect_equal(nrow(analysis_data), 151)
+# Test that the dataset has 3511 rows
+test_that("dataset has 3511 rows", {
+  expect_equal(nrow(analysis_data), 3511)
 })
 
-# Test that the dataset has 3 columns
-test_that("dataset has 3 columns", {
-  expect_equal(ncol(analysis_data), 3)
+# Test that the dataset has 9 columns
+test_that("dataset has 9 columns", {
+  expect_equal(ncol(analysis_data), 9)
 })
 
-# Test that the 'division' column is character type
-test_that("'division' is character", {
-  expect_type(analysis_data$division, "character")
+# Test that the 'age' column is numeric
+test_that("'age' is numeric", {
+  expect_type(analysis_data$age, "double")
 })
 
-# Test that the 'party' column is character type
-test_that("'party' is character", {
-  expect_type(analysis_data$party, "character")
+# Test that the 'caregiver_education' column is character type
+test_that("'caregiver_education' is character", {
+  expect_type(analysis_data$caregiver_education, "character")
 })
 
-# Test that the 'state' column is character type
-test_that("'state' is character", {
-  expect_type(analysis_data$state, "character")
+# Test that the 'race' column is character type
+test_that("'race' is character", {
+  expect_type(analysis_data$race, "character")
 })
 
 # Test that there are no missing values in the dataset
@@ -46,24 +46,38 @@ test_that("no missing values in dataset", {
   expect_true(all(!is.na(analysis_data)))
 })
 
-# Test that 'division' contains unique values (no duplicates)
-test_that("'division' column contains unique values", {
-  expect_equal(length(unique(analysis_data$division)), 151)
+# Test that there are no empty strings in 'caregiver_education' or 'race' columns
+test_that("no empty strings in 'caregiver_education' or 'race' columns", {
+  expect_false(any(analysis_data$caregiver_education == "" | analysis_data$race == ""))
 })
 
-# Test that 'state' contains only valid Australian state or territory names
-valid_states <- c("New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", 
-                  "Tasmania", "Northern Territory", "Australian Capital Territory")
-test_that("'state' contains valid Australian state names", {
-  expect_true(all(analysis_data$state %in% valid_states))
+# Test that the 'caregiver_education' column contains at least 3 unique values
+test_that("'caregiver_education' column contains at least 3 unique values", {
+  expect_true(length(unique(analysis_data$caregiver_education)) >= 3)
 })
 
-# Test that there are no empty strings in 'division', 'party', or 'state' columns
-test_that("no empty strings in 'division', 'party', or 'state' columns", {
-  expect_false(any(analysis_data$division == "" | analysis_data$party == "" | analysis_data$state == ""))
+# Test that the 'age' column values are within a realistic range (e.g., 8 to 30)
+test_that("'age' values are within the range 18 to 36", {
+  expect_true(all(analysis_data$age >= 8 & analysis_data$age <= 30))
 })
 
-# Test that the 'party' column contains at least 2 unique values
-test_that("'party' column contains at least 2 unique values", {
-  expect_true(length(unique(analysis_data$party)) >= 2)
+# Test that the 'birth_order' is between 1 and 8
+test_that("'birth_order' values are between 1 and 4", {
+  expect_true(all(analysis_data$birth_order >= 1 & analysis_data$birth_order <= 8))
+})
+
+# Test that 'sex' contains only 0 or 1 (0: female, 1: male)
+test_that("'sex' contains only 0 or 1", {
+  expect_true(all(analysis_data$sex %in% c(0, 1)))
+})
+
+# Test that 'monolingual' contains only 0 or 1
+test_that("'monolingual' contains only 0 or 1", {
+  expect_true(all(analysis_data$monolingual %in% c(0, 1)))
+})
+
+# Test that 'production' and 'comprehension' values are non-negative
+test_that("'production' and 'comprehension' values are non-negative", {
+  expect_true(all(analysis_data$production >= 0))
+  expect_true(all(analysis_data$comprehension >= 0))
 })

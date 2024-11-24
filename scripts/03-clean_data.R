@@ -1,48 +1,72 @@
 #### Preamble ####
-# Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 6 April 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Cleans the raw data
+# Author: Ziyuan Shen
+# Date: 23 November 2024 
+# Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: 
+#   - The `tidyverse`, `arrow`, `rsample` packages must be installed and loaded
+#   - 02-download_data.R must have been run
+# Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
 
-#### Workspace setup ####
-library(tidyverse)
+# Load required libraries
+library(arrow)
+library(dplyr)
+library(rsample)
 
 # Load the raw data
-raw_data <- read_csv("data/00-raw_data/raw_data.csv")
+raw_data <- read_csv("data/01-raw_data/raw_data.csv")
 
 # Remove columns that are entirely NA
 cleaned_data <- raw_data %>%
   select(where(~ !all(is.na(.))))
 
-cleaned_data <-
-  raw_data |>
-  janitor::clean_names() |>
-  select(wing_width_mm, wing_length_mm, flying_time_sec_first_timer) |>
-  filter(wing_width_mm != "caw") |>
-  mutate(
-    flying_time_sec_first_timer = if_else(flying_time_sec_first_timer == "1,35",
-                                   "1.35",
-                                   flying_time_sec_first_timer)
-  ) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "490",
-                                 "49",
-                                 wing_width_mm)) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "6",
-                                 "60",
-                                 wing_width_mm)) |>
-  mutate(
-    wing_width_mm = as.numeric(wing_width_mm),
-    wing_length_mm = as.numeric(wing_length_mm),
-    flying_time_sec_first_timer = as.numeric(flying_time_sec_first_timer)
-  ) |>
-  rename(flying_time = flying_time_sec_first_timer,
-         width = wing_width_mm,
-         length = wing_length_mm
-         ) |> 
-  tidyr::drop_na()
+# Remove unnecessary columns
+cleaned_data <- cleaned_data %>%
+  select(-c(downloaded, language, form, dataset_name, child_id,
+            ethnicity, language_exposures, health_conditions, typically_developing))
 
-#### Save data ####
-write_csv(cleaned_data, "outputs/data/analysis_data.csv")
+# Remove all rows with any missing values
+cleaned_data <- na.omit(cleaned_data)
+
+# Convert birth_order to numeric sequence
+cleaned_data <- cleaned_data %>%
+  mutate(birth_order = recode(birth_order,
+                              "First" = 1,
+                              "Second" = 2,
+                              "Third" = 3,
+                              "Fourth" = 4,
+                              "Fifth" = 5,
+                              "Sixth" = 6,
+                              "Seventh" = 7,
+                              "Eighth" = 8))
+
+# Convert birth_order to factor and then to numeric
+cleaned_data <- cleaned_data %>%
+  mutate(birth_order = as.factor(birth_order),
+         birth_order = as.numeric(birth_order))
+
+#### Convert Categorical Variables to 0/1 ####
+# Convert categorical variables to binary (1 or 0) using dummy coding
+# Convert categorical variables to binary using mutate
+cleaned_data <- cleaned_data %>%
+  mutate(
+    is_norming = ifelse(is_norming == "TRUE", 1, 0),
+    sex = ifelse(sex == "Male", 1, 0),
+    monolingual = ifelse(monolingual == "TRUE", 1, 0)
+  )
+
+# Perform a stratified split based on the 'race' variable to ensure all levels are present in both sets
+set.seed(123) # Set seed for reproducibility
+split <- initial_split(data = cleaned_data, prop = 0.7, strata = race)
+
+# Create training and testing sets
+analysis_data_train <- training(split)
+analysis_data_test <- testing(split)
+
+#### Step 6: Save data ####
+# Save cleaned data in different formats
+write_csv(cleaned_data, "data/02-analysis_data/analysis_data.csv")
+write_parquet(cleaned_data, "data/02-analysis_data/analysis_data.parquet")
+write_parquet(analysis_data_train, "data/02-analysis_data/train_data.parquet")
+write_parquet(analysis_data_test, "data/02-analysis_data/test_data.parquet")
