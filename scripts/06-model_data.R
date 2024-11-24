@@ -1,37 +1,48 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Models Children's English(American) Cpmprehension by using stan_glm.
+# Author: Ziyuan Shen
+# Date: 23 November 2024 
+# Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: 
+#   - The `tidyverse`, `rstanarm`, `arrow`, `car` packages must be installed and loaded
+#   - 03-clean_data.R must have been run
+# Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
 
 
 #### Workspace setup ####
 library(tidyverse)
 library(rstanarm)
+library(car)
+library(arrow)
 
-#### Read data ####
-analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
+#### Read Data ####
+analysis_data_train <- read_parquet("data/02-analysis_data/train_data.parquet")
 
-### Model data ####
-first_model <-
-  stan_glm(
-    formula = flying_time ~ length + width,
-    data = analysis_data,
-    family = gaussian(),
+#### Fit Bayesian Model ####
+# Assuming 'comprehension' is the dependent variable
+model <- stan_glm(
+    formula = comprehension ~ age + production + is_norming + birth_order + caregiver_education + race +
+      sex + monolingual,
+    data = analysis_data_train,
+    family = gaussian(),  # For a continuous outcome
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
     seed = 853
   )
 
+#### Model Diagnostics ####
+# Calculate Variance Inflation Factor to check multicollinearity
+vif(model)
 
-#### Save model ####
+# Summary of the model
+summary(model)
+
+# Posterior predictive checks
+pp_check(model)
+
+#### Save Model ####
 saveRDS(
-  first_model,
-  file = "models/first_model.rds"
+  model,
+  file = "models/comprehension_model_bayesian_linear.rds"
 )
-
-
