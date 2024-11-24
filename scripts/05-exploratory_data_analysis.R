@@ -21,8 +21,8 @@ analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
 ## Set theme for better aesthetics
 theme_set(theme_minimal())
 
-# General overview of the dataset
-summary(analysis_data$comprehension)
+# Summary for selected numeric variables
+summary(select(analysis_data, age, comprehension, production, birth_order))
 
 
 #### Univariate Analysis ####
@@ -106,10 +106,10 @@ ggplot(analysis_data, aes(x = production, y = comprehension)) +
 
 #Ridgeline Plot of Comprehension by Age Group
 ## Create the age_group variable by binning age into categories
-analysis_data <- analysis_data %>%
+seperate_age_group <- analysis_data %>%
   mutate(age_group = cut(age, breaks = c(0, 10, 15, 20, 25, 30), include.lowest = TRUE))
 
-ggplot(analysis_data, aes(x = comprehension, y = age_group, fill = age_group)) +
+ggplot(seperate_age_group, aes(x = comprehension, y = age_group, fill = age_group)) +
   geom_density_ridges(alpha = 0.6) +
   labs(
     title = "Ridgeline Plot of Comprehension by Age Group",

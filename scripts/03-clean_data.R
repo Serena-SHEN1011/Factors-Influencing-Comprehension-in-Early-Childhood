@@ -31,20 +31,8 @@ cleaned_data <- na.omit(cleaned_data)
 
 # Convert birth_order to numeric sequence
 cleaned_data <- cleaned_data %>%
-  mutate(birth_order = recode(birth_order,
-                              "First" = 1,
-                              "Second" = 2,
-                              "Third" = 3,
-                              "Fourth" = 4,
-                              "Fifth" = 5,
-                              "Sixth" = 6,
-                              "Seventh" = 7,
-                              "Eighth" = 8))
+  mutate(birth_order = as.numeric(factor(birth_order, levels = c("First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"))))
 
-# Convert birth_order to factor and then to numeric
-cleaned_data <- cleaned_data %>%
-  mutate(birth_order = as.factor(birth_order),
-         birth_order = as.numeric(birth_order))
 
 #### Convert Categorical Variables to 0/1 ####
 # Convert categorical variables to binary (1 or 0) using dummy coding
@@ -56,7 +44,6 @@ cleaned_data <- cleaned_data %>%
     monolingual = ifelse(monolingual == "TRUE", 1, 0)
   )
 
-analysis_data <- cleaned_data
   
 
 # Perform a stratified split based on the 'race' variable to ensure all levels are present in both sets
