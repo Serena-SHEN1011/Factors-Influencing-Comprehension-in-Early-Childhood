@@ -1,5 +1,6 @@
 #### Preamble ####
 # Purpose: Downloads and saves the data for analysis from Wordbank database of children’s vocabulary growth
+  #Language: English(American)
 # Author: Ziyuan Shen
 # Date: 23 November 2024 
 # Contact: ziyuan.shen@mail.utoronto.ca
