@@ -1,11 +1,13 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
+# Purpose: Tests structure of the analysis data.
 # Author: Ziyuan Shen
 # Date: 23 November 2024 
 # Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+#  Pre-requisites: 
+#   - The `tidyverse`, `testthat` packages must be installed and loaded
+#   - 03-clean_data.R must have been run
+# Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
 
 
 #### Workspace setup ####

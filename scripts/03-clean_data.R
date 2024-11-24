@@ -56,6 +56,9 @@ cleaned_data <- cleaned_data %>%
     monolingual = ifelse(monolingual == "TRUE", 1, 0)
   )
 
+analysis_data <- cleaned_data
+  
+
 # Perform a stratified split based on the 'race' variable to ensure all levels are present in both sets
 set.seed(123) # Set seed for reproducibility
 split <- initial_split(data = cleaned_data, prop = 0.7, strata = race)
@@ -64,7 +67,6 @@ split <- initial_split(data = cleaned_data, prop = 0.7, strata = race)
 analysis_data_train <- training(split)
 analysis_data_test <- testing(split)
 
-#### Step 6: Save data ####
 # Save cleaned data in different formats
 write_csv(cleaned_data, "data/02-analysis_data/analysis_data.csv")
 write_parquet(cleaned_data, "data/02-analysis_data/analysis_data.parquet")
