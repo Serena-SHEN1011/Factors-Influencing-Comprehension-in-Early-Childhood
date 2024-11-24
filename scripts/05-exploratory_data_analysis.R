@@ -5,7 +5,7 @@
 # Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: 
-#   - The `tidyverse`, `rstanarm` packages must be installed and loaded
+#   - The `tidyverse`, `ggplot2` and `ggridges` packages must be installed and loaded
 #   - 03-clean_data.R must have been run
 # Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
 
