@@ -10,8 +10,12 @@
 #### Workspace setup ####
 library(tidyverse)
 
-#### Clean data ####
-raw_data <- read_csv("inputs/data/plane_data.csv")
+# Load the raw data
+raw_data <- read_csv("data/00-raw_data/raw_data.csv")
+
+# Remove columns that are entirely NA
+cleaned_data <- raw_data %>%
+  select(where(~ !all(is.na(.))))
 
 cleaned_data <-
   raw_data |>
