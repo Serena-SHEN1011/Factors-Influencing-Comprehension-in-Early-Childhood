@@ -7,7 +7,7 @@
 # Pre-requisites: 
 #   - The `tidyverse`, `arrow`, `rsample` packages must be installed and loaded
 #   - 02-download_data.R must have been run
-# Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
+# Any other information needed? Make sure you are in the `Factors-Influencing-Early-Childhood-Comprehension-of-American-English` rproj
 
 # Load required libraries
 library(arrow)

@@ -7,7 +7,7 @@
 # Pre-requisites: 
 #   - The `tidyverse`, `rstanarm`, `arrow`, `car` packages must be installed and loaded
 #   - 03-clean_data.R must have been run
-# Any other information needed? Make sure you are in the `Factors-Influencing-Comprehension-in-Early-Childhood` rproj
+# Any other information needed? Make sure you are in the `Factors-Influencing-Early-Childhood-Comprehension-of-American-English` rproj
 
 
 #### Workspace setup ####
