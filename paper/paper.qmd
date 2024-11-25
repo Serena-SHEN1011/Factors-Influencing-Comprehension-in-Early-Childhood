@@ -18,34 +18,42 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+library(dplyr)
+library(here)
+library(ggplot2)
+library(modelsummary)
+library(rstanarm)
+library(arrow)
+library(knitr)
+library(kableExtra)
+library(usmap)
+library(patchwork)
 ```
 
 
 # Introduction
 
-Overview paragraph
+Early childhood language comprehension is an important aspect of cognitive development that provides a foundation for future literacy and communication skills. Understanding the factors influencing early childhood comprehension is important for educators, caregivers, and policymakers aiming to improve early childhood education. Although research on language learning exists, few studies have considered the range of demographic, developmental, and environmental factors that influence the early comprehension skills of American English language learners. This paper addresses this issue by analyzing the predictors that influence language comprehension in early childhood.
 
-Estimand paragraph
+In this paper, my estimand is the number of words comprehended by children learning American English. Our focus is on quantifying how developmental factors such as age, birth order, caregiver influences such as education level, and language context such as monolingual versus bilingual status affect comprehension outcomes. Using Bayesian regression modelling, I assessed the contributions of these predictors and identified the factors that have the greatest impact on early childhood comprehension.
 
-Results paragraph
+My findings show that developmental factors such as age, production ability of language, and caregiver education are important predictors of young children's level of comprehension. Children with more educated caregivers demonstrated better comprehension, which highlights the role of the home environment in language development. These findings are important because they provide a basis for carefully targeted early childhood interventions, which highlight the areas that need to be supported in order to promote language comprehension. By identifying the most influential factors, this study contributes to a better understanding of early language learning, which is essential for the development of effective educational practices and policies.
 
-Why it matters paragraph
-
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
-
-
-
+The structure of this paper is organized as follows: after this introduction, @sec-data details the dataset used, including the data collection and cleaning processes, and provides an overview of the key variables. @sec-model introduces the regression models employed in the analysis and discusses why these models are suitable for estimating comprehension outcomes. @sec-result presents the results, emphasizing the relationships between different predictors and comprehension. Finally, @sec-discussion concludes the paper by evaluating the implications of the findings, discussing their importance for educational policy, and outlining potential directions for future research.
 
 
 
 # Data {#sec-data}
 
 ## Overview
+I used the statistical programming language R [@citeR] to process and analyze early childhood language comprehension data. The dataset used for this analysis is from Wordbank database of children’s vocabulary growth [@citedata], specifically focusing on American English children. It contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], I explore how different predictors affect language comprehension in early childhood. 
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+###Please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.
 
-Overview text
+
+
+
+
 
 ## Measurement
 	
