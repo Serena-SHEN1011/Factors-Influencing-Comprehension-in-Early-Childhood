@@ -8,7 +8,7 @@ date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 format: pdf
-number-sections: true
+number-sections: true 
 bibliography: references.bib
 ---
 
@@ -26,14 +26,13 @@ library(rstanarm)
 library(arrow)
 library(knitr)
 library(kableExtra)
-library(usmap)
-library(patchwork)
+library(ggridges)
 ```
 
 
 # Introduction
 
-Early childhood language comprehension is an important aspect of cognitive development that provides a foundation for future literacy and communication skills. Understanding the factors influencing early childhood comprehension is important for educators, caregivers, and policymakers aiming to improve early childhood education. Although research on language learning exists, few studies have considered the range of demographic, developmental, and environmental factors that influence the early comprehension skills of American English language learners. This paper addresses this issue by analyzing the predictors that influence language comprehension in early childhood.
+Early childhood language comprehension is a fundamental area of cognitive development that influences future literacy and communication skills. Research has identified several key predictors of language comprehension in young children. For example, a study by Taylor et al.(@Zubrick_Taylor_Christensen_2015) found that socioeconomic factors, family background, and personal characteristics significantly influence early childhood receptive vocabulary development. As highlighted by Lawton et al.(@Lawton5129), the quality and quantity of language exposure in infancy are associated with brain development and long-term language achievement. In addition, Bergelson's study(@Zonarich_2024) showed that babies begin to understand common nouns as early as 6 to 7 months of age, which suggests that comprehension begins earlier than previously thought. Despite these insights, I believe there is still a need for robust research that considers the range of demographic, developmental, and environmental factors that influence the early comprehension of American English learners.
 
 In this paper, my estimand is the number of words comprehended by children learning American English. Our focus is on quantifying how developmental factors such as age, birth order, caregiver influences such as education level, and language context such as monolingual versus bilingual status affect comprehension outcomes. Using Bayesian regression modelling, I assessed the contributions of these predictors and identified the factors that have the greatest impact on early childhood comprehension.
 
@@ -45,64 +44,184 @@ The structure of this paper is organized as follows: after this introduction, @s
 
 # Data {#sec-data}
 
-## Overview
-I used the statistical programming language R [@citeR] to process and analyze early childhood language comprehension data. The dataset used for this analysis is from Wordbank database of children’s vocabulary growth [@citedata], specifically focusing on American English children. It contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], I explore how different predictors affect language comprehension in early childhood. 
+## Data Overview
+I used the statistical programming language R [@citeR] to retrieve, simulate, clean, analyze, and test early childhood language comprehension data. The dataset used for this analysis is from the Wordbank database of children’s vocabulary growth [@citedata], specifically focusing on American English children. It contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], I explore how different predictors affect language comprehension in early childhood. Also, the following packages were used in this study:(Please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.)
 
-###Please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.
-
-
+The dataset used in this study provides different data on the language comprehension skills of young children among American English language learners. The dataset consists of 14,826 rows and 22 columns covering a range of early childhood developmental attributes such as comprehension, output and parental education. To ensure the validity of the analysis, I filtered the data to include children whose comprehension assessments and caregiver information were complete, which would ensure a comprehensive, unbiased representation of the target population. This cleaning allowed us to focus on high-quality, well-integrated cases, which provided reliable results in young children's comprehension skills.
 
 
+## Data Measurement
 
+The Early Childhood Language Development Assessment Measurement Data Set was collected using a standardized instrument such as the Communicative Development Inventory (CDI). Specifically, comprehension and vocabulary data are obtained through parent reports. These CDIs are survey instruments provided to parents or caregivers that allow them to document their child's language skills at specific developmental stages.
 
-## Measurement
-	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+For example, let your child learn the meaning of different objects at home. This process naturally occurs through interaction with caregivers and is translated into quantifiable data when parents marked items on the CDI checklist that their child understood or said. The resulting scores become items in our dataset, which reflect each child's language comprehension skills in numerical form.
+
+In the data cleaning process, we prepared the raw election data for analysis by applying transformations, filtering, and restructuring using several R packages, including `dplyr` [@citedplyr], `tidyverse` [@citetidyverse], `arrow` [@citearrow], and `rsample` [@citersample]. The detailed cleaning processes are in [Appendix -@sec-data-cleaning]. 
+
 
 ## Outcome variables
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
+### Comprehension(Number of Words Understand By Children)
 
-
-
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+The primary outcome variable was the child's comprehension of American English, measured by the number of words the child understood. These data include responses from children of different ages (months) and allow for age-specific and general measures of language comprehension in early development.
 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
-
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
+#| label: fig-comprehension
+#| fig-cap: "Distribution of comprehension among children. Each bar represents the count of children who understand a specific range of words, illustrating the varying levels of vocabulary comprehension in the dataset."
 #| echo: false
 #| warning: false
-#| message: false
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+analysis_data <- read.csv(here::here("data/02-analysis_data/analysis_data.csv"))
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+ggplot(analysis_data, aes(x = comprehension)) +
+  geom_histogram(bins = 30, fill = "skyblue", color = "black") +
+  labs(
+    title = "Distribution of Comprehension",
+    x = "Comprehension",
+    y = "Count(Number of Understanding Words)"
+  )
 ```
 
-Talk way more about it. 
+Using the package ggplot2 [@citeggplot], @fig-comprehension shows the distribution of comprehension, which is the number of words children understand in early childhood. Each bar in the histogram represents the count of children who comprehend a specific range of words.
+
+The histogram shows a right-skewed distribution, with a higher frequency of children having fewer understood words. The count gradually decreases as the number of comprehended words increases, suggesting that most children in the dataset have relatively lower comprehension levels, while fewer children understand a larger vocabulary.
+
+
+\newpage
+## Predictor variables
+There are eight predictor variables for my study after cleaning. @tbl-Predictor shows the descriptions of each predictor variable.
+
+```{r}
+#| label: tbl-Predictor
+#| fig-cap: "Descriptions of Each Predictor Variable"
+#| echo: false
+#| warning: false
+
+# Create a data frame explaining each variable
+variable_summary <- data.frame(
+  Variable = c("age", "production", "is_norming", 
+               "birth_order", "caregiver_education", "race", "sex", "monolingual"),
+  Description = c(
+    "The age of the child in months.",
+    "The number of words a child can produce.",
+    "A binary variable indicating if the child is included in the norming sample (1 = Yes, 0 = No).",
+    "The birth order of the child (e.g., 1 = first-born, 2 = second-born).",
+    "The education level of the primary caregiver (e.g., Graduate, Some College).",
+    "The race of the child (e.g., White, Asian).",
+    "The sex of the child (0 = Female, 1 = Male).",
+    "A binary variable indicating if the child is monolingual (1 = Yes, 0 = No)."
+  )
+)
+
+# Display the table in Markdown format
+kable(variable_summary, caption = "Variable Descriptions") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
+```
+
+
+
+```{r}
+#| label: fig-plot1
+#| fig-cap: "Ridgeline Plot of Comprehension by Age Group"
+#| echo: false
+#| warning: false
+
+## Create the age_group variable by binning age into categories
+seperate_age_group <- analysis_data %>%
+  mutate(age_group = cut(age, breaks = c(0, 10, 15, 20, 25, 30), include.lowest = TRUE))
+
+ggplot(seperate_age_group, aes(x = comprehension, y = age_group, fill = age_group)) +
+  geom_density_ridges(alpha = 0.6) +
+  labs(
+    title = "Ridgeline Plot of Comprehension by Age Group",
+    x = "Comprehension",
+    y = "Age Group"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+@fig-plot1 illustrates the relationship between age and comprehension. Each grey point represents an individual observation of comprehension at a specific age, while the blue trend line provides a smoothed estimate of how comprehension changes with age.
+
+The plot shows an upward trend in comprehension as age increases, and especially after about 10 months.There is a clear upward trend after 20 months, which suggests that children's vocabulary comprehension improves dramatically as they grow up. The shaded area around the blue line represents the confidence interval, which is an estimate of the range within which the true trend is likely to occur, taking into account the variability of the data.
+
+
+
+```{r}
+#| label: fig-plot2
+#| fig-cap: "The relationship between age and comprehension in children. The plot includes individual observations represented by grey points, with a blue trend line and shaded confidence interval showing the general trajectory of comprehension as children age."
+#| echo: false
+#| warning: false
+#| 
+# Stacked bar chart for Birth Order and Caregiver Education
+ggplot(analysis_data, aes(x = factor(birth_order), fill = caregiver_education)) +
+  geom_bar(position = "stack") +
+  labs(
+    title = "Birth Order and Caregiver Education",
+    x = "Birth Order",
+    y = "Count",
+    fill = "Caregiver Education Level"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+#| label: fig-box1
+#| fig-cap: "comprehension vs. caregiver_education"
+#| echo: false
+#| warning: false
+#comprehension vs. caregiver_education
+ggplot(analysis_data, aes(x = caregiver_education, y = comprehension)) +
+  geom_boxplot(fill = "lightblue") +
+  labs(
+    title = "Caregiver Education Level vs Comprehension",
+    x = "Caregiver Education Level",
+    y = "Comprehension Score"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+```{r}
+#| label: fig-plot3
+#| fig-cap: "Comprehension by Sex"
+#| echo: false
+#| warning: false
+
+#Comprehension by Sex
+ggplot(analysis_data, aes(x = comprehension, fill = as.factor(sex))) +
+  geom_area(stat = "bin", alpha = 0.6) +
+  labs(
+    title = "Comprehension by Sex",
+    x = "Comprehension",
+    y = "Count",
+    fill = "Sex (0 = Female, 1 = Male)"
+  )
+
+```
+
+```{r}
+#| label: fig-plot4
+#| fig-cap: "Comprehension by Sex"
+#| echo: false
+#| warning: false
+
+#Density Plot of Comprehension by Race
+ggplot(analysis_data, aes(x = comprehension, fill = race)) +
+  geom_density(alpha = 0.4) +
+  labs(
+    title = "Density Plot of Comprehension by Race",
+    x = "Comprehension",
+    y = "Density",
+    fill = "Race"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+
+```
+
 
 ## Predictor variables
 
@@ -116,7 +235,7 @@ Use sub-sub-headings for each outcome variable and feel free to combine a few in
 
 
 
-
+\newpage
 # Model
 
 The goal of our modelling strategy is twofold. Firstly,...
@@ -156,13 +275,11 @@ Our results are summarized in @tbl-modelresults.
 #| warning: false
 #| message: false
 
-library(rstanarm)
-
 first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
+  readRDS(file = here::here("models/comprehension_model_bayesian_linear.rds"))
 ```
 
-```{r}
+
 #| echo: false
 #| eval: true
 #| label: tbl-modelresults
@@ -176,7 +293,7 @@ modelsummary::modelsummary(
   statistic = "mad",
   fmt = 2
 )
-```
+
 
 
 
@@ -224,15 +341,8 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
 
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
+# Posterior predictive checks
+pp_check(first_model)
 ```
 
 ## Diagnostics
@@ -249,11 +359,9 @@ posterior_vs_prior(first_model) +
 #| label: fig-stanareyouokay
 #| fig-cap: "Checking the convergence of the MCMC algorithm"
 #| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
+#| layout-ncol: 1
 
 plot(first_model, "trace")
-
-plot(first_model, "rhat")
 ```
 
 
