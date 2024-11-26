@@ -89,34 +89,8 @@ The histogram shows a right-skewed distribution, with a higher frequency of chil
 
 \newpage
 ## Predictor variables
-There are eight predictor variables for my study after cleaning. @tbl-Predictor shows the descriptions of each predictor variable.
+There are eight predictor variables for my study after cleaning. The Descriptions of Each Predictor Variable is in @tbl-Predictor shows at [Appendix -@sec-data-details].
 
-```{r}
-#| label: tbl-Predictor
-#| fig-cap: "Descriptions of Each Predictor Variable"
-#| echo: false
-#| warning: false
-
-# Create a data frame explaining each variable
-variable_summary <- data.frame(
-  Variable = c("age", "production", "is_norming", 
-               "birth_order", "caregiver_education", "race", "sex", "monolingual"),
-  Description = c(
-    "The age of the child in months.",
-    "The number of words a child can produce.",
-    "A binary variable indicating if the child is included in the norming sample (1 = Yes, 0 = No).",
-    "The birth order of the child (e.g., 1 = first-born, 2 = second-born).",
-    "The education level of the primary caregiver (e.g., Graduate, Some College).",
-    "The race of the child (e.g., White, Asian).",
-    "The sex of the child (0 = Female, 1 = Male).",
-    "A binary variable indicating if the child is monolingual (1 = Yes, 0 = No)."
-  )
-)
-
-# Display the table in Markdown format
-kable(variable_summary, caption = "Variable Descriptions") %>%
-  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
-```
 
 ### Age
 The `age` variable indicates the age (in months) of each child. This variable is important for understanding how comprehension develops over time in early childhood. By using age in months, we can capture growth on a more granular level rather than grouping children into broader age categories, which may overlook subtle developmental differences. Age is an important factor because it is directly related to a child's cognitive and language development, which can affect their ability to understand and produce words.
@@ -227,7 +201,7 @@ The overlap in the density curves shows comprehension across race groups share s
 
 
 \newpage
-# Model
+# Model{#sec-model}
 
 My modelling approach aims to quantify the relationship between various child and caregiver characteristics and comprehension in early childhood. For this analysis, I use a Bayesian linear model to examine how factors such as age, production (number of words produced), whether the child is in a norming status, birth order, caregiver education level, race, sex, and whether the child is monolingual influence comprehension. The model is implemented using the stan_glm function, with a Gaussian distribution to capture the variability in comprehension.
 
@@ -289,7 +263,7 @@ Bayesian linear regression modeling was chosen to predict comprehension because 
 
 
 
-# Results
+# Results{#sec-result}
 
 @sec-result examines the relationship between age, production, is_norming, birth order, caregiver education, race, sex, and monolingual status with respect to early childhood word comprehension. Using a dataset containing observations of children’s linguistic abilities and various influencing factors, we apply a Bayesian linear regression model to assess which key predictors have the most significant impact on comprehension. Below, we present the results of our model and discuss the implications of our findings.
 
@@ -350,9 +324,33 @@ Future studies could address these limitations by applying non-linear modeling t
 \appendix
 
 # Appendix {-}
+# Additional data details {#sec-data-details}
+```{r}
+#| label: tbl-Predictor
+#| fig-cap: "Descriptions of Each Predictor Variable"
+#| echo: false
+#| warning: false
 
+# Create a data frame explaining each variable
+variable_summary <- data.frame(
+  Variable = c("age", "production", "is_norming", 
+               "birth_order", "caregiver_education", "race", "sex", "monolingual"),
+  Description = c(
+    "The age of the child in months.",
+    "The number of words a child can produce.",
+    "A binary variable indicating if the child is included in the norming sample (1 = Yes, 0 = No).",
+    "The birth order of the child (e.g., 1 = first-born, 2 = second-born).",
+    "The education level of the primary caregiver (e.g., Graduate, Some College).",
+    "The race of the child (e.g., White, Asian).",
+    "The sex of the child (0 = Female, 1 = Male).",
+    "A binary variable indicating if the child is monolingual (1 = Yes, 0 = No)."
+  )
+)
 
-# Additional data details
+# Display the table in Markdown format
+kable(variable_summary, caption = "Variable Descriptions") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
+```
 
 # Model details {#sec-model-details}
 
