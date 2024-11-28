@@ -324,12 +324,96 @@ Future studies could address these limitations by applying non-linear modeling t
 \appendix
 
 # Appendix {-}
+
+# CDI methodology overview and assessment
+
+## Overview
+
+The Communicative Development Inventory (CDI) is a standardized assessment tool used to study early language development in children aged 8 to 30 months. Originally developed by Fenson et al. (1994), the CDI provides a reliable and comprehensive method for evaluating both vocabulary comprehension and production based on parent reports. This chapter revisits the strengths and limitations of CDI, its psychometric properties, and the reliability of the instrument in longitudinal studies.
+
+## Target population, frame, and sample
+
+* Target Population: Infants and toddlers aged 8 to 30 months whose parents are willing to report on their child's language development.
+
+* Sample Frame: The target sample includes children from different demographic backgrounds to capture a diverse representation of language development. Recruitment was conducted across pediatric clinics, childcare centers, and online forums targeting parents, ensuring participants come from various socioeconomic, educational, and geographic contexts.
+
+* Sample Size: The study collected data from approximately 2,000 parents. A sample size of this scale ensures generalizability while maintaining a margin of error within ±3% at a 95% confidence level, thereby enhancing the robustness of findings.
+
+## Sample recruitment
+
+**Recruitment Methods:**
+
+* Parents were recruited via two primary methods: direct outreach at pediatric clinics and digital advertisement on online parenting platforms such as forums and social media. This double approach ensured coverage of typically underrepresented groups such as rural families. The recruitment was conducted with bilingual support (English and Spanish) to improve inclusivity and response rates.
+
+* Online Panel Use: An additional recruitment method involved using an online panel to increase the diversity of the sample. This panel was instrumental in reaching parents from areas with limited in-person outreach capabilities.
+
+## Sampling approach and trade-offs
+
+**Sampling Approach:**
+
+* The approach involves collecting CDI (Communicative Development Inventory) data across various languages and dialects, using both cross-sectional and longitudinal sampling. This data is sourced from multiple studies conducted over the years, sometimes gathered through paper forms, mail-in surveys, in-person sessions, or electronically. Samples are typically convenience samples, with limited control over representativeness.
+
+* Types of Data: The data includes both "Words & Gestures" (WG, for infants) and "Words & Sentences" (WS, for toddlers), gathered from children ranging from infancy to around 36 months. Instruments include checklists and questionnaires aimed at assessing language comprehension and production.
+
+**Trade-offs:**
+
+* Advantages: The flexibility of using both WG and WS instruments allows for capturing a broad spectrum of early language development stages. The data provides valuable insight into different aspects of language development, including gestures, morphology, and grammar.
+
+* Disadvantages: The sampling method is not necessarily representative due to reliance on convenience samples, which leads to biases depending on how researchers choose or access participants. Moreover, inconsistent administration methods such as electronic, paper and in-person lead to potential variability in data quality, affecting comparability between studies.
+
+
+## Non-response handling
+
+Non-response Issues: The variability of the data is mentioned in the CDI methodology and is sometimes described as a “difficult dataset” where inconsistent or surprising results occur. This may indicate that non-response issues or participant misunderstanding of the questions affected data quality.
+
+**Strategies for Handling Non-response:**
+
+* Multiple Attempts: The research team attempted to handle potential non-response issues by improving the clarity of instructions (e.g., simplifying written instructions for electronic forms), thereby reducing misinterpretations that could lead to "floor and ceiling" effects.
+
+* Data Inclusion: Although recognizing the variability caused by nonresponse, the research team decided not to exclude any data sets. They instead accept the confusion and variability inherent in it, and recognize that exclusion of these data may lead to biased conclusions. This method of inclusion was intended to avoid circular arguments and preserve the natural variability in the dataset.
+
+## Longitudinal Stability of CDI Measurements
+
+Stability Across Time: Longitudinal data from CDI demonstrate high stability in early language scores. Studies like De Houwer et al. (2005) reveal significant correlations in CDI measurements across different ages, indicating that early language acquisition remains relatively stable over time.
+
+
+## Psychometric Analysis and Item Response Theory (IRT)
+
+* Measurement Properties of CDI Items: Using IRT, each CDI item was evaluated for difficulty and discrimination. Items like common nouns showed high discrimination, indicating their effectiveness in distinguishing between different levels of vocabulary ability.
+
+* Psychometric Weaknesses: Items such as "mommy" and "daddy" have low discrimination because they are almost universally known by children, providing limited information about individual differences in vocabulary. However, these items are retained due to their cultural and developmental relevance.
+
+**IRT Evaluation Results:**
+
+* Difficulty: Items varied in difficulty, with abstract words proving harder for parents to report on than concrete items.
+
+* Discrimination: High discrimination scores were associated with verbs and adjectives, suggesting these word types are better indicators of a child's linguistic development level compared to function words.
+
+
+## Simulation of CDI Sampling Approach
+
+To further improve the reliability and representativeness of CDI findings, Bayesian inference can be used to assess different sampling strategies. Bayesian methods can integrate a priori information about sampling bias and provide a probability framework to assess the uncertainty of sampling outcomes. By incorporating a priori information related to demographic characteristics such as socioeconomic status and bilingual families, researchers can better model the effects of sampling bias and improve the robustness of their conclusions.
+
+Simulations can also be extended to a variety of sampling methods using Bayesian modelling to estimate the impact of sampling bias, such as over-representation of certain demographic characteristics or under-sampling of key groups. Generating synthetic datasets containing these underrepresented groups would illustrate how these populations might affect language development patterns, and updates to the Bayesian model would adjust the model to reflect observed trends in the data over time. 
+
+
+## Conclusion
+
+The CDI method, while not without its challenges, provides a generalized approach to understanding early language development through parental reports. The stratified sampling methodology used in CDI studies allows for a more representative understanding of language development across demographic contexts, thus mitigating potential biases in traditional parent-report measures. The CDI has been used in some studies to assess language development in children and adolescents. Although there are some limitations, such as potential bias in parent reports and subjectivity in assessing comprehension, the CDI has demonstrated strong reliability and utility in psychometric assessments, making it an important tool for researchers of child language development.
+
+
+
+
+
+
+
 # Additional data details {#sec-data-details}
 ```{r}
 #| label: tbl-Predictor
 #| fig-cap: "Descriptions of Each Predictor Variable"
 #| echo: false
 #| warning: false
+
 
 # Create a data frame explaining each variable
 variable_summary <- data.frame(
@@ -347,9 +431,15 @@ variable_summary <- data.frame(
   )
 )
 
-# Display the table in Markdown format
-kable(variable_summary, caption = "Variable Descriptions") %>%
-  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
+# Beautify and display the table in Markdown format
+variable_summary |>
+  kable(col.names = c("Variable", "Description"), align = c("l", "l"), escape = FALSE, booktabs = TRUE) |>
+  kable_styling(full_width = F, position = "center", font_size = 9) |>
+  row_spec(0, bold = TRUE, color = "black", background = "lightgray") |> 
+  column_spec(1, bold = TRUE, width = "18em") |> 
+  column_spec(2, width = "35em") |> 
+  footnote(general = "Note: This table provides descriptions of each predictor variable used in the study, explaining their relevance and values.", general_title = " ")
+
 ```
 
 # Model details {#sec-model-details}
