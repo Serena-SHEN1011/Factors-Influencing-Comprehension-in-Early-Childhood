@@ -101,7 +101,7 @@ Using the package ggplot2 [@citeggplot], @fig-comprehension shows the distributi
 The histogram shows a right-skewed distribution, with a higher frequency of children having fewer understood words. The count gradually decreases as the number of comprehended words increases, suggesting that most children in the dataset have relatively lower comprehension levels, while fewer children understand a larger vocabulary.
 
 
-\newpage
+
 ## Predictor variables
 There are eight predictor variables for my study after cleaning. The Descriptions of Each Predictor Variable is in @tbl-Predictor shows at [Appendix -@sec-data-descriptions].
 
@@ -368,22 +368,23 @@ The parameter `is_norming` does not have an error bar, which suggests that this 
 
 This study provides insights into early childhood language comprehension by examining various factors, such as age, caregiver education, word production, and birth order, through a Bayesian linear regression model. The findings underscore the significant influence of these predictors, contributing to a broader understanding of the mechanisms that underpin language acquisition during early childhood development.
 
-## Influence of Caregiver Education and Environmental Context
+## The Role of Caregiver Education in Language Development
 
-One of the prominent findings is the positive relationship between caregiver education levels and children's comprehension scores. This aligns with previous research that emphasizes the importance of an enriched home environment in supporting early learning. The implications suggest that interventions targeted at enhancing caregiver awareness and providing educational resources could significantly bolster children's language development.
+An important finding of this study is that caregiver education plays an important role in early childhood language comprehension. Children show better comprehension with caregivers who are more educated, which highlights the great importance of a rich home environment in early language development. This suggests that caregiver education can provide an important representation of language exposure, socioeconomic status, and access to resources that work together to create a favourable learning environment for children.
 
-## Nuanced Relationships Revealed
+## Effect of birth order on language comprehension
 
-Our analysis also uncovered intricate relationships that were not immediately evident. For instance, while caregiver education is generally a strong predictor, its effects appear more pronounced in first-born children compared to their younger siblings. Such a pattern suggests that first-born children might receive more undivided attention, which amplifies the effects of caregiver education. These nuanced findings call for targeted strategies, especially for later-born children, to ensure equitable developmental support across siblings.
+Another finding was the subtle effect of birth order on comprehension. The results showed that first-born children generally had better comprehension skills compared to their siblings. This may be because they receive more one-on-one attention from their caregivers before subsequent siblings are born. The effect of birth order suggests that parental dynamics and family structure play a key role in shaping early language skills, which suggests that attention needs to be more equitably distributed among children in a multi-child family.
+
 
 ## Model Limitations and Uncertainties
 
-Despite these findings, several limitations constrain the conclusions of this study. The linear model used in the analysis assumes a simple relationship between predictors and language comprehension. However, early language acquisition is influenced by a complex web of factors that may interact in non-linear ways. Additionally, the reliance on caregiver-reported data for education level introduces a risk of response bias, which could affect the reliability of the estimates. The dataset also had missing values in key demographic categories, potentially limiting the representativeness of our findings.
+While this study provides valuable observations, there are many limitations. A major limitation is the high degree of uncertainty in some of the model's coefficient estimates, particularly those related to race and the educational level of some caregivers. The wide confidence intervals indicate variability and inconsistency in the data, which may prevent the generalization of the findings. In addition, using samples may introduce bias and reduce the representativeness of the results across populations. In addition, missing data for some population groups limits the ability of the model to make predictions for all groups, which may affect the overall robustness of the study results.
+
 
 ## Recommendations for Future Research
 
-Future studies could address these limitations by applying non-linear modeling techniques, such as Generalized Additive Models (GAMs), to better capture the complexities inherent in early language development. Longitudinal datasets that follow children over time would provide a richer context for understanding how developmental trajectories unfold in different family environments. Moreover, expanding the dataset to include more diverse demographics and additional variables, such as socioeconomic status or access to early education resources, could provide a more comprehensive picture of the factors influencing language comprehension.
-
+Future research should address these limitations by collecting more representative data across different demographic groups. This would reduce uncertainty in model estimates and provide a better understanding of the relationships between different predictors and language comprehension. Longitudinal studies would also be valuable in assessing these relationships' stability over time, providing a deeper understanding of the long-term effects of early intervention. In addition, further exploration of the role of caregiver education, particularly in families with multiple children, could provide more effective strategies to support equitable language development. The expansion of the dataset to include more vocabulary categories and contextual factors such as socioeconomic status, bilingual ability, and parental language practices also enhances our understanding of the mechanisms of early language learning and supports the development of more nuanced educational policies.
 
 
 \newpage
@@ -435,7 +436,7 @@ Non-response Issues: The variability of the data is mentioned in the CDI methodo
 
 **Strategies for Handling Non-response:**
 
-* Multiple Attempts: The research team attempted to handle potential non-response issues by improving the clarity of instructions (e.g., simplifying written instructions for electronic forms), thereby reducing misinterpretations that could lead to "floor and ceiling" effects.
+* Multiple Attempts: The research team attempted to handle potential non-response issues by improving the clarity of instructions such as simplifying written instructions for electronic forms, thereby reducing misinterpretations that could lead to "floor and ceiling" effects.
 
 * Data Inclusion: Although recognizing the variability caused by nonresponse, the research team decided not to exclude any data sets. They instead accept the confusion and variability inherent in it, and recognize that exclusion of these data may lead to biased conclusions. This method of inclusion was intended to avoid circular arguments and preserve the natural variability in the dataset.
 
