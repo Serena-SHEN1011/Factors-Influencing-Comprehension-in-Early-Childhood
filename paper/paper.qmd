@@ -6,7 +6,7 @@ author:
 thanks: "Code and data are available at: [Factors Influencing Early Childhood Comprehension of American English](https://github.com/Serena-SHEN1011/Factors-Influencing-Early-Childhood-Comprehension-of-American-English)."
 date: today
 date-format: long
-abstract: "This paper investigates the factors that influence language comprehension in young children by using a Bayesian linear regression model. We analyzed predictors including age, word production, caregiver education, and birth order. The analysis showed that factors such as caregiver education and word production have a significant association with comprehension levels. This study highlights the importance of both environmental and developmental factors in shaping early language abilities, providing a clearer understanding of how these elements contribute to a child's comprehension."
+abstract: "In this paper, we develop a Bayesian linear model to analyze factors influencing young children's comprehension of American English. Using a dataset from the Wordbank database, our model examines predictors such as age, word production, caregiver education, and birth order to determine their impact on early childhood language comprehension skills. The analysis shows that children with more highly educated caregivers tend to have better comprehension skills, while first-born children generally have higher comprehension scores compared to their siblings. This approach provides a detailed understanding of how developmental and environmental factors shape early childhood language abilities, offering a basis for designing targeted interventions to promote language development."
 format: pdf
 number-sections: true 
 toc: true
