@@ -3,7 +3,7 @@ library(rstanarm)
 library(tidyverse)
 
 # Load the model
-model <- readRDS("comprehension_model_bayesian_linear.rds")
+model <- readRDS("comprehension_reduced_model_bayesian_linear.rds")
 
 # Define the model version
 version_number <- "0.0.1"
@@ -22,26 +22,21 @@ variables <- list(
 
 #* @param age
 #* @param production
-#* @param is_norming
-#* @param birth_order
-#* @param caregiver_education
+#* @param isnorming
+#* @param birthorder
+#* @param caregivereducation
 #* @param race
-#* @param sex
-#* @param monolingual
 #* @get /predict_comprehension
-predict_comprehension <- function(age = 24, production = 50, is_norming = 1, birth_order = 1,
-                                  caregiver_education = "HighSchool", race = "White", sex = 0,
-                                  monolingual = 1) {
+predict_comprehension <- function(age = 24, production = 50, isnorming = 1, birthorder = 1,
+                                  caregivereducation = "HighSchool", race = "White") {
   # Prepare the payload as a data frame
   payload <- data.frame(
     age = as.integer(age),
     production = as.integer(production),
-    is_norming = as.integer(is_norming),
-    birth_order = as.integer(birth_order),
-    caregiver_education = as.character(caregiver_education),
-    race = as.character(race),
-    sex = as.integer(sex),
-    monolingual = as.integer(monolingual)
+    isnorming = as.integer(isnorming),
+    birthorder = as.integer(birthorder),
+    caregivereducation = as.character(caregivereducation),
+    race = as.character(race)
   )
   
   # Extract posterior samples
@@ -50,24 +45,20 @@ predict_comprehension <- function(age = 24, production = 50, is_norming = 1, bir
   # Define the generative process for prediction
   beta_age <- posterior_samples[, "age"]
   beta_production <- posterior_samples[, "production"]
-  beta_is_norming <- posterior_samples[, "is_norming"]
-  beta_birth_order <- posterior_samples[, "birth_order"]
-  beta_caregiver_education <- posterior_samples[, paste0("caregiver_education", payload$caregiver_education)]
+  beta_is_norming <- posterior_samples[, "isnorming"]
+  beta_birth_order <- posterior_samples[, "birthorder"]
+  beta_caregiver_education <- posterior_samples[, paste0("caregivereducation", payload$caregivereducation)]
   beta_race <- posterior_samples[, paste0("race", payload$race)]
-  beta_sex <- posterior_samples[, paste0("sex", payload$sex)]
-  beta_monolingual <- posterior_samples[, "monolingual"]
   alpha <- posterior_samples[, "(Intercept)"]
   
   # Compute the predicted value for the observation
   predicted_values <- alpha +
     beta_age * payload$age +
     beta_production * payload$production +
-    beta_is_norming * payload$is_norming +
-    beta_birth_order * payload$birth_order +
+    beta_is_norming * payload$isnorming +
+    beta_birth_order * payload$birthorder +
     beta_caregiver_education +
-    beta_race +
-    beta_sex +
-    beta_monolingual * payload$monolingual
+    beta_race
   
   # Predict
   mean_prediction <- mean(predicted_values)
