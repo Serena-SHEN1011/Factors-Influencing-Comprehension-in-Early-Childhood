@@ -22,7 +22,7 @@ analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
 theme_set(theme_minimal())
 
 # Summary for selected numeric variables
-summary(select(analysis_data, age, comprehension, production, birth_order))
+summary(select(analysis_data, age, comprehension, production, birthorder))
 
 
 #### Univariate Analysis ####
@@ -74,7 +74,7 @@ ggplot(analysis_data, aes(x = comprehension, fill = race)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 #BoxPlot of Comprehension by Caregiver Education Level
-ggplot(analysis_data, aes(x = caregiver_education, y = comprehension)) +
+ggplot(analysis_data, aes(x = caregivereducation, y = comprehension)) +
   geom_boxplot(fill = "lightblue") +
   labs(
     title = "Box Plot of Comprehension by Caregiver Education Level",
@@ -84,7 +84,7 @@ ggplot(analysis_data, aes(x = caregiver_education, y = comprehension)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 #Proportion of Norming Status by Caregiver Education
-ggplot(analysis_data, aes(x = caregiver_education, fill = as.factor(is_norming))) +
+ggplot(analysis_data, aes(x = caregivereducation, fill = as.factor(isnorming))) +
   geom_bar(position = "fill") +
   labs(
     title = "Proportion of Norming Status by Caregiver Education",
@@ -120,7 +120,7 @@ ggplot(seperate_age_group, aes(x = comprehension, y = age_group, fill = age_grou
 
 
 #comprehension vs. birth_order
-ggplot(analysis_data, aes(x = as.factor(birth_order), y = comprehension)) +
+ggplot(analysis_data, aes(x = as.factor(birthorder), y = comprehension)) +
   geom_boxplot(fill = "skyblue") +
   labs(
     title = "Birth Order vs Comprehension",
@@ -129,7 +129,7 @@ ggplot(analysis_data, aes(x = as.factor(birth_order), y = comprehension)) +
   )
 
 #comprehension vs. caregiver_education
-ggplot(analysis_data, aes(x = caregiver_education, y = comprehension)) +
+ggplot(analysis_data, aes(x = caregivereducation, y = comprehension)) +
   geom_boxplot(fill = "lightblue") +
   labs(
     title = "Caregiver Education Level vs Comprehension",

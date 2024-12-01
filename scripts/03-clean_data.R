@@ -44,7 +44,9 @@ cleaned_data <- cleaned_data %>%
     monolingual = ifelse(monolingual == "TRUE", 1, 0)
   )
 
-  
+# Rename columns by removing underscores and updating names
+names(cleaned_data) <- gsub("_", "", names(cleaned_data))
+
 
 # Perform a stratified split based on the 'race' variable to ensure all levels are present in both sets
 set.seed(123) # Set seed for reproducibility

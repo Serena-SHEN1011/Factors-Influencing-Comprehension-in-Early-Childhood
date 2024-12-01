@@ -28,14 +28,26 @@ test_that("dataset has 9 columns", {
   expect_equal(ncol(analysis_data), 9)
 })
 
+# Test that there are no missing values in the dataset
+test_that("no missing values in dataset", {
+  expect_true(all(!is.na(analysis_data)))
+})
+
 # Test that the 'age' column is numeric
 test_that("'age' is numeric", {
   expect_type(analysis_data$age, "double")
 })
 
-# Test that the 'caregiver_education' column is character type
-test_that("'caregiver_education' is character", {
-  expect_type(analysis_data$caregiver_education, "character")
+# Test that the 'birth order' column is between 1 and 8
+test_that("'birthorder' values are between 1 and 8", {
+  expect_true("birthorder" %in% names(analysis_data))
+  expect_true(all(analysis_data$birthorder >= 1 & analysis_data$birthorder <= 8, na.rm = TRUE))
+})
+
+
+# Test that the 'caregivereducation' column is character type
+test_that("'caregivereducation' is a character", {
+  expect_type(analysis_data$caregivereducation, "character")
 })
 
 # Test that the 'race' column is character type
@@ -43,19 +55,15 @@ test_that("'race' is character", {
   expect_type(analysis_data$race, "character")
 })
 
-# Test that there are no missing values in the dataset
-test_that("no missing values in dataset", {
-  expect_true(all(!is.na(analysis_data)))
+
+# Test that there are no empty strings in 'caregivereducation' or 'race' columns
+test_that("no empty strings in 'caregivereducation' or 'race' columns", {
+  expect_false(any(analysis_data$caregivereducation == "" | analysis_data$race == ""))
 })
 
-# Test that there are no empty strings in 'caregiver_education' or 'race' columns
-test_that("no empty strings in 'caregiver_education' or 'race' columns", {
-  expect_false(any(analysis_data$caregiver_education == "" | analysis_data$race == ""))
-})
-
-# Test that the 'caregiver_education' column contains at least 3 unique values
-test_that("'caregiver_education' column contains at least 3 unique values", {
-  expect_true(length(unique(analysis_data$caregiver_education)) >= 3)
+# Test that the 'caregivereducation' column contains at least 3 unique values
+test_that("'caregivereducation' column contains at least 3 unique values", {
+  expect_true(length(unique(analysis_data$caregivereducation)) >= 3)
 })
 
 # Test that the 'age' column values are within a realistic range (e.g., 8 to 30)
@@ -63,10 +71,6 @@ test_that("'age' values are within the range 18 to 36", {
   expect_true(all(analysis_data$age >= 8 & analysis_data$age <= 30))
 })
 
-# Test that the 'birth_order' is between 1 and 8
-test_that("'birth_order' values are between 1 and 4", {
-  expect_true(all(analysis_data$birth_order >= 1 & analysis_data$birth_order <= 8))
-})
 
 # Test that 'sex' contains only 0 or 1 (0: female, 1: male)
 test_that("'sex' contains only 0 or 1", {
