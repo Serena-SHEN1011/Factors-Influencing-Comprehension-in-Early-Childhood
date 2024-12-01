@@ -21,10 +21,13 @@ raw_data <- read_csv("data/01-raw_data/raw_data.csv")
 cleaned_data <- raw_data %>%
   select(where(~ !all(is.na(.))))
 
+# Rename columns by removing underscores and updating names
+names(cleaned_data) <- gsub("_", "", names(cleaned_data))
+
 # Remove unnecessary columns
 cleaned_data <- cleaned_data %>%
-  select(-c(downloaded, language, form, dataset_name, child_id,
-            ethnicity, language_exposures, health_conditions, typically_developing))
+  select(-c(downloaded, language, form, datasetname, childid,
+            ethnicity, languageexposures, healthconditions, typicallydeveloping))
 
 # Remove all rows with any missing values
 cleaned_data <- na.omit(cleaned_data)
@@ -44,8 +47,6 @@ cleaned_data <- cleaned_data %>%
     monolingual = ifelse(monolingual == "TRUE", 1, 0)
   )
 
-# Rename columns by removing underscores and updating names
-names(cleaned_data) <- gsub("_", "", names(cleaned_data))
 
 
 # Perform a stratified split based on the 'race' variable to ensure all levels are present in both sets

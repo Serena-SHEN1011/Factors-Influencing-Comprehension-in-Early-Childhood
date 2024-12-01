@@ -21,8 +21,8 @@ analysis_data_train <- read_parquet("data/02-analysis_data/train_data.parquet")
 
 #### Fit Bayesian Model ####
 # Assuming 'comprehension' is the dependent variable
-model <- stan_glm(
-    formula = comprehension ~ age + production + is_norming + birth_order + caregiver_education + race +
+full_model <- stan_glm(
+    formula = comprehension ~ age + production + isnorming + birthorder + caregivereducation + race +
       sex + monolingual,
     data = analysis_data_train,
     family = gaussian(),  # For a continuous outcome
@@ -31,18 +31,42 @@ model <- stan_glm(
     seed = 853
   )
 
+# Summary of the model
+summary(full_model)
+
+# create a reduced model without these non-significant predictors
+model_reduced <- stan_glm(
+  formula = comprehension ~ age + production + isnorming + birthorder + caregivereducation + race,
+  data = analysis_data_train,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  seed = 853
+)
+
+# Compare Models
+loo_full <- loo(full_model)
+loo_reduced <- loo(model_reduced)
+
+loo_compare(loo_full, loo_reduced)
+
+
 #### Model Diagnostics ####
 # Calculate Variance Inflation Factor to check multicollinearity
-vif(model)
+vif(model_reduced)
 
-# Summary of the model
-summary(model)
 
 # Posterior predictive checks
-pp_check(model)
+pp_check(model_reduced)
 
 #### Save Model ####
 saveRDS(
-  model,
-  file = "models/comprehension_model_bayesian_linear.rds"
+  full_model,
+  file = "models/comprehension_full_model_bayesian_linear.rds"
+)
+
+
+saveRDS(
+  model_reduced,
+  file = "models/comprehension_reduced_model_bayesian_linear.rds"
 )
