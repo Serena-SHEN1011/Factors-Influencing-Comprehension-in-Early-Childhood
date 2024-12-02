@@ -1,0 +1,1001 @@
+age,sex,form,comprehension,production,is_norming,birth_order,caregiver_education,race,monolingual,ethnicity
+17,0,WG,113.01,90.34,1,1,Graduate,White,0,Hispanic
+16,0,WG,203.88,66.25,0,2,Some College,Other,1,Hispanic
+21,0,WG,240.23,40.16,1,3,Graduate,White,0,Non-Hispanic
+22,1,WS,274.21,144.72,1,2,Graduate,Black,0,Hispanic
+22,1,WS,268.15,55.69,1,2,High School,Black,0,Hispanic
+17,1,WG,194.27,41.96,0,1,High School,Asian,0,Hispanic
+18,0,WG,199.43,71.62,1,1,Graduate,Other,0,Non-Hispanic
+20,1,WS,137.11,118.06,0,2,High School,White,0,Hispanic
+16,0,WG,194.78,48.19,1,2,Some College,White,0,Hispanic
+22,1,WG,212.92,33.55,1,3,Graduate,Black,0,Non-Hispanic
+20,0,WG,162.88,111.92,1,3,High School,Asian,0,Hispanic
+21,0,WS,128.42,75.28,0,2,High School,Black,0,Hispanic
+19,1,WG,233.3,17.58,0,2,Graduate,White,0,Non-Hispanic
+15,0,WG,243.5,97,1,2,High School,Black,1,Hispanic
+20,1,WG,236.96,97.97,1,4,High School,Black,0,Hispanic
+19,1,WS,204.35,40.61,0,4,Graduate,Black,1,Hispanic
+20,0,WG,126.99,125.99,1,1,Graduate,White,0,Non-Hispanic
+23,1,WG,217.66,27,0,4,Graduate,White,1,Non-Hispanic
+21,1,WG,297.47,55.28,0,2,College,Black,1,Non-Hispanic
+19,1,WG,215.6,65.76,1,1,High School,Other,1,Non-Hispanic
+21,1,WG,151.47,141.28,0,3,High School,Asian,1,Non-Hispanic
+21,1,WS,246.51,18.3,0,4,Some College,White,0,Hispanic
+22,0,WS,210.68,65.45,1,3,Graduate,Asian,0,Non-Hispanic
+18,1,WS,173.1,119.46,0,3,Graduate,White,0,Hispanic
+19,0,WG,186.72,31.81,0,3,Some College,Black,1,Non-Hispanic
+20,0,WG,304.87,146.92,1,3,Graduate,White,1,Hispanic
+22,1,WS,181.82,107.49,0,2,Some College,Black,0,Hispanic
+22,0,WS,271.69,131.46,1,2,Some College,Black,0,Non-Hispanic
+18,0,WG,105.51,130.67,0,3,College,White,1,Hispanic
+20,1,WS,163.12,150.07,0,1,College,Asian,0,Hispanic
+20,1,WS,146.15,73.09,1,3,College,White,1,Hispanic
+20,0,WS,288.93,139.95,0,3,College,Black,1,Hispanic
+21,0,WG,235.41,83.27,0,4,College,Other,0,Non-Hispanic
+21,1,WS,309.44,47.27,1,2,High School,Asian,1,Hispanic
+15,0,WG,173.41,92.94,1,2,High School,Other,0,Hispanic
+17,0,WG,291.11,68.41,0,4,Graduate,Asian,1,Hispanic
+15,0,WS,247.61,49.07,1,2,High School,Asian,1,Non-Hispanic
+16,0,WS,175.72,131.15,0,4,Graduate,White,1,Hispanic
+22,0,WG,277.6,42.4,0,1,College,Other,0,Non-Hispanic
+21,1,WS,208.34,130.2,1,3,Some College,Other,1,Non-Hispanic
+19,0,WG,283.64,89.76,1,1,Graduate,Black,1,Non-Hispanic
+15,0,WS,123.39,118.93,1,2,High School,Other,0,Non-Hispanic
+17,0,WS,264.15,65.43,0,3,High School,Black,1,Hispanic
+18,0,WS,174.3,95.54,0,1,High School,Other,0,Hispanic
+15,0,WS,123.5,153,1,1,Graduate,Asian,0,Non-Hispanic
+20,0,WS,292.88,45.92,0,4,Some College,Asian,0,Non-Hispanic
+17,1,WG,121.41,58.05,0,2,High School,Black,1,Non-Hispanic
+18,1,WG,183.96,112.38,0,4,Graduate,Other,1,Non-Hispanic
+18,1,WG,129.16,36.49,0,2,College,Black,0,Non-Hispanic
+18,1,WG,129.02,81.41,1,4,High School,Other,0,Non-Hispanic
+15,1,WS,290.48,137.49,0,4,College,Other,1,Non-Hispanic
+16,0,WG,170.7,49.13,0,2,Some College,Other,0,Hispanic
+18,0,WG,230.32,73.55,0,4,Graduate,White,0,Hispanic
+24,1,WG,190.83,103.1,1,1,Graduate,Black,1,Hispanic
+18,1,WS,174.95,151.37,0,4,College,White,1,Hispanic
+17,0,WS,213.24,110.49,0,2,College,Other,1,Non-Hispanic
+17,0,WS,161.12,33.41,0,4,Some College,Black,1,Hispanic
+18,1,WS,283.91,101.35,1,2,College,Asian,1,Non-Hispanic
+18,1,WG,165.24,100.54,1,1,Graduate,Other,1,Non-Hispanic
+18,0,WS,197.27,110.51,0,3,Graduate,Black,0,Hispanic
+15,0,WG,274.42,66.95,1,1,Some College,Asian,1,Non-Hispanic
+21,0,WS,290.3,22.2,0,4,Graduate,White,0,Non-Hispanic
+21,1,WG,129.52,43.31,0,4,High School,Other,0,Non-Hispanic
+23,1,WS,274.48,130.89,0,3,Some College,Black,0,Non-Hispanic
+20,1,WS,207.91,154.95,0,4,High School,White,0,Non-Hispanic
+23,1,WS,211.44,115.86,0,1,Graduate,White,1,Hispanic
+21,0,WG,235.32,67.21,1,2,Graduate,White,0,Hispanic
+17,1,WG,254.64,81.18,1,4,Graduate,Asian,0,Non-Hispanic
+18,1,WS,292.21,46.53,1,2,High School,Other,0,Non-Hispanic
+19,1,WG,304.35,123.61,0,4,Some College,White,1,Hispanic
+17,1,WG,153.49,98.09,0,3,High School,Black,0,Non-Hispanic
+23,1,WG,301.32,126.79,0,1,College,White,1,Hispanic
+18,0,WG,215.33,42.56,0,2,College,White,1,Hispanic
+19,0,WS,267.7,85.8,1,3,College,Other,0,Non-Hispanic
+23,1,WS,289.29,40.77,0,1,Graduate,Other,1,Non-Hispanic
+19,0,WS,127.66,28.78,0,2,College,Other,0,Non-Hispanic
+20,1,WS,115.92,94.95,0,2,High School,Other,0,Non-Hispanic
+19,0,WS,148.81,63.87,1,3,College,Black,0,Hispanic
+16,1,WG,243.11,41.87,1,2,Graduate,White,0,Non-Hispanic
+15,0,WS,241.42,104.95,0,2,High School,Black,0,Hispanic
+22,1,WG,216.02,79.61,1,4,College,White,1,Hispanic
+17,1,WS,160.63,105.18,1,1,College,Asian,0,Non-Hispanic
+22,1,WS,241.13,115.68,0,1,Some College,Other,0,Non-Hispanic
+18,1,WS,289.84,79.3,0,4,Graduate,Other,1,Hispanic
+22,0,WG,262.5,122.33,1,3,Some College,Other,0,Hispanic
+23,0,WG,109.79,95.52,0,4,Some College,White,0,Non-Hispanic
+21,1,WG,276.73,27.44,0,3,Graduate,Black,0,Non-Hispanic
+17,0,WS,280.1,73.4,0,4,College,White,0,Non-Hispanic
+16,1,WG,300.24,93.94,0,1,Graduate,Asian,0,Hispanic
+17,0,WG,128.2,100.47,0,1,High School,Black,0,Non-Hispanic
+19,0,WS,283.67,128.78,0,2,Graduate,Black,1,Non-Hispanic
+20,0,WG,197.87,152.91,0,4,College,Asian,1,Hispanic
+17,0,WG,234.02,44.35,1,1,College,Other,0,Hispanic
+21,1,WS,219.52,152.31,0,2,Some College,Asian,1,Hispanic
+19,0,WS,303.55,140.7,0,1,College,Black,0,Hispanic
+19,1,WG,264.31,84.59,1,2,Graduate,Black,1,Non-Hispanic
+22,1,WG,288.78,75.47,0,2,College,White,1,Hispanic
+20,0,WS,201.96,57.97,1,4,Graduate,Black,1,Hispanic
+17,0,WS,126.98,119.32,0,2,Graduate,Black,0,Hispanic
+21,1,WG,165.46,24.27,1,4,Some College,Other,0,Hispanic
+15,0,WG,257.57,129.05,0,3,Some College,Asian,0,Hispanic
+24,1,WS,300.76,145.05,0,3,High School,White,1,Hispanic
+19,1,WG,170.26,18.56,0,3,Some College,Asian,1,Non-Hispanic
+18,1,WS,173.85,59.31,0,2,College,Other,1,Non-Hispanic
+21,0,WS,215.19,97.13,0,2,Graduate,Asian,1,Hispanic
+16,0,WG,268.72,43.15,0,4,Graduate,Asian,0,Non-Hispanic
+21,1,WS,154.38,101.23,1,1,Some College,Black,0,Non-Hispanic
+19,1,WS,143.32,75.59,1,2,High School,White,0,Non-Hispanic
+15,0,WG,259.55,48.04,1,2,High School,Asian,0,Hispanic
+17,1,WG,210.74,135.24,1,1,Graduate,Other,0,Hispanic
+19,1,WS,115.72,43.83,0,4,College,Black,1,Hispanic
+20,1,WG,114.91,143.95,1,2,College,White,1,Hispanic
+23,1,WS,277.37,103.82,1,3,Graduate,Asian,1,Hispanic
+24,1,WG,275.07,115.24,0,4,Some College,Black,1,Hispanic
+17,0,WG,290.01,23.34,0,3,Graduate,Asian,1,Hispanic
+24,0,WG,215.07,62.71,0,1,College,Other,0,Non-Hispanic
+21,0,WS,192.19,109.13,0,1,High School,White,0,Non-Hispanic
+16,1,WG,193.77,101.66,0,2,College,Other,0,Hispanic
+20,1,WS,278.24,123.14,0,2,Some College,White,1,Hispanic
+20,1,WG,176.78,91.87,0,4,College,Black,1,Hispanic
+18,0,WS,183.27,90.51,0,2,Some College,White,0,Non-Hispanic
+20,0,WG,125.11,134.07,0,4,Graduate,Black,1,Hispanic
+20,0,WS,116.01,29.01,1,1,College,Asian,0,Hispanic
+22,1,WS,288.22,146.73,0,3,Graduate,Other,1,Hispanic
+25,1,WS,312.27,47.36,1,1,College,Black,1,Non-Hispanic
+18,1,WS,297.07,92.44,1,1,College,White,0,Non-Hispanic
+18,0,WS,149.4,49.6,0,4,Some College,Black,1,Hispanic
+18,1,WS,122.91,115.35,0,1,Some College,Asian,0,Hispanic
+21,0,WG,146.2,120.13,0,4,Graduate,Asian,0,Non-Hispanic
+18,0,WG,124.29,148.53,0,3,High School,Black,1,Non-Hispanic
+22,1,WS,118.87,72.52,0,2,High School,Asian,0,Non-Hispanic
+20,0,WS,211.91,37.94,1,2,College,Asian,0,Hispanic
+18,1,WG,124.1,74.46,0,4,Graduate,Other,0,Hispanic
+19,0,WG,240.76,113.84,1,1,Some College,White,0,Hispanic
+19,1,WG,194.41,100.65,1,3,College,Asian,1,Non-Hispanic
+15,0,WS,234.45,56.96,0,3,College,Black,1,Hispanic
+19,1,WG,113.36,108.62,1,4,High School,Other,1,Hispanic
+21,1,WG,281.64,106.38,0,1,Some College,Black,0,Hispanic
+22,1,WG,202.83,141.5,1,4,Graduate,Black,0,Non-Hispanic
+17,0,WS,220.03,134.36,1,2,Graduate,Asian,1,Non-Hispanic
+23,1,WG,126.4,73.84,1,4,High School,White,0,Non-Hispanic
+17,0,WS,244.99,64.32,1,4,Some College,Asian,0,Hispanic
+17,1,WS,227.64,27.18,1,4,High School,Black,0,Hispanic
+19,1,WG,226.41,139.65,0,4,Graduate,Other,0,Hispanic
+20,1,WG,226.88,49.93,0,4,Graduate,Black,0,Non-Hispanic
+16,0,WG,121.9,123.27,1,1,Graduate,Asian,1,Hispanic
+18,1,WS,201.99,48.39,0,2,High School,Black,0,Non-Hispanic
+16,1,WG,117.04,100.82,1,3,Graduate,Black,0,Non-Hispanic
+18,0,WG,122.42,86.61,1,3,High School,Other,1,Hispanic
+17,0,WG,250.17,40.45,0,1,College,White,1,Non-Hispanic
+16,1,WG,258.79,62.67,0,3,High School,Asian,0,Non-Hispanic
+20,0,WG,230.92,127.94,0,4,Graduate,Other,1,Hispanic
+21,1,WG,193.69,139.41,1,1,Graduate,Other,0,Non-Hispanic
+16,0,WG,136.94,128.3,1,2,High School,Asian,1,Non-Hispanic
+18,0,WS,238.3,27.54,1,4,High School,Black,1,Non-Hispanic
+17,0,WS,199.16,49.44,1,4,High School,Asian,0,Non-Hispanic
+20,1,WS,147.14,82.08,0,3,High School,Black,1,Non-Hispanic
+15,0,WS,142.43,130.95,0,2,High School,White,1,Hispanic
+17,1,WS,164.42,120.05,1,3,High School,Black,1,Non-Hispanic
+22,0,WS,152.52,55.35,1,1,Graduate,Asian,1,Non-Hispanic
+21,1,WG,208.25,40.15,1,3,Graduate,Other,1,Hispanic
+19,0,WG,257.7,126.8,0,4,High School,White,0,Non-Hispanic
+18,1,WG,201.02,76.41,0,3,Graduate,Black,0,Non-Hispanic
+16,1,WS,246.8,37.68,1,1,High School,White,1,Hispanic
+16,0,WG,159.94,58.29,0,3,High School,Asian,0,Hispanic
+23,1,WG,120.29,85.77,0,2,Some College,White,0,Non-Hispanic
+22,0,WG,144.53,113.35,0,3,Graduate,Asian,1,Non-Hispanic
+20,1,WG,252.95,101.97,0,4,Some College,Black,0,Hispanic
+18,0,WS,141.4,140.6,1,4,High School,Black,0,Hispanic
+13,0,WG,152.99,39.66,0,1,High School,Asian,0,Hispanic
+14,1,WG,141.15,135.29,1,1,Some College,Asian,1,Hispanic
+19,1,WS,238.63,151.78,1,4,Some College,Black,0,Non-Hispanic
+21,0,WG,280.29,28.19,0,1,College,Asian,1,Hispanic
+17,1,WG,176.31,129.98,0,1,College,White,0,Non-Hispanic
+21,1,WS,172.39,144.23,1,3,High School,Other,1,Non-Hispanic
+22,1,WG,193.16,124.7,0,4,Graduate,Other,0,Hispanic
+20,0,WS,152.09,82.06,0,4,Graduate,Black,0,Hispanic
+24,0,WG,214.15,52.77,1,4,Graduate,Black,1,Hispanic
+20,1,WG,254.92,30.95,0,3,Some College,Asian,1,Non-Hispanic
+22,1,WG,152.94,144.57,1,2,Some College,Asian,1,Hispanic
+18,0,WG,114.4,44.6,1,2,College,Black,1,Non-Hispanic
+17,0,WS,218.19,64.46,1,3,Graduate,White,0,Hispanic
+22,1,WG,118.09,16.66,1,3,Some College,Other,1,Non-Hispanic
+23,1,WG,269.3,62.78,1,2,Graduate,White,0,Non-Hispanic
+22,1,WS,124.22,156.73,1,4,College,White,1,Non-Hispanic
+18,1,WS,150.99,56.39,1,1,Graduate,White,1,Non-Hispanic
+22,1,WG,184.84,81.51,1,2,Graduate,Black,0,Non-Hispanic
+21,1,WS,233.63,64.38,0,1,Some College,Asian,0,Non-Hispanic
+20,1,WS,166.22,114.13,1,3,High School,Other,1,Hispanic
+14,0,WS,236.12,146.75,1,3,College,White,0,Hispanic
+18,0,WS,128.34,30.56,1,4,College,White,1,Hispanic
+26,1,WS,139.05,79.83,0,1,Graduate,Other,1,Non-Hispanic
+18,0,WS,126.5,98.67,1,2,Some College,Other,1,Non-Hispanic
+18,0,WS,132.31,23.54,0,4,College,Other,1,Hispanic
+22,0,WG,291.62,131.41,0,2,College,Other,0,Non-Hispanic
+21,1,WS,115.67,155.4,1,4,Some College,Black,0,Non-Hispanic
+22,0,WG,266.48,149.32,0,3,College,White,0,Hispanic
+21,1,WS,133.31,83.18,0,3,High School,White,1,Non-Hispanic
+18,0,WG,196.33,100.55,0,3,High School,Black,0,Hispanic
+19,0,WG,302.7,72.8,0,1,Graduate,Asian,0,Non-Hispanic
+16,0,WG,179.69,95.13,1,3,College,Asian,0,Hispanic
+16,0,WS,142.69,147.13,0,2,High School,Other,0,Non-Hispanic
+21,1,WS,269.64,102.38,0,3,Graduate,Other,0,Non-Hispanic
+20,1,WS,275.8,135.88,0,1,College,Asian,0,Non-Hispanic
+18,1,WG,148.81,16.28,0,2,Graduate,Other,0,Hispanic
+17,1,WS,236.31,51.99,1,2,High School,White,1,Hispanic
+16,0,WG,258.69,78.13,1,3,Some College,Black,0,Non-Hispanic
+13,0,WS,194.95,139.63,0,1,Some College,Black,0,Non-Hispanic
+19,0,WS,261.82,55.88,1,3,College,Black,0,Non-Hispanic
+13,0,WS,261.98,127.65,1,3,High School,Other,0,Hispanic
+19,1,WS,223.75,146.85,0,4,Some College,Other,0,Non-Hispanic
+25,1,WS,182.38,140.43,0,4,High School,Asian,0,Non-Hispanic
+19,1,WS,125.72,99.83,0,2,College,Black,0,Hispanic
+16,0,WG,241.74,94.16,0,4,High School,White,0,Non-Hispanic
+21,0,WG,209.16,131.11,0,2,College,Asian,0,Hispanic
+16,0,WG,171.76,123.17,0,1,College,Black,0,Non-Hispanic
+19,1,WS,145.38,83.63,1,2,College,Asian,0,Non-Hispanic
+20,1,WS,175.08,53.05,0,3,Graduate,Other,0,Non-Hispanic
+13,0,WS,147.76,137.51,0,2,Some College,White,0,Non-Hispanic
+15,1,WG,238.66,118.59,1,1,High School,Other,0,Hispanic
+21,0,WG,231.27,82.18,1,3,College,Asian,0,Hispanic
+19,0,WG,165.7,104.8,0,2,Graduate,Asian,0,Hispanic
+22,1,WS,144.1,33.66,0,1,Graduate,Black,1,Non-Hispanic
+21,0,WS,141.23,65.16,1,2,College,Other,1,Non-Hispanic
+23,0,WS,285.8,88.53,1,3,Some College,White,0,Non-Hispanic
+15,1,WG,139.32,71.39,0,2,High School,White,0,Hispanic
+18,0,WG,251.55,99.7,1,1,College,Black,1,Hispanic
+20,0,WG,126.97,45.98,0,2,Graduate,Asian,1,Non-Hispanic
+19,0,WS,127.57,87.71,1,2,High School,Asian,0,Non-Hispanic
+18,0,WS,167.36,75.58,0,2,Graduate,Asian,0,Non-Hispanic
+22,0,WS,183.68,148.45,1,2,Some College,Other,0,Hispanic
+17,1,WS,301.58,98.15,1,3,College,Asian,1,Non-Hispanic
+18,0,WG,174.53,120.69,0,1,High School,White,0,Non-Hispanic
+22,1,WS,218.95,62.57,0,2,Some College,Black,1,Hispanic
+15,0,WS,124.57,131.04,1,4,Some College,Asian,1,Non-Hispanic
+16,0,WG,112.94,35.29,1,3,High School,Black,0,Non-Hispanic
+20,1,WG,236.93,152.96,0,3,Some College,Other,1,Hispanic
+14,0,WS,160.2,95.8,1,3,High School,Black,1,Non-Hispanic
+20,1,WS,249.88,61.93,1,3,Graduate,Asian,1,Hispanic
+16,0,WG,139.84,19.23,1,4,Some College,White,1,Non-Hispanic
+12,0,WG,124.73,60.48,0,4,Some College,Black,1,Hispanic
+24,1,WS,208.18,81.31,1,1,College,Other,0,Hispanic
+18,0,WS,124.36,85.57,0,3,College,White,0,Non-Hispanic
+15,0,WG,240.42,80.94,1,2,High School,Black,1,Non-Hispanic
+20,0,WS,133.91,63.94,0,4,High School,Asian,0,Non-Hispanic
+22,1,WG,247.99,113.59,0,1,Graduate,Asian,1,Hispanic
+16,0,WG,160.94,100.3,0,3,High School,Asian,1,Hispanic
+21,0,WS,277.43,132.29,1,2,Graduate,Asian,0,Non-Hispanic
+17,1,WS,191.46,49.08,1,4,Some College,Other,1,Hispanic
+18,0,WG,300.31,134.54,1,1,High School,White,0,Non-Hispanic
+17,0,WS,106.08,34.39,0,2,Graduate,Black,1,Non-Hispanic
+19,1,WS,228.28,24.57,1,2,College,Black,1,Non-Hispanic
+16,1,WS,152.83,30.7,0,1,Some College,Other,1,Non-Hispanic
+19,1,WG,219.75,41.85,0,2,Some College,Other,0,Hispanic
+19,1,WS,223.54,35.73,0,4,Graduate,White,1,Non-Hispanic
+22,1,WG,127.77,136.46,0,2,Graduate,White,0,Hispanic
+22,1,WG,175.01,145.61,1,3,College,Other,1,Hispanic
+23,0,WG,109.79,33.53,0,1,Graduate,White,0,Hispanic
+22,0,WG,129.54,133.36,1,2,College,Other,1,Non-Hispanic
+21,1,WG,265.29,121.18,1,4,College,White,1,Hispanic
+19,0,WS,137.68,104.79,0,2,Graduate,Black,0,Non-Hispanic
+16,0,WS,232.93,117.29,0,1,College,Asian,0,Non-Hispanic
+18,1,WS,251.04,126.42,1,1,Graduate,Asian,0,Hispanic
+18,0,WS,155.27,85.51,0,1,College,Black,0,Hispanic
+22,0,WG,144.54,53.36,1,1,High School,Other,0,Non-Hispanic
+17,0,WG,225.1,88.4,0,4,Graduate,Other,1,Hispanic
+22,1,WG,253.8,22.48,0,1,College,White,1,Non-Hispanic
+18,0,WG,156.35,15.57,0,4,Some College,Asian,1,Non-Hispanic
+18,0,WG,112.26,123.51,1,2,Some College,Black,0,Non-Hispanic
+18,0,WS,296.53,122.69,1,3,High School,Other,1,Non-Hispanic
+16,0,WG,300.71,132.14,1,4,High School,Other,0,Non-Hispanic
+18,0,WG,170.38,84.59,0,3,College,White,0,Hispanic
+16,1,WG,119.15,77.89,0,4,Graduate,Black,0,Non-Hispanic
+25,1,WG,158.67,35.6,0,2,Some College,White,1,Non-Hispanic
+16,0,WS,157.73,126.15,0,4,High School,White,0,Non-Hispanic
+19,0,WS,183.79,71.86,1,1,High School,Black,0,Non-Hispanic
+17,1,WG,133.61,132.17,1,4,College,White,1,Hispanic
+17,0,WS,213.16,120.44,1,2,Some College,Asian,1,Non-Hispanic
+14,0,WS,158.19,139.8,1,1,Graduate,Black,0,Hispanic
+22,1,WS,227.99,47.59,1,3,High School,Other,1,Hispanic
+21,1,WG,194.65,68.39,0,3,College,White,0,Non-Hispanic
+19,1,WG,271.62,95.77,0,3,Some College,White,1,Non-Hispanic
+17,0,WS,285.07,82.38,0,1,College,Black,0,Non-Hispanic
+14,0,WG,232.27,134.85,1,4,High School,White,0,Non-Hispanic
+17,0,WS,152.13,32.42,0,2,Some College,Black,0,Hispanic
+21,1,WS,270.42,146.25,0,1,Some College,Other,1,Hispanic
+16,0,WG,150.69,94.13,1,2,High School,White,1,Hispanic
+18,0,WS,139.33,68.55,0,4,Some College,Other,1,Hispanic
+18,0,WS,239.49,37.66,1,3,Some College,Other,1,Hispanic
+18,0,WS,290.46,123.64,1,3,College,White,0,Hispanic
+17,0,WG,178.1,95.4,1,1,Graduate,Other,1,Non-Hispanic
+22,0,WS,229.61,78.41,0,4,College,Black,1,Hispanic
+21,1,WS,284.38,85.23,0,2,Graduate,Asian,1,Hispanic
+19,1,WS,186.27,61.56,0,1,Some College,White,1,Non-Hispanic
+17,0,WG,139.23,36.49,1,1,Graduate,Black,1,Non-Hispanic
+17,0,WG,159.96,153.31,0,4,High School,Black,1,Hispanic
+18,1,WS,179.24,127.55,0,1,Graduate,White,1,Hispanic
+15,1,WG,230.4,72.44,1,1,Graduate,White,1,Hispanic
+27,0,WS,254.24,95.49,0,3,Some College,Black,1,Non-Hispanic
+20,1,WS,161.99,141.99,1,1,High School,Asian,0,Non-Hispanic
+16,1,WS,197.16,95.89,1,3,Graduate,Other,0,Hispanic
+18,0,WS,293.5,53.67,0,1,High School,Asian,1,Hispanic
+15,0,WS,261.63,26.09,0,3,High School,White,1,Hispanic
+24,1,WG,284.06,72.24,0,3,College,Other,1,Hispanic
+20,1,WG,227.07,27.04,0,1,High School,Black,1,Hispanic
+19,0,WG,252.6,32.73,1,4,College,Other,1,Hispanic
+20,1,WS,295.97,114.98,1,4,Graduate,Black,1,Hispanic
+19,0,WG,248.84,146.89,0,3,High School,White,1,Hispanic
+24,1,WG,138.8,102.08,1,2,Some College,Asian,0,Hispanic
+20,0,WG,117.1,24.07,0,3,Some College,Asian,1,Hispanic
+17,1,WS,238.33,95,1,1,College,Asian,1,Hispanic
+19,1,WS,187.53,124.72,1,4,Some College,White,1,Hispanic
+20,0,WS,142.88,76.92,1,4,High School,Black,1,Non-Hispanic
+19,0,WG,123.56,102.71,1,3,Some College,White,0,Non-Hispanic
+17,0,WG,301.07,63.38,1,3,College,White,0,Hispanic
+16,1,WG,239,130.8,0,4,Some College,Asian,1,Hispanic
+16,0,WG,278.73,107.16,0,3,Graduate,Black,1,Non-Hispanic
+18,0,WG,229.53,33.69,1,1,College,Black,1,Non-Hispanic
+20,0,WS,250.03,90.02,1,2,High School,Other,0,Hispanic
+22,1,WS,234.9,40.54,1,4,College,White,0,Non-Hispanic
+23,1,WG,246.31,65.79,0,3,College,Other,0,Non-Hispanic
+18,0,WG,201.46,13.64,1,3,College,White,1,Hispanic
+16,0,WG,271.9,92.27,1,2,Some College,Black,0,Non-Hispanic
+18,1,WG,220.08,50.45,0,1,Graduate,White,0,Hispanic
+14,0,WS,176.14,43.76,1,3,College,Other,1,Non-Hispanic
+15,0,WG,115.61,46.07,1,4,Graduate,White,1,Hispanic
+18,0,WG,195.31,152.54,1,2,Some College,Other,0,Non-Hispanic
+19,1,WG,308.73,119.84,1,3,Some College,White,1,Non-Hispanic
+17,0,WS,211.13,140.42,0,3,Graduate,Black,0,Hispanic
+19,1,WG,196.55,86.73,0,1,Some College,Asian,0,Non-Hispanic
+18,0,WG,107.32,109.55,0,3,High School,Black,0,Non-Hispanic
+17,0,WG,153.1,86.4,1,1,Some College,White,1,Non-Hispanic
+16,1,WS,110.89,47.73,0,1,Graduate,Asian,1,Non-Hispanic
+19,0,WG,187.69,133.79,1,1,Some College,Asian,1,Non-Hispanic
+15,0,WS,201.63,55.09,1,3,Graduate,Asian,0,Non-Hispanic
+14,0,WG,285.19,129.79,1,3,College,Black,1,Non-Hispanic
+22,1,WS,249.97,111.58,0,3,Some College,Asian,1,Non-Hispanic
+23,1,WG,247.5,144.9,0,1,High School,White,1,Hispanic
+16,1,WS,271.91,44.74,0,4,Graduate,Other,1,Hispanic
+17,0,WG,205.17,97.45,1,1,High School,Black,1,Non-Hispanic
+18,1,WS,173,121.4,0,1,High School,Other,1,Hispanic
+21,0,WS,300.45,40.3,1,4,College,White,1,Non-Hispanic
+22,1,WS,199.09,101.65,0,2,Some College,White,0,Non-Hispanic
+11,0,WS,211.32,44.21,1,3,College,Other,0,Non-Hispanic
+20,0,WS,194.06,52.04,1,4,College,Black,0,Non-Hispanic
+22,1,WG,193.75,149.45,0,3,Some College,White,1,Hispanic
+16,1,WS,112.08,16.85,1,4,College,Asian,0,Hispanic
+18,0,WS,150.32,109.55,0,4,Some College,White,0,Non-Hispanic
+20,0,WG,226.99,42,1,4,College,Asian,1,Hispanic
+23,1,WG,201.44,120.86,1,1,High School,Black,1,Hispanic
+17,0,WS,137.21,63.47,0,3,College,Black,0,Non-Hispanic
+20,1,WS,132.21,120.13,1,1,High School,Black,0,Hispanic
+17,0,WG,286.23,40.49,0,4,Graduate,Other,0,Non-Hispanic
+18,0,WS,270.31,57.54,1,3,College,White,1,Hispanic
+19,0,WG,256.8,28.87,0,1,High School,Asian,1,Non-Hispanic
+18,0,WG,113.37,93.58,1,1,Graduate,Asian,1,Non-Hispanic
+20,0,WG,221.06,95.04,0,3,High School,Other,1,Non-Hispanic
+19,1,WS,216.61,49.77,1,1,Some College,Asian,0,Non-Hispanic
+23,1,WS,249.6,131.96,1,3,Some College,Black,0,Non-Hispanic
+21,1,WG,274.65,23.39,0,4,Some College,White,0,Non-Hispanic
+17,0,WG,209.03,102.35,1,4,High School,White,1,Hispanic
+21,1,WS,256.52,82.31,0,1,College,Black,1,Non-Hispanic
+20,1,WG,169.89,59.93,0,3,Some College,Asian,0,Hispanic
+18,0,WG,117.43,112.62,1,3,College,Black,1,Hispanic
+16,1,WS,182.82,146.69,0,1,Graduate,White,1,Hispanic
+16,0,WG,299.82,123.21,0,4,Graduate,Asian,0,Non-Hispanic
+20,1,WS,302.19,65.11,0,1,High School,Asian,0,Hispanic
+15,1,WG,287.34,50.4,0,1,Graduate,White,0,Non-Hispanic
+20,0,WG,268.86,42.9,1,1,College,Black,1,Hispanic
+21,1,WG,115.47,127.28,1,4,Graduate,White,0,Hispanic
+22,1,WG,180.91,102.55,0,4,High School,Asian,1,Hispanic
+22,1,WG,227.99,38.59,1,3,High School,Asian,1,Hispanic
+16,0,WS,267.65,76.1,1,3,College,Asian,0,Non-Hispanic
+20,0,WS,212.12,93.08,1,2,High School,Asian,0,Non-Hispanic
+18,0,WS,182.28,117.52,1,4,High School,White,1,Hispanic
+19,0,WS,222.8,22.86,1,1,College,White,1,Non-Hispanic
+19,0,WS,195.71,112.8,0,2,Some College,Other,0,Hispanic
+19,1,WG,299.47,29.68,0,1,High School,Asian,0,Non-Hispanic
+19,1,WG,132.58,20.75,1,1,Some College,Black,0,Non-Hispanic
+22,1,WS,229.82,101.49,1,4,Some College,White,0,Non-Hispanic
+19,0,WS,277.78,78.85,0,4,Graduate,Black,1,Hispanic
+18,1,WG,127.23,86.54,1,2,College,Asian,0,Non-Hispanic
+18,0,WS,265.4,108.6,1,2,College,Other,1,Hispanic
+23,1,WG,285.61,136.96,1,3,High School,Black,1,Non-Hispanic
+21,1,WG,212.31,54.19,1,4,College,Other,0,Hispanic
+27,1,WG,208.32,111.99,1,3,Graduate,Asian,1,Non-Hispanic
+23,1,WG,192.25,84.75,1,2,Some College,White,1,Non-Hispanic
+17,0,WS,193.11,128.41,0,4,College,Asian,0,Hispanic
+16,1,WG,281.99,121.8,0,4,Some College,Black,1,Non-Hispanic
+18,1,WG,279.17,95.5,1,3,Some College,Black,1,Hispanic
+21,1,WS,206.74,43.45,0,2,Graduate,White,0,Hispanic
+20,1,WS,190.78,130.87,0,1,College,Asian,1,Hispanic
+21,1,WS,257.27,156.16,1,3,Graduate,Other,1,Non-Hispanic
+19,1,WS,256.72,150.83,1,2,College,Black,0,Non-Hispanic
+17,1,WS,305.52,74.11,0,2,High School,White,1,Non-Hispanic
+23,1,WG,253.49,42.89,1,3,Graduate,Other,0,Non-Hispanic
+19,0,WG,265.59,128.73,1,3,College,Asian,0,Hispanic
+18,1,WG,202.79,47.27,0,4,Graduate,White,1,Non-Hispanic
+20,0,WG,300.11,130.07,1,3,Graduate,Asian,0,Non-Hispanic
+16,1,WS,301.92,37.75,0,2,High School,Other,1,Hispanic
+20,1,WS,145.21,79.13,1,3,High School,Other,1,Hispanic
+18,0,WS,238.38,81.59,0,1,Graduate,Asian,0,Hispanic
+17,0,WG,205.22,22.48,1,2,Graduate,Black,1,Hispanic
+18,1,WG,237.24,110.55,0,2,Some College,Black,1,Non-Hispanic
+21,0,WG,182.37,60.25,1,3,High School,Other,0,Non-Hispanic
+24,1,WS,267.22,67.33,0,3,Graduate,Other,1,Hispanic
+19,1,WG,146.4,19.64,1,2,Some College,Asian,1,Hispanic
+23,0,WG,165.91,56.61,0,3,Some College,White,0,Non-Hispanic
+22,0,WG,189.59,36.39,0,4,Some College,Black,1,Non-Hispanic
+17,0,WG,166.19,147.46,0,4,Some College,Other,0,Hispanic
+21,0,WG,172.41,131.27,0,1,College,White,0,Hispanic
+16,0,WS,227.67,103.11,0,3,College,Asian,0,Non-Hispanic
+15,0,WG,260.54,131.03,0,3,Graduate,Asian,1,Non-Hispanic
+18,1,WG,243.78,92.27,0,3,Graduate,Black,1,Non-Hispanic
+19,0,WS,163.75,151.83,0,3,Some College,Asian,0,Hispanic
+19,1,WS,136.37,92.62,1,3,Some College,Black,0,Non-Hispanic
+18,1,WG,214.85,19.31,1,2,Graduate,Black,1,Non-Hispanic
+22,1,WS,277.2,81.72,1,4,Graduate,Black,1,Non-Hispanic
+21,1,WS,219.66,97.39,0,2,Some College,Other,0,Non-Hispanic
+22,1,WS,295.12,60.67,1,4,Graduate,White,1,Non-Hispanic
+18,0,WS,230.36,73.58,0,3,Graduate,Asian,0,Non-Hispanic
+20,1,WG,190.14,145.08,0,3,Some College,White,1,Non-Hispanic
+16,0,WG,301.92,96.28,0,1,College,Black,0,Non-Hispanic
+17,1,WG,303.41,84.05,0,4,High School,Black,0,Non-Hispanic
+17,0,WS,193.02,83.35,1,4,High School,White,1,Non-Hispanic
+21,1,WS,212.34,55.2,0,3,High School,Asian,1,Non-Hispanic
+18,1,WG,145.05,75.43,1,3,Some College,White,0,Hispanic
+18,1,WS,154.11,152.47,1,1,High School,White,1,Non-Hispanic
+18,0,WS,107.37,95.58,1,1,Graduate,Asian,0,Non-Hispanic
+13,0,WS,254.83,110.55,0,2,Graduate,White,0,Non-Hispanic
+22,1,WS,210.98,58.59,1,4,College,White,0,Non-Hispanic
+17,0,WS,225.02,97.35,0,4,Graduate,Asian,0,Hispanic
+18,1,WG,300.84,53.3,0,1,Some College,Black,1,Hispanic
+17,0,WG,129.25,107.5,1,2,Graduate,Other,1,Hispanic
+16,0,WS,124.85,89.24,0,3,Graduate,Other,1,Non-Hispanic
+15,0,WG,220.5,120,1,3,Some College,Asian,1,Hispanic
+22,1,WS,309.75,70.45,0,2,Some College,Black,0,Non-Hispanic
+18,0,WG,236.39,117.59,1,3,High School,White,0,Hispanic
+20,0,WG,231.09,139.06,0,4,Graduate,White,1,Non-Hispanic
+18,0,WS,153.33,75.55,0,2,Some College,White,0,Non-Hispanic
+21,1,WG,186.61,131.37,1,4,Some College,White,1,Hispanic
+18,0,WG,150.26,91.51,1,3,High School,White,1,Hispanic
+19,1,WG,204.28,76.57,0,1,Graduate,Black,0,Hispanic
+18,1,WS,182.83,78.3,1,3,Some College,Asian,0,Hispanic
+23,1,WG,218.32,98.79,1,4,High School,Asian,1,Non-Hispanic
+22,1,WG,274.05,129.63,1,4,College,Other,0,Hispanic
+23,1,WG,236.64,88.99,1,1,College,Other,0,Non-Hispanic
+23,0,WS,179.87,77.58,1,2,High School,Other,1,Hispanic
+23,1,WG,125.58,64.95,0,1,Some College,Black,0,Non-Hispanic
+18,1,WS,192.07,112.44,1,3,High School,White,0,Non-Hispanic
+23,1,WG,245.67,20,1,1,High School,White,1,Non-Hispanic
+20,0,WS,205.98,126.98,1,2,High School,Black,0,Hispanic
+20,1,WS,141.8,139.88,1,1,Graduate,Black,0,Hispanic
+15,0,WG,235.38,40.92,1,4,College,White,0,Hispanic
+17,1,WS,210.35,133.01,1,3,Some College,Other,1,Hispanic
+19,0,WG,152.82,108.88,0,2,Graduate,White,0,Non-Hispanic
+18,0,WG,126.38,21.59,1,1,Some College,Black,0,Hispanic
+20,0,WG,126.02,68.01,1,3,Graduate,Asian,0,Hispanic
+19,1,WG,211.46,48.67,0,4,Graduate,White,1,Non-Hispanic
+13,0,WG,145.97,68.65,0,3,Graduate,Asian,1,Non-Hispanic
+17,1,WG,130.48,118.09,1,4,High School,Other,1,Non-Hispanic
+21,0,WS,270.32,150.22,1,3,High School,Asian,1,Non-Hispanic
+18,0,WS,153.39,143.59,0,3,Some College,Other,1,Non-Hispanic
+15,1,WS,259.68,141.61,1,4,College,White,0,Non-Hispanic
+19,1,WG,190.62,114.77,1,3,Graduate,Asian,1,Hispanic
+21,1,WS,244.31,140.19,1,2,College,Other,0,Non-Hispanic
+15,0,WS,125.54,45.02,1,3,Some College,White,0,Non-Hispanic
+19,0,WS,264.7,88.8,0,4,College,Asian,0,Hispanic
+20,1,WG,282.16,22.1,0,2,College,Other,1,Hispanic
+19,1,WG,284.7,140.82,0,1,High School,Other,0,Hispanic
+18,0,WG,190.49,83.66,0,1,College,Other,0,Hispanic
+20,1,WS,147.78,100.87,1,3,Graduate,Other,1,Hispanic
+24,1,WG,162.75,101.05,1,4,College,Other,1,Non-Hispanic
+25,1,WS,192.38,21.43,1,3,High School,White,1,Hispanic
+19,1,WS,122.41,64.65,1,1,High School,Black,0,Non-Hispanic
+19,1,WS,192.43,29.66,1,1,Graduate,White,1,Hispanic
+17,0,WG,114.13,103.42,1,2,High School,Black,1,Non-Hispanic
+13,1,WS,134.71,31.03,0,1,Some College,Black,1,Non-Hispanic
+17,0,WG,258.13,140.42,1,3,High School,Black,1,Hispanic
+18,1,WG,167.1,78.46,0,1,College,Asian,0,Hispanic
+20,1,WS,113.84,110.9,0,2,High School,Black,0,Non-Hispanic
+22,1,WG,152.76,96.46,0,2,High School,Asian,0,Non-Hispanic
+22,1,WG,193.77,144.46,0,2,Graduate,White,0,Non-Hispanic
+18,1,WS,301.2,57.52,1,3,Some College,Asian,0,Hispanic
+19,0,WG,189.77,52.85,0,3,College,Other,1,Hispanic
+22,1,WS,111.25,148.75,0,1,College,Asian,1,Hispanic
+19,0,WG,238.76,71.84,0,4,College,Asian,0,Non-Hispanic
+25,1,WS,130.32,125.39,1,3,Some College,Black,0,Hispanic
+17,0,WS,286.03,121.36,0,4,Some College,Other,0,Hispanic
+18,0,WS,214.44,35.63,1,2,College,Black,0,Non-Hispanic
+22,1,WG,182.82,116.49,0,1,Some College,Other,0,Hispanic
+20,0,WS,130.92,122.95,1,3,Some College,Asian,1,Hispanic
+21,1,WG,182.67,44.4,1,4,College,Other,1,Hispanic
+20,1,WS,195.96,133.98,1,3,Some College,Other,0,Non-Hispanic
+21,1,WS,187.61,31.37,0,4,College,Black,1,Hispanic
+22,0,WS,261.69,41.46,1,2,College,White,0,Non-Hispanic
+21,0,WS,259.26,64.18,0,3,Some College,Other,0,Non-Hispanic
+24,1,WG,147.92,95.15,0,1,Some College,Asian,1,Non-Hispanic
+17,0,WS,178.15,91.43,1,4,High School,Asian,1,Non-Hispanic
+19,1,WS,144.27,92.56,0,1,Graduate,Other,1,Non-Hispanic
+15,0,WS,294.6,33.06,0,4,Graduate,Black,1,Non-Hispanic
+17,0,WS,195.13,107.42,0,1,Some College,Black,0,Hispanic
+18,0,WS,181.32,54.55,1,3,High School,Other,1,Non-Hispanic
+19,1,WS,143.64,114.79,1,3,Graduate,White,0,Non-Hispanic
+18,1,WG,237,38.4,0,1,Graduate,White,1,Hispanic
+19,1,WG,208.74,127.84,1,4,Graduate,Asian,0,Non-Hispanic
+20,0,WS,287.09,103.06,0,2,High School,Other,0,Non-Hispanic
+20,1,WS,199.93,146.96,1,2,Graduate,Black,0,Non-Hispanic
+23,0,WS,224.97,117.65,1,4,College,Other,0,Hispanic
+19,1,WS,143.69,33.81,1,1,College,Black,1,Non-Hispanic
+18,0,WG,120.45,109.63,0,3,College,Black,1,Non-Hispanic
+18,1,WS,303.81,17.29,0,4,Some College,Asian,1,Hispanic
+21,0,WG,243.38,141.25,1,2,High School,Asian,1,Non-Hispanic
+15,1,WS,140.4,61.44,0,3,Graduate,Asian,0,Hispanic
+22,1,WG,178.86,58.51,0,1,College,White,1,Hispanic
+21,1,WG,133.71,65.42,1,2,College,Other,1,Non-Hispanic
+28,1,WG,300.94,88.36,0,2,High School,Other,1,Non-Hispanic
+16,1,WG,140.06,77.83,1,1,Graduate,Black,1,Hispanic
+20,0,WS,160.07,19.05,1,1,Graduate,Other,0,Non-Hispanic
+22,1,WS,278.24,104.74,1,4,Graduate,White,0,Non-Hispanic
+21,1,WG,217.65,27.39,0,1,College,Other,1,Non-Hispanic
+17,0,WG,298.12,90.42,0,3,Graduate,Other,1,Hispanic
+19,1,WG,149.28,124.57,0,3,Graduate,White,1,Hispanic
+21,0,WS,150.32,67.22,0,4,Some College,Other,0,Non-Hispanic
+15,1,WS,297.54,83.53,1,3,Some College,Black,1,Hispanic
+16,0,WG,213.66,19.1,0,1,Graduate,Other,0,Non-Hispanic
+18,1,WG,209.78,90.27,0,1,High School,Other,1,Non-Hispanic
+21,0,WG,207.16,96.11,1,4,High School,Other,1,Non-Hispanic
+21,0,WG,136.4,32.27,0,1,College,Asian,0,Non-Hispanic
+17,1,WG,126.61,124.17,0,4,High School,Black,1,Non-Hispanic
+17,0,WS,119.98,56.32,1,3,Graduate,Other,0,Non-Hispanic
+23,1,WS,213.59,59.96,1,4,College,Other,1,Hispanic
+23,1,WG,215.73,69.04,1,3,Some College,Black,0,Non-Hispanic
+18,0,WG,122.28,42.52,0,1,College,Black,1,Non-Hispanic
+20,1,WG,247.8,113.88,1,3,High School,Other,0,Non-Hispanic
+14,0,WS,266.1,66.73,0,3,College,White,1,Non-Hispanic
+22,1,WG,165.84,68.5,1,3,Some College,Asian,0,Non-Hispanic
+22,0,WG,125.52,104.35,1,2,College,White,0,Non-Hispanic
+18,1,WG,195.12,120.47,0,2,High School,Other,0,Non-Hispanic
+20,1,WG,282.24,65.15,1,4,Some College,White,1,Hispanic
+21,0,WG,294.44,85.29,0,1,Some College,Other,0,Hispanic
+17,0,WG,170.03,90.35,1,1,Graduate,Black,0,Non-Hispanic
+20,1,WG,137.82,98.89,0,4,High School,Black,0,Hispanic
+18,1,WG,303.8,105.28,0,1,Graduate,White,1,Hispanic
+18,0,WG,225.36,32.57,0,1,High School,Asian,0,Hispanic
+16,0,WG,146.77,83.18,1,4,High School,White,0,Non-Hispanic
+19,0,WS,269.77,115.84,0,1,Graduate,White,1,Non-Hispanic
+18,1,WS,221.97,143.38,1,3,High School,Black,0,Hispanic
+20,0,WS,107.91,66.94,0,1,Some College,Black,1,Non-Hispanic
+19,1,WG,222.74,106.84,1,2,Graduate,Asian,0,Non-Hispanic
+17,0,WG,186.24,71.49,0,2,Some College,White,0,Hispanic
+21,1,WG,113.71,37.42,0,3,High School,Black,1,Hispanic
+15,0,WG,236.61,131.08,0,1,Graduate,Asian,0,Non-Hispanic
+20,1,WS,231.76,72.86,0,1,Graduate,Black,0,Non-Hispanic
+21,0,WG,274.21,79.14,0,1,Graduate,Asian,0,Non-Hispanic
+15,0,WS,154.44,27.96,1,3,Graduate,White,0,Hispanic
+17,1,WG,182.4,65.04,1,2,College,Other,0,Hispanic
+21,1,WS,233.59,26.35,0,3,Graduate,Asian,1,Non-Hispanic
+18,0,WS,153.36,136.57,1,2,College,Black,1,Hispanic
+20,1,WS,176.91,46.95,1,2,High School,Other,1,Hispanic
+22,1,WG,236.01,44.61,1,4,Graduate,White,0,Hispanic
+17,0,WG,279.25,14.5,1,1,Some College,Other,0,Hispanic
+17,0,WS,219.25,136.5,1,4,Some College,Black,0,Non-Hispanic
+21,1,WS,209.51,65.31,1,2,College,White,0,Non-Hispanic
+16,1,WS,161.01,21.81,1,1,Graduate,Black,0,Non-Hispanic
+16,1,WS,179.79,117.68,1,1,College,White,1,Hispanic
+17,1,WG,232.53,136.12,0,2,High School,White,0,Non-Hispanic
+21,1,WG,296.52,60.31,1,3,College,Black,0,Hispanic
+20,1,WS,129.13,62.08,1,2,College,Other,1,Non-Hispanic
+20,1,WS,231.96,54.98,0,3,Graduate,Other,0,Hispanic
+16,0,WS,221.84,130.23,1,4,Graduate,Asian,1,Non-Hispanic
+19,1,WS,225.36,102.62,0,3,High School,Other,1,Non-Hispanic
+17,0,WS,190.18,89.45,1,3,College,Asian,0,Non-Hispanic
+22,1,WS,298.01,93.61,0,4,Graduate,Black,0,Non-Hispanic
+20,1,WS,270.77,132.86,0,3,Graduate,White,1,Non-Hispanic
+16,0,WS,245.87,78.25,1,1,High School,White,0,Hispanic
+20,0,WS,302.93,60.95,1,2,High School,Asian,1,Hispanic
+22,1,WS,202.13,17.68,0,1,Some College,Other,1,Non-Hispanic
+19,0,WS,153.63,35.75,1,3,Graduate,Asian,1,Non-Hispanic
+16,0,WS,240.68,134.12,0,1,High School,Other,0,Hispanic
+18,1,WS,227.89,89.34,1,2,High School,White,0,Hispanic
+18,0,WS,194.49,108.66,1,2,Graduate,Other,1,Non-Hispanic
+21,1,WS,118.36,135.21,0,3,College,Black,1,Hispanic
+18,0,WS,278.26,16.5,0,4,College,White,0,Non-Hispanic
+18,1,WG,163.22,22.53,1,3,Graduate,Black,1,Hispanic
+17,0,WS,209.12,125.41,0,2,High School,White,1,Non-Hispanic
+22,1,WS,110.88,102.53,0,3,High School,White,1,Hispanic
+24,1,WG,250.07,108.24,1,2,College,Black,0,Non-Hispanic
+17,0,WG,165.14,71.43,1,3,College,Other,0,Hispanic
+21,0,WG,176.34,150.23,1,4,High School,Black,0,Non-Hispanic
+20,1,WS,283.98,154.99,1,3,College,Asian,1,Non-Hispanic
+22,1,WG,269.97,101.58,0,3,Graduate,Other,1,Non-Hispanic
+24,1,WS,244.94,118.17,1,3,Some College,Other,0,Hispanic
+19,0,WS,196.69,46.79,1,4,Graduate,Asian,0,Non-Hispanic
+21,1,WS,212.32,156.19,0,1,High School,Asian,1,Non-Hispanic
+27,1,WS,280.32,19.99,0,1,Graduate,Other,1,Non-Hispanic
+23,1,WS,271.45,53.87,0,1,College,Asian,1,Non-Hispanic
+19,1,WG,210.35,33.61,1,1,Graduate,Asian,0,Hispanic
+21,1,WG,148.51,70.31,1,2,College,White,0,Non-Hispanic
+21,1,WS,217.44,26.27,1,3,High School,Other,1,Non-Hispanic
+14,0,WG,216.14,135.76,1,3,High School,Other,0,Non-Hispanic
+21,1,WS,153.34,90.2,0,3,High School,White,0,Non-Hispanic
+17,0,WG,188.16,89.44,0,2,Graduate,Asian,1,Non-Hispanic
+16,1,WS,149.17,142.9,1,4,High School,Asian,1,Hispanic
+17,1,WG,150.72,70.23,1,4,Some College,Other,0,Non-Hispanic
+17,0,WG,158.2,134.46,1,3,High School,Black,0,Non-Hispanic
+20,0,WG,287.92,45.95,1,2,Some College,Black,0,Non-Hispanic
+16,0,WS,196.76,140.17,0,1,High School,Black,0,Hispanic
+22,1,WS,154.89,136.54,0,2,Some College,Black,1,Hispanic
+20,1,WG,282.05,77.03,1,1,Graduate,White,0,Hispanic
+15,0,WG,251.5,54,1,1,Graduate,Other,1,Hispanic
+15,1,WG,200.59,32.56,0,2,Graduate,White,0,Hispanic
+22,1,WG,171.98,100.59,0,2,Some College,Black,0,Hispanic
+17,0,WS,263.08,17.39,1,1,High School,Other,1,Non-Hispanic
+16,0,WS,243.92,130.28,0,2,College,Black,0,Non-Hispanic
+20,0,WG,218.96,148.97,1,4,Graduate,Black,1,Non-Hispanic
+19,0,WG,274.63,36.75,1,4,Graduate,Other,0,Non-Hispanic
+19,0,WS,159.82,23.88,0,4,Some College,Black,1,Non-Hispanic
+20,0,WG,215.07,44.05,1,3,Graduate,Asian,1,Hispanic
+18,0,WG,109.31,28.54,0,1,Graduate,Other,1,Non-Hispanic
+21,1,WS,257.72,36.43,1,4,Graduate,Asian,0,Non-Hispanic
+21,0,WS,295.27,39.18,0,2,Some College,Other,1,Hispanic
+18,0,WG,154.26,70.51,0,3,College,Black,0,Hispanic
+19,1,WG,201.56,16.73,0,3,High School,Black,0,Non-Hispanic
+18,0,WG,202.51,93.67,1,2,Graduate,Other,0,Non-Hispanic
+22,1,WG,276.09,55.66,0,1,High School,Other,1,Hispanic
+16,0,WG,155.77,60.18,1,2,Some College,Asian,1,Hispanic
+20,0,WS,129.05,135.03,1,2,High School,Other,0,Non-Hispanic
+18,0,WS,196.51,88.67,1,3,Graduate,White,0,Hispanic
+21,1,WG,269.72,119.43,1,1,College,Asian,0,Non-Hispanic
+25,1,WS,259.33,56.4,0,4,Some College,Asian,0,Non-Hispanic
+23,0,WS,160.84,111.56,1,4,Some College,Other,0,Hispanic
+22,1,WS,205.08,124.65,1,2,Some College,White,0,Non-Hispanic
+18,0,WG,243.52,56.68,0,2,College,Other,0,Non-Hispanic
+23,1,WS,245.39,136.83,1,3,College,White,1,Hispanic
+24,1,WS,198.07,103.24,0,2,High School,Other,0,Non-Hispanic
+20,1,WG,261.76,60.86,0,2,Graduate,White,0,Hispanic
+19,1,WG,148.34,25.6,1,1,Graduate,Other,0,Hispanic
+22,0,WS,106.64,109.42,0,3,Some College,Asian,0,Non-Hispanic
+16,0,WS,109.95,51.3,0,2,High School,Asian,0,Non-Hispanic
+23,1,WS,123.73,137.04,1,3,High School,Black,0,Hispanic
+14,0,WS,190.32,102.88,0,4,College,Black,0,Non-Hispanic
+22,1,WG,269.88,68.53,1,2,High School,Asian,1,Hispanic
+18,0,WG,278.48,133.65,0,2,College,White,1,Non-Hispanic
+24,1,WG,194.04,118.22,1,2,College,Asian,1,Hispanic
+22,1,WS,261.2,83.72,1,3,Some College,Other,1,Hispanic
+21,1,WG,295.61,24.37,0,2,Graduate,Other,0,Hispanic
+15,1,WS,304.59,57.55,0,2,Graduate,White,1,Hispanic
+22,0,WS,262.48,63.32,1,1,High School,Other,0,Hispanic
+19,1,WS,184.75,85.85,1,2,Graduate,Other,0,Non-Hispanic
+19,0,WG,246.62,38.75,0,2,College,Black,0,Non-Hispanic
+19,1,WS,256.53,97.72,1,3,Some College,Black,1,Hispanic
+14,0,WS,171.26,92.84,0,4,College,Black,0,Non-Hispanic
+16,0,WS,251.91,62.27,0,3,High School,White,0,Hispanic
+16,1,WG,249.04,133.82,0,2,College,Other,1,Hispanic
+20,0,WS,160.86,84.91,0,3,High School,Asian,0,Hispanic
+19,0,WG,284.7,130.8,0,3,High School,Black,1,Non-Hispanic
+15,0,WS,215.59,41.06,1,3,Some College,Asian,1,Hispanic
+19,1,WS,205.62,80.77,1,2,High School,White,1,Hispanic
+22,1,WS,111.13,35.68,1,1,High School,Other,1,Hispanic
+18,0,WG,226.26,76.51,1,2,Graduate,Asian,1,Hispanic
+17,0,WG,203.08,68.39,1,1,High School,Other,0,Hispanic
+23,1,WS,178.35,21.81,1,3,High School,Other,0,Non-Hispanic
+18,1,WS,181.1,75.46,0,2,Some College,Asian,0,Hispanic
+19,1,WS,147.72,147.83,0,2,High School,Asian,0,Non-Hispanic
+14,0,WS,233.22,44.81,0,4,Some College,White,1,Non-Hispanic
+15,1,WS,178.65,108.59,0,3,Some College,Other,0,Non-Hispanic
+18,1,WS,179.96,39.38,1,3,Graduate,Other,1,Non-Hispanic
+16,0,WS,161.94,150.3,1,3,Some College,White,1,Hispanic
+18,1,WG,254.17,106.5,1,4,High School,White,1,Hispanic
+14,0,WG,268.27,62.84,1,3,Graduate,Asian,1,Non-Hispanic
+21,0,WS,210.24,148.16,0,2,College,Other,1,Non-Hispanic
+19,1,WG,255.54,77.72,1,4,College,White,1,Hispanic
+20,1,WS,294.85,131.91,0,4,High School,White,1,Non-Hispanic
+21,1,WS,157.57,62.34,0,2,High School,White,1,Non-Hispanic
+19,0,WS,256.77,79.84,1,3,Graduate,Asian,1,Non-Hispanic
+24,1,WS,272.8,98.08,1,2,College,Other,0,Non-Hispanic
+23,1,WG,156.26,39.76,0,2,College,White,0,Hispanic
+20,0,WS,305.1,138.07,0,4,College,White,1,Non-Hispanic
+22,0,WG,144.54,76.36,0,4,College,Black,0,Hispanic
+14,0,WG,108.2,124.8,0,2,Some College,Asian,1,Hispanic
+20,1,WG,131.09,63.05,0,2,High School,Other,0,Hispanic
+20,1,WG,234.83,30.9,0,2,High School,Other,0,Non-Hispanic
+13,0,WS,246.84,66.56,0,1,Some College,Asian,0,Non-Hispanic
+24,1,WS,115.15,85.29,0,1,Graduate,Asian,0,Non-Hispanic
+19,0,WG,272.84,52.89,0,2,Graduate,Asian,1,Non-Hispanic
+21,1,WG,202.51,81.3,0,2,Some College,Black,1,Hispanic
+18,0,WS,305.54,52.69,1,2,College,Other,1,Hispanic
+25,1,WG,200.58,47.55,0,4,College,White,1,Hispanic
+24,0,WG,223.21,114.81,0,4,Graduate,White,0,Non-Hispanic
+22,1,WS,141.02,147.61,1,3,College,White,0,Non-Hispanic
+20,1,WS,281.1,82.06,1,1,Some College,Asian,0,Hispanic
+17,1,WS,277.59,132.15,0,4,Graduate,Asian,1,Non-Hispanic
+19,1,WG,192.37,144.62,1,1,Graduate,Other,0,Non-Hispanic
+19,0,WS,106.79,26.86,1,2,Graduate,Asian,0,Hispanic
+15,0,WG,291.49,110,0,1,High School,Other,1,Non-Hispanic
+20,0,WS,264.9,133.93,1,1,College,Black,1,Hispanic
+19,0,WS,177.72,146.81,1,1,Graduate,White,1,Hispanic
+19,1,WS,163.3,93.58,0,3,Graduate,White,0,Hispanic
+23,1,WS,203.52,61.91,1,1,Graduate,Asian,1,Non-Hispanic
+21,1,WS,253.3,112.18,0,2,Graduate,Black,1,Hispanic
+17,1,WG,243.66,31.2,0,2,Graduate,Other,0,Hispanic
+16,0,WS,151.75,54.16,1,1,Some College,Other,1,Non-Hispanic
+16,0,WS,248.8,95.2,1,3,Graduate,Other,1,Hispanic
+20,1,WG,120.17,44.1,1,4,High School,Black,1,Hispanic
+20,1,WG,164.85,82.91,0,1,College,Asian,0,Non-Hispanic
+18,0,WG,199.55,115.7,0,4,Graduate,Black,1,Non-Hispanic
+18,0,WG,126.33,102.56,1,4,High School,Black,1,Hispanic
+20,1,WS,161.79,25.87,1,4,Graduate,Black,0,Non-Hispanic
+18,1,WG,280.09,147.46,1,1,High School,Black,0,Non-Hispanic
+19,1,WS,250.55,88.73,1,3,Some College,White,1,Non-Hispanic
+19,0,WG,257.76,57.84,0,1,Graduate,White,1,Hispanic
+15,0,WG,221.52,20.01,1,3,High School,Other,0,Non-Hispanic
+16,0,WS,246.86,74.24,1,2,Graduate,Black,0,Non-Hispanic
+18,1,WS,132.2,96.52,0,1,High School,Black,0,Non-Hispanic
+22,0,WS,163.69,150.46,0,4,Some College,White,0,Hispanic
+20,1,WS,140.82,154.89,0,2,College,Asian,1,Non-Hispanic
+20,1,WG,143,66,0,4,High School,White,0,Non-Hispanic
+19,1,WS,239.6,153.76,0,1,Some College,White,1,Hispanic
+19,1,WG,271.47,27.68,1,2,High School,Other,0,Non-Hispanic
+15,0,WS,195.43,33.95,0,3,College,White,1,Non-Hispanic
+20,0,WS,239.89,118.93,0,3,College,Black,1,Non-Hispanic
+20,1,WS,163.24,52.15,0,3,Graduate,White,1,Non-Hispanic
+20,0,WG,115.12,110.08,0,3,High School,Black,0,Hispanic
+19,0,WG,222.74,78.83,1,2,College,Asian,1,Hispanic
+24,1,WS,126.85,67.11,1,3,College,White,0,Non-Hispanic
+17,0,WG,300.97,17.32,1,3,College,White,1,Hispanic
+23,0,WS,151.98,113.65,1,3,High School,White,1,Non-Hispanic
+22,1,WG,119.83,59.5,0,4,Some College,Black,0,Hispanic
+20,0,WS,238.98,112.99,1,1,Some College,Other,1,Non-Hispanic
+20,1,WG,127.22,71.13,0,2,High School,Other,1,Hispanic
+20,0,WS,203.99,132.99,0,1,High School,Other,0,Non-Hispanic
+21,1,WS,132.51,63.3,1,1,High School,White,1,Non-Hispanic
+20,0,WG,290.06,114.04,0,2,Some College,Black,0,Non-Hispanic
+19,0,WS,255.8,25.87,1,1,Graduate,Other,1,Non-Hispanic
+17,1,WG,254.52,112.11,1,1,Graduate,Black,0,Hispanic
+19,1,WS,182.72,125.83,0,4,Some College,Black,1,Hispanic
+17,0,WG,277.11,20.41,1,4,College,White,0,Non-Hispanic
+22,1,WS,252,130.6,1,3,Some College,Black,0,Non-Hispanic
+17,1,WS,300.49,110.09,0,3,College,Asian,1,Hispanic
+19,0,WG,189.63,21.75,1,2,High School,White,1,Hispanic
+16,0,WS,118.79,78.2,1,2,Some College,Asian,0,Hispanic
+20,1,WG,121.81,23.89,0,2,High School,Other,0,Non-Hispanic
+21,0,WS,126.22,31.15,0,2,Some College,Other,0,Hispanic
+18,0,WG,187.49,57.66,1,1,Graduate,Asian,0,Non-Hispanic
+15,0,WG,160.63,111.08,0,4,Some College,Black,0,Hispanic
+14,0,WG,120.06,151.71,0,4,Graduate,Black,1,Hispanic
+24,1,WG,225.21,56.33,0,1,Graduate,Black,0,Hispanic
+20,0,WS,151.88,79.92,0,2,High School,Other,1,Hispanic
+19,0,WS,161.76,131.84,0,4,Graduate,Black,0,Non-Hispanic
+17,1,WG,159.41,65.04,0,1,Some College,Other,0,Hispanic
+20,1,WG,120.24,29.14,0,1,College,Asian,0,Non-Hispanic
+23,1,WS,153.36,70.82,0,4,Some College,Other,0,Hispanic
+20,0,WG,120.12,127.08,1,1,Some College,Asian,1,Hispanic
+23,1,WS,121.46,141.88,0,3,Graduate,Asian,0,Hispanic
+23,1,WG,201.27,79.76,1,4,College,Other,0,Hispanic
+20,1,WG,230.21,33.12,0,4,Some College,Asian,1,Non-Hispanic
+16,1,WG,147.84,41.7,1,4,College,Asian,0,Hispanic
+21,1,WG,302.56,81.34,0,4,College,Other,1,Non-Hispanic
+23,1,WS,267.41,117.84,0,3,High School,Other,0,Non-Hispanic
+22,0,WS,136.65,80.43,0,1,Some College,Black,1,Hispanic
+22,1,WS,246.83,16.5,1,4,Some College,Asian,0,Hispanic
+24,1,WG,252.11,152.27,0,4,Graduate,White,0,Hispanic
+17,0,WS,131.24,58.49,0,4,Some College,Asian,0,Hispanic
+23,1,WS,252.3,136.78,1,3,High School,White,1,Non-Hispanic
+19,1,WS,120.61,136.77,0,4,Graduate,Other,0,Hispanic
+22,1,WG,113.14,148.69,0,3,Graduate,Black,0,Hispanic
+17,0,WG,176.03,153.36,0,4,College,Other,1,Non-Hispanic
+22,0,WS,109.49,69.32,1,1,College,Asian,1,Non-Hispanic
+22,1,WS,292.19,156.72,0,3,College,Other,0,Hispanic
+19,0,WG,117.63,146.76,0,1,Graduate,White,0,Non-Hispanic
+22,1,WG,261.02,35.61,0,2,Some College,Other,0,Non-Hispanic
+17,0,WS,225.25,13.5,0,4,Some College,Black,1,Hispanic
+21,1,WS,255.35,106.21,1,2,Graduate,White,0,Non-Hispanic
+19,1,WS,304.52,19.71,0,4,High School,Black,0,Hispanic
+15,0,WS,172.6,27.07,0,1,High School,Other,0,Non-Hispanic
+20,0,WS,140.06,84.04,0,1,Graduate,Asian,0,Hispanic
+18,1,WG,214.05,108.43,0,1,Graduate,Black,0,Hispanic
+15,0,WG,144.64,117.09,1,2,Graduate,Other,0,Non-Hispanic
+15,0,WS,273.46,24.97,1,4,College,Asian,1,Non-Hispanic
+18,0,WS,237.41,93.61,0,3,High School,Other,0,Non-Hispanic
+19,0,WG,191.65,146.77,1,1,Graduate,Black,0,Hispanic
+20,1,WG,237.86,136.91,1,3,College,White,1,Hispanic
+23,1,WS,311.26,76.75,0,2,Some College,Other,1,Non-Hispanic
+23,1,WS,306.25,110.75,0,1,Graduate,Asian,0,Non-Hispanic
+21,1,WG,237.48,82.29,1,2,Some College,Black,0,Hispanic
+17,1,WS,298.33,38,0,2,Some College,Asian,1,Hispanic
+12,0,WS,183.53,45.35,0,1,High School,Other,1,Hispanic
+18,0,WG,283.49,20.66,0,3,High School,Black,1,Non-Hispanic
+16,0,WS,167.86,91.24,1,1,College,Asian,1,Non-Hispanic
+23,1,WG,307.48,106.89,0,2,Graduate,White,0,Non-Hispanic
+18,0,WS,221.48,97.65,1,4,Some College,Asian,1,Hispanic
+18,0,WG,304.41,21.6,0,1,High School,White,1,Non-Hispanic
+16,0,WS,107.73,71.15,0,3,College,White,1,Hispanic
+21,1,WG,196.25,18.15,0,4,Some College,Asian,0,Hispanic
+22,1,WG,182.84,56.51,0,1,Some College,Asian,0,Hispanic
+21,1,WG,271.66,106.4,1,2,Some College,Other,1,Non-Hispanic
+19,1,WS,195.51,139.7,0,3,Graduate,White,1,Non-Hispanic
+19,1,WS,194.52,38.71,1,4,College,Other,0,Hispanic
+20,0,WS,231.86,25.91,1,4,High School,Other,1,Non-Hispanic
+20,1,WG,185.9,125.94,0,4,High School,Other,0,Hispanic
+19,0,WS,264.55,124.7,0,3,Some College,Black,0,Non-Hispanic
+21,0,WS,293.16,20.11,1,3,Graduate,White,1,Non-Hispanic
+18,0,WS,234.31,60.54,1,4,College,Black,1,Non-Hispanic
+22,1,WG,134.16,139.69,0,2,Some College,Other,0,Non-Hispanic
+22,1,WS,183.93,64.56,1,3,High School,Asian,1,Hispanic
+16,0,WS,168.69,25.13,1,4,High School,Other,1,Hispanic
+22,1,WS,259.12,46.67,1,3,High School,Other,1,Hispanic
+16,0,WS,108.82,54.21,0,3,Graduate,Other,0,Non-Hispanic
+19,1,WG,191.34,17.6,0,3,Graduate,Other,1,Hispanic
+16,1,WS,268.77,87.66,1,4,High School,Asian,0,Hispanic
+21,1,WG,192.68,64.41,0,2,College,White,0,Non-Hispanic
+14,0,WS,244.26,143.84,1,3,College,Black,0,Hispanic
+15,0,WG,136.52,112.01,1,1,Some College,White,0,Hispanic
+20,1,WS,114.19,62.11,0,2,Some College,Other,1,Non-Hispanic
+14,1,WG,221.24,116.34,0,1,High School,Asian,1,Hispanic
+20,0,WS,124.92,40.94,0,3,Some College,Black,0,Hispanic
+19,0,WG,229.73,47.82,1,3,College,White,1,Hispanic
+16,0,WS,181.87,130.24,0,4,Graduate,Other,1,Hispanic
+19,0,WS,170.76,120.84,1,4,Some College,Asian,0,Non-Hispanic
+20,1,WG,217.02,51.01,1,1,College,White,0,Hispanic
+15,1,WS,262.25,91.35,0,3,Graduate,White,1,Hispanic
+21,1,WS,190.58,103.35,1,2,Some College,White,0,Non-Hispanic
+16,0,WS,286.77,61.18,0,1,High School,Black,1,Hispanic
+15,0,WS,288.63,41.09,1,1,High School,Black,0,Hispanic
+21,0,WG,259.25,100.17,1,1,College,White,1,Non-Hispanic
+24,1,WS,119.11,21.27,1,2,Some College,Asian,1,Non-Hispanic
+22,1,WG,124.08,41.65,0,3,Graduate,Asian,1,Non-Hispanic
+21,1,WS,243.49,130.29,0,2,High School,White,1,Non-Hispanic
+16,0,WG,119.81,132.2,1,2,Some College,White,1,Non-Hispanic
+18,0,WG,196.46,132.64,1,1,High School,White,1,Hispanic
+16,1,WS,276.78,100.67,0,2,Graduate,White,1,Non-Hispanic
+23,1,WG,139.35,136.81,0,4,High School,Black,0,Non-Hispanic
+20,1,WS,309.75,142.85,1,4,Graduate,White,0,Non-Hispanic
+19,0,WS,176.7,101.8,0,1,Some College,Black,0,Non-Hispanic
+25,0,WG,137.48,101.99,0,4,Some College,Other,0,Non-Hispanic
+20,0,WG,105.94,46.96,1,3,High School,Black,1,Hispanic
+18,0,WS,160.37,15.58,1,2,Graduate,Asian,1,Hispanic
+21,0,WG,210.2,112.13,1,3,Graduate,Other,1,Non-Hispanic
+18,0,WG,106.4,134.6,1,3,Graduate,White,0,Hispanic
+21,1,WG,205.71,95.42,0,4,Graduate,Black,0,Hispanic
+21,1,WG,254.42,52.25,1,1,Some College,White,1,Hispanic
+20,1,WG,153.14,120.08,0,4,Graduate,White,0,Non-Hispanic
+20,1,WS,236.24,83.14,0,2,Graduate,Black,0,Non-Hispanic
+17,1,WG,215.31,39.98,0,1,Some College,Other,0,Hispanic
+14,1,WG,224.05,61.23,0,1,Some College,Black,0,Hispanic
+16,1,WS,252.89,30.73,1,2,High School,Black,0,Non-Hispanic
+20,1,WS,227.84,64.91,0,1,High School,White,0,Non-Hispanic
+20,1,WS,113.89,56.94,1,1,Some College,Other,0,Non-Hispanic
+16,0,WG,292.68,100.12,1,1,Some College,Black,0,Non-Hispanic
+19,1,WG,173.72,136.83,0,4,Some College,White,1,Non-Hispanic
+20,1,WS,284.81,59.89,0,4,High School,Other,1,Hispanic
+19,1,WG,198.26,120.55,0,1,High School,White,1,Hispanic
+15,1,WG,135.56,69.53,1,3,High School,White,0,Non-Hispanic
+13,0,WS,287.93,143.62,0,4,High School,White,1,Non-Hispanic
+18,0,WS,248.26,82.5,0,1,High School,White,1,Non-Hispanic
+22,1,WS,240.1,127.66,1,1,High School,Black,1,Non-Hispanic
+19,1,WS,147.59,109.75,0,3,Some College,White,1,Hispanic
+19,0,WG,131.65,125.77,0,2,Some College,White,1,Non-Hispanic
+23,1,WG,289.39,73.83,0,3,Graduate,Other,0,Non-Hispanic
+21,1,WS,224.25,67.15,0,1,High School,Black,1,Non-Hispanic
+22,0,WG,182.68,55.45,1,1,Graduate,White,0,Non-Hispanic
+18,1,WS,116.8,134.28,0,3,College,Black,0,Non-Hispanic
+16,1,WS,112.18,44.91,0,2,Some College,Black,0,Hispanic
+19,1,WS,194.61,74.76,0,2,Graduate,Asian,1,Hispanic
+22,1,WS,210.23,117.74,1,4,Some College,White,0,Hispanic
+16,0,WG,108.84,131.23,1,1,Graduate,Asian,0,Non-Hispanic
+13,0,WS,240,92.67,1,3,High School,Black,1,Hispanic
+19,0,WS,226.59,99.73,1,1,Some College,Asian,0,Hispanic
+20,0,WS,140.04,110.03,0,3,High School,White,1,Hispanic
+20,0,WS,263.94,119.96,0,3,Some College,Black,0,Non-Hispanic
+12,1,WG,195.85,49.51,1,2,College,Asian,1,Non-Hispanic
+22,1,WS,261.78,21.47,1,3,Graduate,Asian,1,Non-Hispanic
+16,0,WS,296.74,108.16,0,2,College,Asian,1,Hispanic
+18,0,WS,154.39,31.59,0,4,Some College,Black,1,Non-Hispanic
+22,1,WG,120.98,35.59,0,2,Some College,Black,0,Hispanic
+21,1,WG,224.59,38.36,1,2,High School,White,1,Hispanic
+19,1,WG,222.56,89.74,0,4,Some College,Asian,1,Hispanic
+20,1,WS,221.02,96.01,0,2,Graduate,Asian,0,Hispanic
+18,0,WG,110.38,116.59,1,1,Graduate,White,1,Hispanic
+17,0,WG,222.03,150.35,0,2,College,Asian,0,Hispanic
+21,1,WS,112.67,101.4,0,2,Graduate,Other,0,Non-Hispanic
+17,0,WS,206.22,78.48,1,3,High School,Asian,0,Non-Hispanic
+17,0,WS,278.07,141.38,0,4,Some College,White,1,Hispanic
+19,0,WG,242.76,29.84,1,1,College,Asian,0,Non-Hispanic
+16,0,WS,275.94,75.29,1,1,Some College,Asian,1,Hispanic
+16,0,WG,263.77,38.18,0,4,College,Other,1,Non-Hispanic
+18,0,WS,290.35,141.57,1,4,College,Black,0,Hispanic
+21,1,WG,270.6,19.36,0,3,High School,White,0,Non-Hispanic
+19,1,WS,167.27,149.56,1,3,Some College,Black,0,Hispanic
+18,0,WS,240.31,17.54,1,4,High School,Black,0,Non-Hispanic
+18,0,WG,200.38,53.58,0,2,High School,Black,0,Non-Hispanic
+16,1,WS,288.25,64.95,0,3,College,Other,0,Non-Hispanic
+21,1,WS,168.67,124.4,1,1,College,Other,1,Hispanic
+17,0,WG,227.08,93.39,0,2,College,Black,1,Non-Hispanic
+18,0,WG,211.51,128.67,0,4,Graduate,White,1,Hispanic
+24,1,WS,214.17,61.3,1,1,High School,White,0,Hispanic
+17,1,WS,118.64,135.18,1,4,College,Asian,1,Non-Hispanic
+16,0,WG,110.7,77.13,1,3,Graduate,Black,1,Non-Hispanic
+16,0,WG,193.86,14.24,1,2,Some College,Other,1,Non-Hispanic
+15,0,WS,293.55,147.03,1,2,Graduate,Black,0,Hispanic
+21,1,WS,159.43,20.26,0,4,High School,Other,0,Hispanic
+21,0,WG,194.22,46.15,0,1,Graduate,Black,1,Non-Hispanic
+23,1,WG,310.74,24.04,0,1,Some College,Other,0,Non-Hispanic
+20,0,WG,135.02,33.01,1,2,High School,Other,1,Hispanic
+20,0,WS,294.03,70.02,1,3,Graduate,Other,0,Hispanic
+22,1,WS,205.81,146.49,0,2,Graduate,Other,1,Non-Hispanic
+22,1,WG,142.83,77.5,0,4,High School,White,0,Non-Hispanic
+15,0,WS,255.48,132.98,0,3,Some College,Asian,1,Hispanic
+19,0,WS,150.56,68.71,1,1,Graduate,Black,1,Hispanic
+18,1,WS,110.18,28.51,0,1,College,Asian,1,Non-Hispanic
+18,0,WS,165.53,130.69,1,2,College,Black,0,Non-Hispanic
+23,0,WG,233.79,149.53,0,1,Graduate,Black,0,Non-Hispanic
+19,1,WS,119.39,37.63,0,2,College,White,1,Non-Hispanic
+19,0,WG,236.58,84.72,1,2,College,White,0,Hispanic
+20,1,WG,146.19,36.11,1,1,Graduate,Asian,1,Non-Hispanic
+22,0,WS,187.46,132.3,1,2,High School,Other,0,Non-Hispanic
+22,1,WS,263.16,21.7,0,3,College,Black,1,Non-Hispanic
+25,1,WS,189.73,93.64,1,1,High School,Black,1,Non-Hispanic
+23,1,WG,274.56,124.94,1,3,High School,Asian,1,Hispanic
+19,1,WG,202.39,78.64,1,3,Some College,Asian,0,Non-Hispanic
+18,0,WS,161.42,126.61,1,1,High School,Other,1,Non-Hispanic
+19,1,WG,274.7,138.82,0,4,Graduate,Other,0,Non-Hispanic
+19,0,WG,257.59,81.73,0,3,College,Black,0,Hispanic
+19,0,WG,218.65,49.76,0,4,College,White,1,Hispanic
+19,1,WS,124.72,125.83,0,2,Some College,Black,0,Non-Hispanic
+17,0,WS,263.08,86.38,0,1,High School,Other,1,Non-Hispanic
+14,0,WS,128.26,112.84,1,2,Graduate,White,0,Non-Hispanic
+21,1,WG,212.35,144.21,1,1,Some College,Asian,1,Non-Hispanic
+15,0,WS,120.42,46.95,0,2,Graduate,Black,0,Non-Hispanic
+20,0,WS,129.96,49.97,1,4,Some College,Black,0,Non-Hispanic
+19,0,WG,207.83,105.89,0,3,High School,White,0,Hispanic
+17,0,WG,143.11,46.41,1,4,College,Asian,0,Non-Hispanic
+16,1,WG,147.11,69.87,0,2,Graduate,White,0,Hispanic
+16,1,WS,217.16,55.89,0,2,College,White,0,Hispanic
+14,0,WG,281.25,151.83,1,4,High School,Asian,0,Hispanic
+17,1,WG,208.47,99.08,0,3,College,Asian,0,Non-Hispanic
+19,0,WG,192.84,129.89,1,1,Some College,Asian,0,Hispanic
+22,1,WG,123.11,58.67,1,2,High School,Asian,1,Hispanic
+23,1,WS,296.44,117.86,1,1,Graduate,Asian,1,Hispanic
+26,1,WS,192.84,99.71,0,4,College,White,1,Hispanic
+18,0,WG,299.52,23.68,1,4,Graduate,Black,0,Hispanic
+24,1,WS,253.97,80.18,0,4,College,Other,0,Hispanic
+21,0,WG,204.44,55.29,0,2,Graduate,Asian,0,Hispanic
+24,1,WS,168.9,108.14,0,3,High School,White,1,Hispanic
+14,1,WS,230.12,77.27,0,1,High School,Other,0,Hispanic
+19,0,WG,272.85,108.9,1,4,Some College,Asian,0,Hispanic
+24,1,WS,205.79,141.07,1,3,Some College,Black,1,Non-Hispanic
+20,1,WS,204.99,105.99,1,4,Graduate,Other,0,Non-Hispanic
+22,1,WG,144.06,77.63,1,2,High School,Black,1,Non-Hispanic
+19,0,WG,206.68,87.79,0,3,Some College,White,0,Non-Hispanic
+17,0,WS,230.21,58.47,1,3,Graduate,White,1,Non-Hispanic
+23,0,WG,265.81,34.54,1,3,Graduate,White,0,Non-Hispanic
+18,0,WS,269.3,47.53,0,3,High School,Asian,0,Non-Hispanic
+18,0,WG,203.51,41.68,1,2,Some College,White,0,Non-Hispanic
+20,1,WS,127.11,117.07,1,1,Some College,Black,0,Non-Hispanic
+21,1,WG,294.64,151.39,0,4,College,Black,0,Hispanic
+22,0,WS,178.55,32.37,1,2,College,White,1,Non-Hispanic
+15,1,WS,109.38,126.43,0,1,Some College,Asian,1,Non-Hispanic
+14,0,WS,204.29,116.86,0,4,High School,Asian,0,Hispanic
+17,0,WG,276.18,13.46,0,2,Some College,White,1,Hispanic
+21,1,WG,151.31,71.18,1,4,College,Other,1,Non-Hispanic
+13,0,WS,209.86,33.57,1,1,Graduate,Other,0,Non-Hispanic
+18,1,WS,284.18,146.51,1,3,Graduate,Black,0,Non-Hispanic
+14,0,WS,224.3,86.87,0,3,College,Asian,0,Non-Hispanic
+18,1,WG,163.03,79.42,1,1,High School,Asian,0,Hispanic
+19,1,WS,257.31,140.59,1,4,College,Asian,1,Non-Hispanic
+20,1,WG,171.94,114.96,1,4,Some College,Black,0,Hispanic
+21,0,WS,237.36,74.24,0,2,College,White,1,Hispanic
+17,0,WS,161.2,69.47,0,4,Some College,White,1,Non-Hispanic
+18,0,WS,237.27,139.51,1,2,College,White,1,Hispanic
+19,1,WG,131.52,29.71,0,2,High School,White,1,Non-Hispanic
+17,0,WG,179.12,19.41,1,1,Graduate,White,1,Non-Hispanic
+19,1,WS,162.28,27.57,1,4,Some College,Black,1,Hispanic
+22,0,WS,113.67,80.45,0,4,High School,White,1,Hispanic
+17,1,WG,260.64,57.19,1,2,College,Other,1,Hispanic
+17,0,WG,273.22,107.48,0,1,High School,Other,0,Hispanic
+17,1,WS,207.36,57.02,0,2,Some College,Black,0,Non-Hispanic
+17,1,WG,258.49,98.1,0,4,High School,White,1,Non-Hispanic
+17,1,WG,283.65,127.19,0,2,High School,Black,0,Non-Hispanic
+24,1,WS,232.05,104.23,1,2,Graduate,Other,0,Non-Hispanic
+23,0,WG,221.03,123.68,0,4,Graduate,Asian,0,Hispanic
+15,0,WG,189.54,77.02,1,2,Some College,Asian,0,Non-Hispanic
+20,0,WG,113.1,141.07,1,3,High School,Black,1,Hispanic
+14,0,WS,270.11,15.74,0,3,Graduate,Black,0,Hispanic
+19,1,WS,189.66,106.79,0,4,Graduate,Black,0,Hispanic
+19,0,WG,273.56,27.71,0,3,College,White,1,Non-Hispanic
+20,0,WS,256.93,103.95,0,3,High School,White,0,Non-Hispanic
+18,0,WG,260.55,58.7,1,2,Graduate,White,1,Hispanic
+25,1,WG,266.41,57.45,1,3,Some College,Other,0,Non-Hispanic
+17,0,WS,181.96,145.31,0,1,High School,Other,1,Hispanic
+19,0,WG,198.58,27.72,1,2,Graduate,Black,1,Hispanic
+20,0,WG,222.88,35.92,1,3,Graduate,Black,0,Non-Hispanic
+19,0,WS,112.75,139.83,0,1,High School,White,1,Non-Hispanic
+18,0,WG,280.27,32.51,1,1,Graduate,Other,1,Non-Hispanic
+17,0,WG,299.1,30.4,0,3,Graduate,White,0,Non-Hispanic
+14,1,WS,156.03,50.22,0,3,Some College,Asian,1,Non-Hispanic
+19,0,WS,141.6,16.73,0,4,College,Black,1,Non-Hispanic
+16,1,WG,200.19,150.91,0,1,High School,Other,0,Hispanic
+15,0,WG,174.39,101.92,0,1,College,White,1,Non-Hispanic
