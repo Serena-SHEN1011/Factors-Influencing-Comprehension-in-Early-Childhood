@@ -1,12 +1,12 @@
 ---
-title: "Factors Influencing Early Childhood Comprehension of American English"
-subtitle: "Analyzing the impact of early childhood on English comprehension"
+title: "Factors Influencing Early Childhood Comprehension of American English with a Bayesian Model"
+subtitle: "Word production, child age, norming status and caregiver education have key effects on early language comprehension ability"
 author: 
   - Ziyuan Shen
 thanks: "Code and data are available at: [Factors Influencing Early Childhood Comprehension of American English](https://github.com/Serena-SHEN1011/Factors-Influencing-Early-Childhood-Comprehension-of-American-English)."
 date: today
 date-format: long
-abstract: "In this paper, we develop a Bayesian linear model to analyze factors influencing young children's comprehension of American English. Using a dataset from the Wordbank database, our model examines predictors such as age, word production, caregiver education, and birth order to determine their impact on early childhood language comprehension skills. The analysis shows that children with more highly educated caregivers tend to have better comprehension skills, while first-born children generally have higher comprehension scores compared to their siblings. This approach provides a detailed understanding of how developmental and environmental factors shape early childhood language abilities, offering a basis for designing targeted interventions to promote language development."
+abstract: "In this paper, we develop a Bayesian linear model to analyze the factors that influence early childhood comprehension of American English from age 8 to 30 months. Using a dataset from the Wordbank database, our model examines predictors such as age, word production, caregiver education, and birth order to determine their impact on early childhood language comprehension skills. The analysis shows that children with more highly educated caregivers tend to have better language comprehension, while first-born children generally have higher comprehension compared to their siblings. This approach provides a detailed understanding of how developmental and environmental factors shape early childhood language abilities, offering a basis for designing targeted interventions to promote language development."
 format: pdf
 number-sections: true 
 toc: true
@@ -35,9 +35,9 @@ library(broom.mixed)
 
 # Introduction
 
-Early childhood language comprehension is a fundamental area of cognitive development that influences future literacy and communication skills. Research has identified several key predictors of language comprehension in young children. For example, a study by Taylor et al.(@Zubrick_Taylor_Christensen_2015) found that socioeconomic factors, family background, and personal characteristics significantly influence early childhood receptive vocabulary development. As highlighted by Lawton et al.(@Lawton5129), the quality and quantity of language exposure in infancy are associated with brain development and long-term language achievement. In addition, Bergelson's study(@Zonarich_2024) showed that babies begin to understand common nouns as early as 6 to 7 months of age, which suggests that comprehension begins earlier than previously thought. Despite these insights, I believe there is still a need for robust research that considers the range of demographic, developmental, and environmental factors that influence the early comprehension of American English learners.
+Early childhood language comprehension is a fundamental area of cognitive development that influences future literacy and communication skills. Research has identified several key predictors of language comprehension in young children. For example, a study by Taylor et al.(@Zubrick_Taylor_Christensen_2015) found that socioeconomic factors, family background, and personal characteristics significantly influence early childhood receptive vocabulary development. As highlighted by Lawton et al.(@Lawton5129), the quality and quantity of language exposure in infancy are associated with brain development and long-term language achievement. In addition, Bergelson's study(@Zonarich_2024) showed that babies begin to understand common nouns as early as 6 to 7 months of age, which suggests that comprehension begins earlier than previously thought. Despite these observations, we believe there is still a need for robust research that considers the range of demographic, developmental, and environmental factors that influence the early comprehension of American English learners.
 
-In this paper, my estimand is the number of words comprehended by children learning American English. Our focus is on quantifying how developmental factors such as age, birth order, caregiver influences such as education level, and language context such as monolingual versus bilingual status affect comprehension outcomes. Using Bayesian regression modelling, I assessed the contributions of these predictors and identified the factors that have the greatest impact on early childhood comprehension.
+In this paper, my estimand is the number of words comprehended by children learning American English. Our focus is on quantifying how developmental factors such as age, birth order, caregiver influences such as education level, and language context such as monolingual versus bilingual status affect comprehension outcomes. To analyze these relationships, we used Bayesian linear regression models. We initially built a full model and a reduced model to assess the contribution of these predictors. Upon comparison, we found that the reduced model retained the most important predictors, providing a more concise and easier-to-interpret result while maintaining a high level of predictive accuracy. Therefore, we chose the reduced model for our final analysis because it effectively captured the key factors that influence early childhood comprehension.
 
 My findings show that developmental factors such as age, production ability of language, and caregiver education are important predictors of young children's level of comprehension. Children with more educated caregivers demonstrated better comprehension, which highlights the role of the home environment in language development. These findings are important because they provide a basis for carefully targeted early childhood interventions, which highlight the areas that need to be supported in order to promote language comprehension. By identifying the most influential factors, this study contributes to a better understanding of early language learning, which is essential for the development of effective educational practices and policies.
 
@@ -49,9 +49,10 @@ The structure of this paper is organized as follows: after this introduction, @s
 
 ## Data Overview
 
-I used the statistical programming language R [@citeR] to retrieve, simulate, clean, analyze, and test early childhood language comprehension data. The dataset used for this analysis is from the Wordbank database of children’s vocabulary growth [@citedata], specifically focusing on American English children. It contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], I explore how different predictors affect language comprehension in early childhood.
+We used the statistical programming language R [@citeR] to retrieve, simulate, clean, analyze, and test early childhood language comprehension data. The dataset used for this analysis is from the Wordbank database of children’s vocabulary growth [@citedata], specifically focusing on American English children. It contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], we 
+discover how different predictors affect language comprehension in early childhood.
 
-The dataset used in this study provides different data on the language comprehension skills of young children among American English language learners. The dataset consists of 14,826 rows and 22 columns covering a range of early childhood developmental attributes such as comprehension, output and parental education. To ensure the validity of the analysis, I filtered the data to include children whose comprehension assessments and caregiver information were complete, which would ensure a comprehensive, unbiased representation of the target population. This cleaning allowed us to focus on high-quality, well-integrated cases, which provided reliable results in young children's comprehension skills. For key operations, please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.
+The dataset used in this study provides different data on the language comprehension skills of young children among American English language learners. The dataset consists of 14,826 rows and 22 columns covering a range of early childhood developmental attributes such as comprehension, output and parental education. To ensure the validity of the analysis, we filtered the data to include children whose comprehension assessments and caregiver information were complete, which would ensure a general, unbiased representation of the target population. This cleaning allowed us to focus on high-quality, well-integrated cases, which provided reliable results in young children's comprehension skills. For key operations, please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.
 
 
 ## Data Measurement
@@ -69,7 +70,7 @@ In the data cleaning process, we prepared the raw election data for analysis by 
 * `knitr`[@citeknitr]: Converts R code and markdown text into reports, documents, or presentations.
 * `kableExtra`[@citekableExtra]: Beautify tables made with `knitr::kable` by adding formatting options.
 * `ggridges`[@citeggridges]: Creates ridgeline plots, which are useful for visualizing distributions.
-* `car`[@citecar]: Provides tools for regression diagnostics and advanced linear model analysis.
+* `car`[@citecar]: Provides tools for regression diagnostics and more accuracy linear model analysis.
 The detailed cleaning processes are in [Appendix -@sec-data-cleaning]. 
 
 
@@ -84,16 +85,18 @@ The primary outcome variable was the child's comprehension of American English, 
 #| fig-cap: "Distribution of comprehension among children. Each bar represents the count of children who understand a specific range of words, illustrating the varying levels of vocabulary comprehension in the dataset."
 #| echo: false
 #| warning: false
+#| fig.width: 7
+#| fig.height: 4
 
 analysis_data <- read.csv(here::here("data/02-analysis_data/analysis_data.csv"))
 
 ggplot(analysis_data, aes(x = comprehension)) +
   geom_histogram(bins = 30, fill = "skyblue", color = "black") +
   labs(
-    title = "Distribution of Comprehension",
     x = "Comprehension",
-    y = "Number of Understanding Words"
-  )
+    y = "Count"
+  ) + 
+  theme_minimal()
 ```
 
 Using the package ggplot2 [@citeggplot], @fig-comprehension shows the distribution of comprehension, which is the number of words children understand in early childhood. Each bar in the histogram represents the count of children who comprehend a specific range of words.
@@ -122,11 +125,11 @@ seperate_age_group <- analysis_data %>%
 ggplot(seperate_age_group, aes(x = comprehension, y = age_group, fill = age_group)) +
   geom_density_ridges(alpha = 0.6) +
   labs(
-    title = "Ridgeline Plot of Comprehension by Age Group",
     x = "Comprehension(Number of Understanding Words)",
     y = "Age Group"
   ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  theme_minimal()
 ```
 
 @fig-plot1 presents a ridgeline plot that illustrates the distribution of comprehension across different age groups. The data is segmented into different age groups to analyze how comprehension levels vary across different stages of early childhood. Each ridge represents an age group, with the x-axis showing the number of words understood (comprehension) and the y-axis indicating the age group category. The density of each ridge shows how comprehension varies within each age group.
@@ -135,9 +138,9 @@ As we can see from the plot, comprehension is generally lower for children from 
 
 
 ### Birth Order and Caregiver Education
-The `birth_order` variable indicates the position of the child in terms of the order of births within their family. It ranges from 1 (first-born) to 8, which allow us to understand whether being a first-born, middle, or later-born child influences comprehension. Birth order can play an important role in a child’s language development due to varying attention levels or interactions they receive from caregivers and siblings.
+The `birthorder` variable indicates the position of the child in terms of the order of births within their family. It ranges from 1 (first-born) to 8, which allow us to understand whether being a first-born, middle, or later-born child influences comprehension. Birth order can play an important role in a child’s language development due to varying attention levels or interactions they receive from caregivers and siblings.
 
-The `caregiver_education` variable reflects the highest level of education attained by the child’s caregiver. This variable includes levels such as "Primary," "Secondary," "College," "Some College," "Graduate". Caregiver education is also important in the analysis because it often serves as a proxy for socioeconomic status and access to language resources, both of which can significantly affect a child's language environment and comprehension ability.
+The `caregivereducation` variable reflects the highest level of education attained by the child’s caregiver. This variable includes levels such as "Primary," "Secondary," "College," "Some College," "Graduate". Caregiver education is also important in the analysis because it often serves as a proxy for socioeconomic status and access to language resources, both of which can significantly affect a child's language environment and comprehension ability.
 
 ```{r}
 #| label: fig-plot2
@@ -146,10 +149,9 @@ The `caregiver_education` variable reflects the highest level of education attai
 #| warning: false
 
 # Stacked bar chart for Birth Order and Caregiver Education
-ggplot(analysis_data, aes(x = factor(birth_order), fill = caregiver_education)) +
+ggplot(analysis_data, aes(x = factor(birthorder), fill = caregivereducation)) +
   geom_bar(position = "stack") +
   labs(
-    title = "Birth Order and Caregiver Education",
     x = "Birth Order",
     y = "Count",
     fill = "Caregiver Education Level"
@@ -157,7 +159,7 @@ ggplot(analysis_data, aes(x = factor(birth_order), fill = caregiver_education)) 
   theme_minimal()
 ```
 
-@fig-plot2 shown above visualizes the distribution of birth order along with caregiver education level. Each bar represents the number of children with a specific birth order, ranging from 1 (first-born) to 8. The bars are stacked by caregiver education level, with different colors indicating categories such as "College", "Graduate", "Primary", and others.
+@fig-plot2 shown above visualizes the distribution of birth order along with caregiver education level. Each bar represents the number of children with a specific birth order, ranging from 1 (first born) to 8. The bars are stacked by caregiver's education level, with different colors indicating categories such as "College", "Graduate", "Primary", and others.
 
 As can be seen from the graph, the majority of children are first or second births, while the number of children in higher birth orders is lower. Caregivers with a "college" or "graduate" level of education make up a large percentage of first and second births, while lower birth order caregivers with "some college" or "secondary" level of education also make up a large proportion of caregivers. The predominance of lower birth orders suggests that most families in the data set tend to have only one or two children.
 
@@ -169,14 +171,14 @@ As can be seen from the graph, the majority of children are first or second birt
 #| echo: false
 #| warning: false
 #comprehension vs. caregiver_education
-ggplot(analysis_data, aes(x = caregiver_education, y = comprehension)) +
+ggplot(analysis_data, aes(x = caregivereducation, y = comprehension)) +
   geom_boxplot(fill = "lightblue") +
   labs(
-    title = "Caregiver Education Level vs Comprehension",
     x = "Caregiver Education Level",
     y = "Comprehension(Number of Understanding Words)"
   ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  theme_minimal()
 ```
 
 @fig-box1 shows the distribution of children's number of comprehension words grouped by the caregiver's educational level. Children whose caregivers had higher education, such as `Graduate` and `Secondary` tended to have higher median comprehension scores compared to children with primary education. Median comprehension scores are lowest in the primary school category, with a narrower range compared to the other categories, which suggests that there is less variation in comprehension for children with caregivers at this level of education. `Graduate` and `Some College` show larger IQRs, indicating more variability in comprehension scores among children.
@@ -188,7 +190,7 @@ There are several outliers present, particularly for `Some Graduate` and `Gradua
 
 ```{r}
 #| label: fig-plot3
-#| fig-cap: "Comprehension by Race"
+#| fig-cap: "Density Plot of Comprehension by Race"
 #| echo: false
 #| warning: false
 
@@ -196,12 +198,12 @@ There are several outliers present, particularly for `Some Graduate` and `Gradua
 ggplot(analysis_data, aes(x = comprehension, fill = race)) +
   geom_density(alpha = 0.4) +
   labs(
-    title = "Density Plot of Comprehension by Race",
     x = "Comprehension",
     y = "Density",
     fill = "Race"
   ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+ 
+  theme_minimal()
 ```
 
 @fig-plot3 visualizes the distribution of comprehension across different race groups, including Asian, Black, Other, and White. Each coloured density curve represents the distribution of comprehension scores for children from each race group.
@@ -214,19 +216,63 @@ The overlap in the density curves shows comprehension across race groups share s
 
 
 
-\newpage
 # Model{#sec-model}
 
-My modelling approach aims to quantify the relationship between various child and caregiver characteristics and comprehension in early childhood. For this analysis, I use a Bayesian linear model to examine how factors such as age, production (number of words produced), whether the child is in a norming status, birth order, caregiver education level, race, sex, and whether the child is monolingual influence comprehension. The model is implemented using the stan_glm function, with a Gaussian distribution to capture the variability in comprehension.
+My modelling approach aims to quantify the relationship between various child and caregiver characteristics and comprehension in early childhood. For this analysis, we use a Bayesian linear model to examine how factors such as age, production (number of words produced) influence comprehension. The model is implemented using the `stan glm` function, with a Gaussian distribution to capture the variability in comprehension.
+
 
 The model assumes that the distribution of comprehension follows a normal distribution when these factors are considered. This Gaussian assumption favours parameter estimation, which is a standard method for linear regression. To prevent overfitting and maintain interpretability, we assume a modest before ensuring that uncertainty is balanced between predictors. This approach allowed us to assess the effects of child and caregiver characteristics on comprehension while maintaining the stability of the findings. See 
 in [Appendix -@sec-model-details] for more background details and diagnostics.
 
-## Alternative Models 
+
+
+## Alternative model
 
 Alternative models, including a Bayesian logistic regression was considered. Logistic regression was rejected since the outcome (comprehension) is continuous, not binary. The Bayesian linear model was ultimately chosen for its balance between interpretability and the ability to handle uncertainty explicitly through priors.
 
+To determine the best set of predictors, both a full and a reduced model of the Bayesian linear model were fitted. After comparing the models using Leave-One-Out Cross-Validation, the results @tbl-compare-model showed that the reduced model had an elpd difference of 0.0, while the full model had an elpd difference of -1.89 with a se difference of 0.17. This indicates that the reduced model performed better than the full model in terms of predictive accuracy with fewer predictors. Consequently, the reduced model was chosen for its simplicity and interpretability, without compromising on predictive performance. The detailed model selection process is in [Appendix -@sec-model-selection]
+
+```{r}
+#| label: tbl-compare-model
+#| tbl-cap: "Comparison of Full and Reduced Models Using LOO"
+#| echo: false
+#| warning: false
+
+# Load the model
+full_model <-
+  readRDS(file = here::here("models/comprehension_full_model_bayesian_linear.rds"))
+
+reduced_model <-
+  readRDS(file = here::here("models/comprehension_reduced_model_bayesian_linear.rds"))
+
+loo_full <- loo(full_model)
+loo_reduced <- loo(reduced_model)
+
+# Extract comparison results from loo_compare
+loo_comparison <- loo_compare(loo_full, loo_reduced)
+
+# Convert to a data frame
+loo_comparison <- as.data.frame(loo_comparison)
+
+# Select only 'elpd_diff' and 'se_diff' columns and round them to two decimal places
+loo_comparison <- loo_comparison %>%
+  select(elpd_diff, se_diff) %>%
+  mutate(across(everything(), ~ round(. , 2)))  # Round all columns to 2 decimal places
+
+
+# Display the table using kable
+kable(loo_comparison, 
+      col.names = c("ELPD Diff", "Sd Error Diff")
+)
+```
+
+
+
+
 ## Model set-up
+
+### Reduced Model
+The reduced model was developed by removing non-significant variables `sex` and `monolingual` from the full model. This reduced model simplifies interpretation and potentially improves model performance without losing significant explanatory power.
 
 The model predicts the comprehension of children using the following predictor variables:
 
@@ -234,25 +280,22 @@ The model predicts the comprehension of children using the following predictor v
 
 - Production Words(`production`): The number of words the child can produce.
 
-- Norming Status (`is_norming`): A binary variable, shoews if the child is being used for norming purposes (1 if true, 0 false).
+- Norming Status (`isnorming`): A binary variable, shoews if the child is being used for norming purposes (1 if true, 0 false).
 
-- Birth Order (`birth_order`): Represents the child's birth order, ranging from 1 to 8.
+- Birth Order (`birthorder`): Represents the child's birth order, ranging from 1 to 8.
 
-- Caregiver Education (`caregiver_education`): The highest education level attained by the child's caregiver.
+- Caregiver Education (`caregivereducation`): The highest education level attained by the child's caregiver.
 
 - Race (`race`): Represents the race of the child.
-
-- Gender (`sex`):  A binary variable, the gender of children (1 for female, 0 for male).
-
-- Monolingual (`monolingual`): A binary variable, which indicates if the child is monolingual (1 if true, 0 false).
 
 
 The model takes the form:
 
 \begin{align*}
     y_i \mid \mu_i, \sigma &\sim \text{Normal}(\mu_i, \sigma) \\
-    \mu_i &= \beta_0 + \beta_1 \cdot \text{age}_i + \beta_2 \cdot \text{production}_i + \beta_3 \cdot \text{is\_norming}_i + \beta_4 \cdot \text{birth\_order}_i \\
-          &\quad + \beta_5 \cdot \text{caregiver\_education}_i + \beta_6 \cdot \text{race}_i + \beta_7 \cdot \text{sex}_i + \beta_8 \cdot \text{monolingual}_i + \epsilon_i \\
+    \mu_i &= \beta_0 + \beta_1 \cdot \text{age}_i + \beta_2 \cdot \text{production}_i + \beta_3 \cdot \text{isnorming}_i + \beta_4 \cdot \text{birthorder}_i \\
+          &\quad + \beta_5 \cdot \text{caregivereducation}_i + \beta_6 \cdot \text{race}_i
+          + \epsilon_i \\
     \epsilon_i &\sim \text{Normal}(0, \sigma^2) 
 \end{align*}
 
@@ -260,33 +303,36 @@ The model takes the form:
 \begin{itemize}
     \item $y_i \mid \mu_i, \sigma \sim \text{Normal}(\mu_i, \sigma)$ represents the outcome variable $y_i$ (comprehension: number of words understood by child $i$), which is modeled as a normal distribution with mean $\mu_i$ and standard deviation $\sigma$.
     \item $\beta_0$ is the intercept term.
-    \item $\beta_1, \beta_2, \beta_3, \beta_4, \beta_5, \beta_6, \beta_7, \beta_8$ are the coefficients for each predictor.
+    \item $\beta_1, \beta_2, \beta_3, \beta_4, \beta_5, \beta_6$ are the coefficients for each predictor.
     \item $\sigma^2$ is the variance of the error term.
 \end{itemize}
 
 
-The model is executed in \texttt{R} [@citeR] using the \texttt{rstanarm} package [@rstanarm]. Default priors from \texttt{rstanarm} [@rstanarm] are used, with the priors set to have a mean of zero and a moderate standard deviation to ensure a reasonable level of regularization.
+The model is executed in \texttt{R} [@citeR] using the \texttt{rstanarm} package [@citerstanarm]. Default priors from \texttt{rstanarm} [@citerstanarm] are used, with the priors set to have a mean of zero and a moderate standard deviation to ensure a reasonable level of regularization.
+
+
+
 
 
 ## Model justification
 
-Existing research in developmental psychology and linguistics suggests that factors such as age, production (vocabulary), birth order, caregiver's level of education, and other demographic variables can have a great impact on children's comprehension. For example, older children generally comprehend more words due to longer exposure to language and cognitive development. Since these two aspects of language acquisition are closely related, higher language expression tends to correlate with better comprehension. Caregiver education is associated with a child's vocabulary since more educated caregivers provide a richer language environment. Birth order may also play a role, with research suggesting that first-born children typically receive more one-on-one attention, which may lead to differences in comprehension levels.
+Existing research in developmental psychology and linguistics suggests that factors such as age, production of words, birth order, caregiver's level of education, and other demographic variables can have a great impact on children's comprehension. For example, older children generally comprehend more words due to longer exposure to language and cognitive development. Since these two aspects of language acquisition are closely related, higher language expression tends to correlate with better comprehension. Caregiver's education is associated with a child's vocabulary since more educated caregivers provide a richer language environment. Birth order may also play a role, with research suggesting that first-born children typically receive more one-on-one attention, which may lead to differences in comprehension levels.
 
-Bayesian linear regression modeling was chosen to predict comprehension because the outcome variables are continuous and can reasonably be assumed to follow a normal distribution. Linear regression is suitable for quantifying the relationship between multiple predictors and continuous outcomes, providing interpretable coefficients for each independent variable. Bayesian methods allow us to incorporate a priori knowledge into the model and are particularly useful in situations where existing research provides information on expected effects. In addition, the Bayesian inference method provides a way to quantify the uncertainty of parameter estimates, which provides us with a deeper understanding of the modeled relationships.
+Bayesian linear regression modeling was chosen to predict comprehension because the outcome variables are continuous and can reasonably be assumed to follow a normal distribution. Linear regression is suitable for quantifying the relationship between multiple predictors and continuous outcomes, which provide interpretable coefficients for each independent variable. Bayesian methods allow us to incorporate a priori knowledge into the model and are particularly useful in situations where existing research provides information on expected effects. In addition, the bayesian inference method provides a way to quantify the uncertainty of parameter estimates, which provides us with a deeper understanding of the modeled relationships.
 
 
 
 
 # Results{#sec-result}
 
-@sec-result examines the relationship between age, production, is_norming, birth order, caregiver education, race, sex, and monolingual status with respect to early childhood word comprehension. Using a dataset containing observations of children’s linguistic abilities and various influencing factors, we apply a Bayesian linear regression model to assess which key predictors have the most significant impact on comprehension. Below, we present the results of our model and discuss the implications of our findings.
+@sec-result examines the relationship between age, production, norming status, birth order, caregiver's education and race with respect to early childhood word comprehension. Using a dataset containing observations of children’s linguistic abilities and various influencing factors, we apply a bayesian linear regression model to assess which key predictors have the most key impact on comprehension. Below, we present the results of our model and discuss the implications of our findings.
 
 We predicted comprehension scores using our test dataset, but due to missing data for certain groups such as some levels of caregiver education or race categories, our model could not make predictions for all children. To address these gaps, we examined demographic trends from similar children in the dataset; if a group showed consistent patterns in linguistic development, we assumed that trend would continue and used it to estimate missing comprehension values. This limitation arises because groups with missing values are not represented in the model, preventing accurate forecasts for those individuals. Further discussion on this limitation can be found in @sec-discussion. 
 
 
 ## Model results and interpretation
 
-The bayesian linear regression model built using our training dataset, which consists of 2,457 data points, estimated the factors that influence comprehension levels in children. For brevity, @tbl-summary-model shows only the first ten rows of the model’s coefficients, while the full model summary is provided in [Appendix -@sec-model-details]. The intercept is estimated at 78.515, representing the baseline comprehension level when all predictors are at their reference levels. The model achieved an $R^2$ value of 0.936, indicating that 93.6% of the variance in comprehension outcomes is explained by the predictors included. The adjusted $R^2$ value of 0.936 further confirms that the model captures the relationships between variables effectively without overfitting.
+The bayesian linear regression model built using our training dataset, which consists of 2,457 data points, estimated the factors that influence comprehension levels in children. For brevity, @tbl-summary-model shows only the first ten rows of the reduced model’s coefficients, while the full reduced model summary is provided in [Appendix -@sec-model-details]. The intercept is estimated at 77.564, representing the baseline comprehension level when all predictors are at their reference levels. The model achieved an $R^2$ value of 0.936, indicating that 93.6% of the variance in comprehension outcomes is explained by the predictors included. The adjusted $R^2$ value of 0.936 further confirms that the model captures the relationships between variables effectively without overfitting.
 
 ```{r}
 #| label: tbl-summary-model
@@ -294,20 +340,17 @@ The bayesian linear regression model built using our training dataset, which con
 #| echo: false
 #| warning: false
 
-# Load the model
-model <-
-  readRDS(file = here::here("models/comprehension_model_bayesian_linear.rds"))
 
-summary <- summary(model)
+summary <- summary(reduced_model)
 summary_table <- head(summary, 10)[, 1:1]
 
 kable(col.names = c(" ", "coefficient"),
   summary_table, digits = 3)
 ```
 
-Certain predictors have a more pronounced impact than others. For instance, `production` (0.983) shows that a one-unit increase in the number of words produced by a child corresponds to a 0.983 increase in predicted comprehension outcomes. The variable `is_norming` (26.115) also has a positive effect, indicating that children in the norming status tend to have higher comprehension levels. Other predictors, such as `age` (-3.481) and birth_order (-1.922), have negative coefficients, suggesting that as age increases (within the studied age range), there may be a slight decrease in comprehension, and children born later in the birth order tend to have lower comprehension scores.
+Certain predictors have a more pronounced impact than others. For instance, `production` (0.983) shows that a one-unit increase in the number of words produced by a child corresponds to a 0.983 increase in predicted comprehension outcomes. The variable `isnorming` (26.034) also has a positive effect, indicating that children in the norming status tend to have higher comprehension levels. Other predictors, such as `age` (-3.476) and `birthorder` (-1.919), have negative coefficients, suggesting that as age increases (within the studied age range), there may be a slight decrease in comprehension, and children born later in the birth order tend to have lower comprehension scores.
 
-The caregiver’s education level also contributes to variations in comprehension. For example, `caregiver_educationPrimary` (10.381) indicates that children whose caregivers have a primary education level tend to have higher comprehension compared to those whose caregivers have no formal education. However, `caregiver_educationSome College` (-2.204) and `caregiver_educationSome Graduate` (-0.086) show negative coefficients, suggesting a potential decrease in comprehension associated with these categories. A complete overview of all predictors is available in [Appendix -@sec-model-details].
+The caregiver’s education level also contributes to variations in comprehension. For example, `caregivereducationPrimary` (10.881) indicates that children whose caregivers have a primary education level tend to have higher comprehension compared to those whose caregivers have no formal education. However, `caregivereducationSomeCollege` (-2.234) and `caregivereducationSomeGraduate` (-0.144) show negative coefficients, suggesting a potential decrease in comprehension associated with these categories. A complete overview of all predictors is available in [Appendix -@sec-model-summary].
 
 
 ```{r}
@@ -319,13 +362,14 @@ The caregiver’s education level also contributes to variations in comprehensio
 #| fig.height: 5
 
 
-model_summary <- tidy(model, conf.int = TRUE, conf.level = 0.90)
+model_summary <- tidy(reduced_model, conf.int = TRUE, conf.level = 0.90)
 
 important_parameters <- c("age", 
-                          "is_norming",
-               "caregiver_educationPrimary",
-               "caregiver_educationSecondary", 
-               "caregiver_educationSome Secondary",
+                          "production",
+                          "isnorming",
+               "caregivereducationPrimary",
+               "caregivereducationSecondary", 
+               "caregivereducationSome Secondary",
                "raceBlack", 
                "raceOther", 
                "raceWhite"
@@ -337,27 +381,22 @@ ggplot(filtered_summary, aes(x = estimate, y = term)) +
   geom_point(size = 3, color = "blue") +
   geom_errorbarh(aes(xmin = conf.low, xmax = conf.high), height = 0.3, color = "blue") +
   labs(
-    title = "Model Coefficients",
-    subtitle = "90% credible intervals",
     x = "Coefficient Estimate",
     y = "Parameters"
   ) +
   theme_minimal() +
-  xlim(-20, 30) 
+  xlim(-10, 30) 
 ```
 
-Based on @tbl-summary in [Appendix -@sec-model-details], @fig-coefficient-intervals-data shows the 90% credible intervals for selected coefficients from the Bayesian linear regression model used to predict comprehension by using package `broom.mixed`[@citebroom]. The variables in @fig-coefficient-intervals-data are chosen based on their coefficient magnitude in the regression results table, specifically for those coefficients that have an absolute value greater than 3, which indicate a significant influence on the model.
+Based on @tbl-summary in [Appendix -@sec-model-details], @fig-coefficient-intervals-data shows the 90% credible intervals for selected coefficients from the Bayesian linear regression model used to predict comprehension by using package `broom.mixed`[@citebroom]. The variables in @fig-coefficient-intervals-data are chosen based on their coefficient magnitude in the regression results table, specifically the caregiver's education levels are chosen for those coefficients that have an absolute value greater than 3, which indicate a significant influence on the model.
 
 The plot visualizes the estimates of key parameter and their confidence intervals, which provide a deeper understanding of the direction and uncertainty associated with these estimates. The intervals provide an understanding of the possible range of where the impact of each variable.
 
-`raceWhite,` `raceOther` and `raceBlack` show a relatively large credible interval, indicating high uncertainty.
+* `age`, `production`, `isnorming` and `caregivereducation` all have 95% credible intervals that do not include 0. Their CIs do not contain 0, indicating that these predictors have meaningful impacts on comprehension. 
 
-`caregiver_educationPrimary` has a negative estimate with its credible interval crossing zero, suggesting its effect might not be significant. The credible interval for `caregiver_educationSecondary` does not extend very far into the negative side, which might indicate that the effect could be significant, but there is still some uncertainty. And for `caregiver_educationSome Secondary`, the credible interval is quite wide and crosses zero, indicating a high degree of uncertainty regarding the effect of this parameter. This implies that it might not be significantly different from zero, meaning that it could have little or no effect on the `comprehension`
+* `birthorder` and `race` have 95% credible intervals that include 0. Since their CIs include 0, this suggests they do not have key affect comprehension. 
 
-`age` has a very small credible interval, which means it has a more accurate estimate of its `comprehension`.
-
-The parameter `is_norming` does not have an error bar, which suggests that this estimate has high uncertainty or insufficient information.
-
+As shown above, the predictor variables of  `age`, `production`, `isnorming` and `caregivereducation` had the greatest impact on `comprehension`. `production` and `isnorming` showed a strong positive correlation, indicating that the higher the production of words and norming status to the normative group, the better the comprehension of words. `age` and `caregivereducation` also play a major role, with different age and caregiver education having different effects.
 
 
 
@@ -366,7 +405,7 @@ The parameter `is_norming` does not have an error bar, which suggests that this 
 
 # Discussion{#sec-discussion}
 
-This study provides insights into early childhood language comprehension by examining various factors, such as age, caregiver education, word production, and birth order, through a Bayesian linear regression model. The findings underscore the significant influence of these predictors, contributing to a broader understanding of the mechanisms that underpin language acquisition during early childhood development.
+This study provides an in-depth study of early childhood language comprehension by examining various factors, such as age, caregiver education, word production, and birth order, through a Bayesian linear regression model. The findings underscore the significant influence of these predictors, contributing to a broader understanding of the mechanisms that underpin language acquisition during early childhood development.
 
 ## The Role of Caregiver Education in Language Development
 
@@ -379,12 +418,12 @@ Another finding was the subtle effect of birth order on comprehension. The resul
 
 ## Model Limitations and Uncertainties
 
-While this study provides valuable observations, there are many limitations. A major limitation is the high degree of uncertainty in some of the model's coefficient estimates, particularly those related to race and the educational level of some caregivers. The wide confidence intervals indicate variability and inconsistency in the data, which may prevent the generalization of the findings. In addition, using samples may introduce bias and reduce the representativeness of the results across populations. In addition, missing data for some population groups limits the ability of the model to make predictions for all groups, which may affect the overall robustness of the study results.
+While this study provides meaningful observations, there are many limitations. A major limitation is the high degree of uncertainty in some of the model's coefficient estimates, particularly those related to race and the educational level of some caregivers. The wide confidence intervals indicate variability and inconsistency in the data, which may prevent the generalization of the findings. In addition, using samples may introduce bias and reduce the representativeness of the results across populations. In addition, missing data for some population groups limits the ability of the model to make predictions for all groups, which may affect the overall robustness of the study results.
 
 
 ## Recommendations for Future Research
 
-Future research should address these limitations by collecting more representative data across different demographic groups. This would reduce uncertainty in model estimates and provide a better understanding of the relationships between different predictors and language comprehension. Longitudinal studies would also be valuable in assessing these relationships' stability over time, providing a deeper understanding of the long-term effects of early intervention. In addition, further exploration of the role of caregiver education, particularly in families with multiple children, could provide more effective strategies to support equitable language development. The expansion of the dataset to include more vocabulary categories and contextual factors such as socioeconomic status, bilingual ability, and parental language practices also enhances our understanding of the mechanisms of early language learning and supports the development of more nuanced educational policies.
+Future research should address these limitations by collecting more representative data across different demographic groups. This would reduce uncertainty in model estimates and provide a better understanding of the relationships between different predictors and language comprehension. Longitudinal studies would also be useful for assessing these relationships' stability over time, providing a deeper understanding of the long-term effects of early intervention. In addition, further study of the role of caregiver education, particularly in families with multiple children, could provide more effective strategies to support equitable language development. The expansion of the dataset to include more vocabulary categories and contextual factors such as socioeconomic status, bilingual ability, and parental language practices also enhances our understanding of the mechanisms of early language learning and supports the development of more detailed educational policies.
 
 
 \newpage
@@ -397,7 +436,7 @@ Future research should address these limitations by collecting more representati
 
 ## Overview
 
-The Communicative Development Inventory (CDI) is a standardized assessment tool used to study early language development in children aged 8 to 30 months. Originally developed by Fenson et al. (1994), the CDI provides a reliable and comprehensive method for evaluating both vocabulary comprehension and production based on parent reports. This chapter revisits the strengths and limitations of CDI, its psychometric properties, and the reliability of the instrument in longitudinal studies.
+The Communicative Development Inventory (CDI) is a standardized assessment tool used to study early language development in children aged 8 to 30 months. Originally developed by Fenson et al. (1994), the CDI provides a reliable and general method for evaluating both vocabulary comprehension and production based on parent reports. This chapter revisits the strengths and limitations of CDI, its psychometric properties, and the reliability of the instrument in longitudinal studies.
 
 ## Target population, frame, and sample
 
@@ -425,7 +464,7 @@ The Communicative Development Inventory (CDI) is a standardized assessment tool 
 
 **Trade-offs:**
 
-* Advantages: The flexibility of using both WG and WS instruments allows for capturing a broad spectrum of early language development stages. The data provides valuable insight into different aspects of language development, including gestures, morphology, and grammar.
+* Advantages: The flexibility of using both WG and WS instruments allows for capturing a broad spectrum of early language development stages. The data provides meaningful ideas about different aspects of language development, including gestures, morphology, and grammar.
 
 * Disadvantages: The sampling method is not necessarily representative due to reliance on convenience samples, which leads to biases depending on how researchers choose or access participants. Moreover, inconsistent administration methods such as electronic, paper and in-person lead to potential variability in data quality, affecting comparability between studies.
 
@@ -442,7 +481,7 @@ Non-response Issues: The variability of the data is mentioned in the CDI methodo
 
 ## Longitudinal Stability of CDI Measurements
 
-Stability Across Time: Longitudinal data from CDI demonstrate high stability in early language scores. Studies like De Houwer et al. (2005) reveal significant correlations in CDI measurements across different ages, indicating that early language acquisition remains relatively stable over time.
+Stability Across Time: Longitudinal data from CDI demonstrate high stability in early language scores. Studies like De Houwer et al. (2005) show significant correlations in CDI measurements across different ages, indicating that early language acquisition remains relatively stable over time.
 
 
 ## Psychometric Analysis and Item Response Theory (IRT)
@@ -483,23 +522,25 @@ In the data cleaning process, we prepared the raw data for analysis by applying 
 
 1. **Removing columns with missing values**: Using the `select(where(~ !all(is.na(.))))` function from `dplyr` to remove any columns that were entirely NA, thus retaining only those columns that contain meaningful data.
 
-2. **Removing unnecessary columns**: We further removed columns deemed unnecessary for analysis, they were `downloaded`, `language`, `form`, `dataset_name`, `child_id`, `ethnicity`, `l`anguage_exposures`, `health_conditions`, `typically_developing` by using `dplyr` `select()` function. This helped to streamline the dataset by eliminating redundant information.
+2. **Rename columns by removing underscores and updating names**: Using `gsub()` function to replace all underscores with an empty string ("").
 
-3. **Handling missing values**: Removing rows with any missing values by using the `na.omit()` function, ensuring that our dataset contained only complete cases. This step was important to maintain data integrity and ensure accurate model training
+3. **Removing unnecessary columns**: We further removed columns deemed unnecessary for analysis, they were `downloaded`, `language`, `form`, `datasetname`, `childid`, `ethnicity`, `languageexposures`, `healthconditions`, `typicallydeveloping` by using `dplyr` `select()` function. This helped to streamline the dataset by eliminating redundant information.
 
-4. **Transforming birth order**: The `birth_order` column was converted to a numeric sequence using `mutate()` and `factor()`. We mapped levels like "First", "Second", "Third" to a corresponding numeric value to facilitate easier use in statistical models.
+4. **Handling missing values**: Removing rows with any missing values by using the `na.omit()` function, ensuring that our dataset contained only complete cases. This step was important to maintain data integrity and ensure accurate model training
 
-5. **Converting categorical variables to binary**: Several categorical variables were converted into binary values to prepare the data for modeling. We used `mutate()` and `ifelse()` to recode variables:
+5. **Transforming birth order**: The `birthorder` column was converted to a numeric sequence using `mutate()` and `factor()`. We mapped levels like "First", "Second", "Third" to a corresponding numeric value to facilitate easier use in statistical models.
 
-* `is_norming` was converted to 1 for "TRUE" and 0 for "False".
+6. **Converting categorical variables to binary**: Several categorical variables were converted into binary values to prepare the data for modeling. We used `mutate()` and `ifelse()` to recode variables:
+
+* `isnorming` was converted to 1 for "TRUE" and 0 for "False".
 
 * `sex` was coded as 1 for "Male" and 0 for "False".
 
 * `monolingual` was similarly converted to 1 for "TRUE" and 0 for "False".
 
-6. **Splitting the data**: We used the `rsample` package to perform a stratified split of the cleaned dataset based on the `race` variable. This ensured that all levels of `race` were well-represented in both the training (70%) and testing (30%) sets. We set a seed (`set.seed(123)`) for reproducibility.
+7. **Splitting the data**: We used the `rsample` package to perform a stratified split of the cleaned dataset based on the `race` variable. This ensured that all levels of `race` were well-represented in both the training (70%) and testing (30%) sets. We set a seed (`set.seed(123)`) for reproducibility.
 
-7. **Saving the cleaned data**: Finally, the cleaned dataset was saved in different formats (CSV and Parquet) using `arrow` to facilitate efficient storage and accessibility. We saved both the full cleaned dataset and the resulting training/testing splits, enabling their use in further analyses and modeling.
+8. **Saving the cleaned data**: Finally, the cleaned dataset was saved in different formats (CSV and Parquet) using `arrow` to facilitate efficient storage and accessibility. We saved both the full cleaned dataset and the resulting training/testing splits, enabling their use in further analyses and modeling.
 
 
 
@@ -513,8 +554,8 @@ In the data cleaning process, we prepared the raw data for analysis by applying 
 
 # Create a data frame explaining each variable
 variable_summary <- data.frame(
-  Variable = c("age", "production", "is_norming", 
-               "birth_order", "caregiver_education", "race", "sex", "monolingual"),
+  Variable = c("age", "production", "isnorming", 
+               "birthorder", "caregivereducation", "race", "sex", "monolingual"),
   Description = c(
     "The age of the child in months.",
     "The number of words a child can produce.",
@@ -540,9 +581,45 @@ variable_summary |>
 
 # Model details {#sec-model-details}
 
-## Model summary
+## Model Selection Process {#sec-model-selection}
+1. **Fitting the Full Model**: By using Bayesian regression with a Gaussian distribution. The priors for both the intercept and the coefficients are set to normal distributions with a location of 0 and a scale of 2.5, allowing for flexibility in the regression parameters.
 
-@tbl-summary presents the coefficients from our model analyzing factors that influence comprehension in early childhood. The `intercept` value is 78.522, represents the baseline level of comprehension when all other predictors are at their reference levels. Key variables include `is_norming` with a positive coefficient indicating that children included in the norming sample tend to have higher comprehension scores. Different caregiver education levels show varying effects. For example, `"`caregiver_educationPrimary` has a positive coefficient of 10.214, suggesting that having a caregiver with primary education is associated with increased comprehension. On the other hand, `caregiver_educationSome Secondary` has a negative coefficient, indicating a potential decrease in comprehension scores for children whose caregivers have some secondary education.
+2. **Full Model Evaluation**:
+
+In @tbl-full-model-summary, it generates a summary table for a Bayesian regression model, using the `tidy()` function from the broom[@citebroom] package and displaying it with `kable()`. 
+
+This summary table can help us understand the significance and uncertainty around each of the model's predictors. The 90% credible intervals can be particularly helpful in assessing the strength of each predictor's relationship with the outcome variable, `comprehension`.
+
+From @tbl-full-model-summary, we would like to remove both `sex` and `monolingual` to build a reduced model. Because both of their estimated effects were close to zero and credible intervals included zero, indicating no significant effect on comprehension. Thus, removing them could simplify the full model while maintaining interpretability and predictive accuracy.
+
+```{r}
+#| label: tbl-full-model-summary
+#| tbl-cap: "Model Summary: Standard Deviations and 90% Credible Intervals for Predictors"
+#| echo: false
+#| warning: false
+
+# Extract model summary using tidy()
+model_summary <- tidy(
+  full_model,           # Replace with model_reduced if that is what you're working on
+  conf.int = TRUE,      # Include confidence (credible) intervals
+  conf.level = 0.90
+)
+
+# Round all numeric columns to three decimal places
+model_summary <- model_summary %>%
+  mutate(across(where(is.numeric), round, digits = 3))
+
+
+# Display the summary table using kable
+kable(model_summary)
+
+```
+
+
+
+## Model summary {#sec-model-summary}
+
+@tbl-summary presents the coefficients from our model analyzing factors that influence comprehension in early childhood. The `intercept` value is 78.522, represents the baseline level of comprehension when all other predictors are at their reference levels. Key variables include `isnorming` with a positive coefficient indicating that children included in the norming sample tend to have higher comprehension scores. Different caregiver education levels show varying effects. For example, `"`caregivereducationPrimary` has a positive coefficient of 10.214, suggesting that having a caregiver with primary education is associated with increased comprehension. On the other hand, `caregivereducationSome Secondary` has a negative coefficient, indicating a potential decrease in comprehension scores for children whose caregivers have some secondary education.
 
 ```{r}
 #| label: tbl-summary
@@ -553,17 +630,19 @@ variable_summary |>
 
 modelsummary(
   list(
-    "coefficient" = model
+    "coefficient" = reduced_model
   )
 )
 ```
 
 
+## Diagnostics
 
+### Posterior predictive check
 
-## Posterior predictive check
+In @tbl-pp, we present a posterior predictive check by comparing the distribution of comprehension scores (denoted by $y$) across different age groups. The ridgeline plot illustrates the distribution of the observed comprehension scores for each age group and their corresponding replicated scores generated by the model (denoted by $y_{rep}$). In a well-fitting model, the replicated data should closely overlap with the observed data.
 
-In @tbl-pp we conduct a posterior predictive check, showing the overlap between the observed data (denoted by $y$) and the replicated data generated from the model (denoted by $y_{rep}$). In a well-fitting model, the distribution of the replicated data should match the observed data closely. In this case, the replicated lines generally follow the shape of the observed data's density, especially around the peak, showing that the model is effectively capturing the main structure of the data. Any discrepancies between the replicated and observed lines would highlight areas where the model fails to adequately capture the observed data characteristics.
+From the plot, we observe that the distribution of the replicated scores generally follows the same shape as the observed data's density, especially in the central regions of the age groups. This indicates that the model is capturing the main structure of the comprehension across different age intervals. AAny discrepancies between the replicated and observed lines would highlight areas where the model fails to adequately capture the observed data characteristics, such as specific patterns or variations in comprehension across age groups. However, in this case, the overall fit seems reasonable, as the replicated lines match the observed data’s density well.
 
 ```{r}
 #| label: tbl-pp
@@ -572,13 +651,13 @@ In @tbl-pp we conduct a posterior predictive check, showing the overlap between 
 #| warning: false
 
 # Posterior predictive checks
-pp_check(model)
+pp_check(reduced_model)
 ```
 
-## Variance Inflation Factors for Each Predictor in the Model
 
-In @tbl-vif presents the Variance Inflation Factors (VIF) for each predictor in the model. VIF values are used to assess multicollinearity among the predictors, with values greater than 10 typically indicating a high level of multicollinearity. In this model, all predictors have VIF values below 3, suggesting that multicollinearity is not a significant concern. For example, `age` and `production` have VIF values of 2.559 and 2.500, respectively, indicating a moderate relationship with other predictors. Other variables, such as `is_norming` and `monolingual`, show lower VIF values, which 
-indicates minimal multicollinearity.
+### Variance Inflation Factors for Each Predictor in the Model
+
+In @tbl-vif presents the Variance Inflation Factors (VIF) for each predictor in the model. VIF values are used to assess multicollinearity among the predictors, with values greater than 10 typically indicating a high level of multicollinearity. In this model, all predictors have VIF values below 3, suggesting that multicollinearity is not a key concern. For example, `age` and `production` have VIF values of 2.571 and 2.478, respectively, indicating a moderate relationship with other predictors. Other variables, such as `birthorder` and `race`, show lower VIF values, which indicates minimal multicollinearity.
 
 ```{r}
 #| label: tbl-vif
@@ -587,7 +666,7 @@ indicates minimal multicollinearity.
 #| warning: false
 
 # Calculate Variance Inflation Factor to check multicollinearity
-vif_values <- vif(model)
+vif_values <- vif(reduced_model)
 
 vif_df <- data.frame(
   GVIF = round(vif_values[, "GVIF"], 3),
@@ -601,8 +680,8 @@ kable(vif_df)
 
 
 
-
-## Diagnostics
+\newpage
+### Gelman-Rubin diagnosis
 
 @fig-rhat is a visualization of the Gelman-Rubin diagnosis (often denoted as R-hat) for evaluating the convergence of Markov chain Monte Carlo (MCMC) samples in Bayesian models.  The plot illustrates the R-hat values for various parameters. An R-hat value near 1 indicates that the MCMC chains have mixed well and are effectively sampling from the same posterior distribution. In @fig-rhat, all parameters exhibit an R-hat value at or below 1.05, suggesting that the model has reached adequate convergence, and the resulting parameter estimates are reliable for interpretation.
 
@@ -614,7 +693,7 @@ kable(vif_df)
 #| label: fig-rhat
 #| fig-cap: "All parameters have R-hat values at or below 1.05, which indicates strong convergence of the MCMC chains and reliable parameter estimates."
 
-plot(model, "rhat")
+plot(reduced_model, "rhat")
 ```
 
 \newpage
