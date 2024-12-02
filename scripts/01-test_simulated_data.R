@@ -14,7 +14,7 @@
 library(tidyverse)
 library(testthat)
 
-simulated_data <- read_csv("data/00-simulated_data/simulated_data.csv")
+simulated_data <- read_csv("data/00-simulated_data/simulated_data_with_interaction.csv")
 
 
 # Test if the data was successfully loaded
@@ -27,9 +27,9 @@ test_that("dataset has 1000 rows", {
   expect_equal(nrow(simulated_data), 1000)
 })
 
-# Check if the dataset has 9 columns
-test_that("dataset has 9 columns", {
-  expect_equal(ncol(simulated_data), 9)
+# Check if the dataset has 11 columns
+test_that("dataset has 11 columns", {
+  expect_equal(ncol(simulated_data), 11)
 })
 
 # Check if there are no missing values in the dataset
@@ -37,10 +37,15 @@ test_that("dataset contains no missing values", {
   expect_true(all(!is.na(simulated_data)))
 })
 
-# Check if 'age' is within a realistic range (e.g., 18, 24, 30, 36 months)
-test_that("'age' values are within the range of possible ages (18, 24, 30, 36)", {
-  valid_ages <- c(18, 24, 30, 36)
-  expect_true(all(simulated_data$age %in% valid_ages))
+# Check if 'age' is within a reasonable range (11 to 28)
+test_that("'age' values are within a reasonable range (11 to 28)", {
+  expect_true(all(simulated_data$age >= 11 & simulated_data$age <= 28))
+})
+
+# Check if 'form' contains only valid form values ('WG', 'WS')
+test_that("'form' contains only valid form values", {
+  valid_forms <- c("WG", "WS")
+  expect_true(all(simulated_data$form %in% valid_forms))
 })
 
 # Check if 'is_norming' contains only 0 or 1
@@ -75,3 +80,8 @@ test_that("'monolingual' contains only 0 or 1", {
   expect_true(all(simulated_data$monolingual %in% c(0, 1)))
 })
 
+# Check if 'ethnicity' contains only valid ethnicity categories
+test_that("'ethnicity' contains only valid ethnicity categories", {
+  valid_ethnicities <- c("Hispanic", "Non-Hispanic")
+  expect_true(all(simulated_data$ethnicity %in% valid_ethnicities))
+})
