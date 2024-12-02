@@ -34,7 +34,7 @@ cleaned_data <- na.omit(cleaned_data)
 
 # Convert birth_order to numeric sequence
 cleaned_data <- cleaned_data %>%
-  mutate(birth_order = as.numeric(factor(birth_order, levels = c("First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"))))
+  mutate(birthorder = as.numeric(factor(birthorder, levels = c("First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"))))
 
 
 #### Convert Categorical Variables to 0/1 ####
@@ -42,7 +42,7 @@ cleaned_data <- cleaned_data %>%
 # Convert categorical variables to binary using mutate
 cleaned_data <- cleaned_data %>%
   mutate(
-    is_norming = ifelse(is_norming == "TRUE", 1, 0),
+    isnorming = ifelse(isnorming == "TRUE", 1, 0),
     sex = ifelse(sex == "Male", 1, 0),
     monolingual = ifelse(monolingual == "TRUE", 1, 0)
   )
