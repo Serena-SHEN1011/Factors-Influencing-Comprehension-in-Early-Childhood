@@ -21,6 +21,7 @@ analysis_data_train <- read_parquet("data/02-analysis_data/train_data.parquet")
 
 #### Fit Bayesian Model ####
 # Assuming 'comprehension' is the dependent variable
+# Create a Full model
 full_model <- stan_glm(
     formula = comprehension ~ age + production + isnorming + birthorder + caregivereducation + race +
       sex + monolingual,
@@ -34,7 +35,7 @@ full_model <- stan_glm(
 # Summary of the model
 summary(full_model)
 
-# create a reduced model without these non-significant predictors
+# By seeing results of summary of full model, create a reduced model without these non-significant predictors
 model_reduced <- stan_glm(
   formula = comprehension ~ age + production + isnorming + birthorder + caregivereducation + race,
   data = analysis_data_train,
