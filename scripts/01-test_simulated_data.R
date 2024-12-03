@@ -7,7 +7,7 @@
 # Pre-requisites: 
   # - The `tidyverse`, `testthat` packages must be installed and loaded
   # - 00-simulate_data.R must have been run
-# Any other information needed? Make sure you are in the `Factors-Influencing-Early-Childhood-Comprehension-of-American-English` rproj
+# Any other information needed? Make sure you are in the `Factors_Influencing_Early_Childhood_Comprehension_of_American_English` rproj
 
 
 #### Workspace setup ####
