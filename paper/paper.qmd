@@ -166,25 +166,28 @@ As can be seen from the graph, the majority of children are first or second birt
 
 
 ```{r}
-#| label: fig-box1
-#| fig-cap: "Boxplot of Comprehension by Caregiver Education Level. This plot shows the distribution of comprehension scores for children based on the education level of their caregiver, which highlights differences in comprehension across different educational backgrounds."
+#| label: fig-horizontal-bar-plot
+#| fig-cap: "Corrected Colored Horizontal Bar Plot of Mean Comprehension by Caregiver Education Level. Each bar is colored differently to clearly distinguish between education levels."
 #| echo: false
 #| warning: false
-#comprehension vs. caregiver_education
-ggplot(analysis_data, aes(x = caregivereducation, y = comprehension)) +
-  geom_boxplot(fill = "lightblue") +
+# caregivereducation vs. comprehension with corrected colors
+ggplot(analysis_data, aes(y = caregivereducation, x = comprehension, fill = as.factor(caregivereducation))) +
+  stat_summary(fun = mean, geom = "bar", alpha = 0.8) +
+  scale_fill_brewer(palette = "Set3") +
   labs(
-    x = "Caregiver Education Level",
-    y = "Comprehension(Number of Understanding Words)"
+    y = "Caregiver Education Level",
+    x = "Mean Comprehension"
   ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-  theme_minimal()
+  theme_minimal() +
+  theme(axis.text.y = element_text(angle = 0, vjust = 0.5),
+        legend.position = "none") 
+
+
 ```
 
-@fig-box1 shows the distribution of children's number of comprehension words grouped by the caregiver's educational level. Children whose caregivers had higher education, such as `Graduate` and `Secondary` tended to have higher median comprehension scores compared to children with primary education. Median comprehension scores are lowest in the primary school category, with a narrower range compared to the other categories, which suggests that there is less variation in comprehension for children with caregivers at this level of education. `Graduate` and `Some College` show larger IQRs, indicating more variability in comprehension scores among children.
+@fig-horizontal-bar-plot shows the mean comprehension of children grouped by the caregiver's educational level. This plot indicates that children whose caregivers have a higher level of education, such as `Some Graduate` and `Some Secondary`, tend to have higher average comprehension ability compared to children whose caregivers have only a primary education.
 
-There are several outliers present, particularly for `Some Graduate` and `Graduate` education levels, suggesting that some children scored significantly higher or lower compared to the majority.
-
+The `Primary` category has the lowest mean comprehension, suggesting that lower caregiver education is associated with lower comprehension in children. There is also less variation across the categories, with the mean value for all groups being relatively close. This may indicate that while caregiver education level has an impact, it is not drastically different across these categories. The bars for `Some Graduate` and `Graduate` are among the highest, showing that higher education levels are correlated with increased comprehension. However, there is no indication of median, range, or outliers, as this plot represents only the average values for each group.
 
 ### Race
 
