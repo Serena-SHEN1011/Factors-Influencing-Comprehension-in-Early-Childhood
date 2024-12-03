@@ -4,7 +4,7 @@ subtitle: "Word production, child age, norming status and caregiver education ha
 author: 
   - Ziyuan Shen
 thanks: "Code and data are available at: [Factors Influencing Early Childhood Comprehension of American English](https://github.com/Serena-SHEN1011/Factors-Influencing-Early-Childhood-Comprehension-of-American-English)."
-date: today
+date: 03 December 2024 
 date-format: long
 abstract: "In this paper, we develop a Bayesian linear model to analyze the factors that influence early childhood comprehension of American English from age 8 to 30 months. Using a dataset from the Wordbank database, our model examines predictors such as age, word production, caregiver education, and birth order to determine their impact on early childhood language comprehension skills. The analysis shows that children with more highly educated caregivers tend to have better language comprehension, while first-born children generally have higher comprehension compared to their siblings. This approach provides a detailed understanding of how developmental and environmental factors shape early childhood language abilities, offering a basis for designing targeted interventions to promote language development."
 format: pdf
@@ -61,7 +61,7 @@ The Early Childhood Language Development Assessment Measurement Data Set was col
 
 For example, let your child learn the meaning of different objects at home. This process naturally occurs through interaction with caregivers and is translated into quantifiable data when parents marked items on the CDI checklist that their child understood or said. The resulting scores become items in our dataset, which reflect each child's language comprehension skills in numerical form.
 
-In the data cleaning process, we prepared the raw election data for analysis by applying transformations, filtering, and restructuring using several R packages, including `dplyr` [@citedplyr], `arrow` [@citearrow], and `rsample` [@citersample].  Also, the following packages were used in this study: 
+In the data cleaning process, we prepared the raw election data for analysis by applying transformations, filtering, and restructuring using several R packages, including `tidyverse`[@citetidyverse], `dplyr` [@citedplyr], `arrow` [@citearrow], and `rsample` [@citersample]. Also, the following packages were used in this study: 
 
 * `here`[@citehere]: Helps manage file paths in a project directory, which make it easier to locate and load data files.
 * `ggplot2` [@citeggplot]: Used for creating data visualizations like charts and graphs.
@@ -71,7 +71,7 @@ In the data cleaning process, we prepared the raw election data for analysis by 
 * `kableExtra`[@citekableExtra]: Beautify tables made with `knitr::kable` by adding formatting options.
 * `ggridges`[@citeggridges]: Creates ridgeline plots, which are useful for visualizing distributions.
 * `car`[@citecar]: Provides tools for regression diagnostics and more accuracy linear model analysis.
-The detailed cleaning processes are in [Appendix -@sec-data-cleaning]. 
+* `broom.mixed`[@citebroom]: Provides functions to convert statistical model outputs, particularly from mixed-effects models into tidy data frames. 
 
 
 ## Outcome variables
@@ -436,7 +436,7 @@ Future research should address these limitations by collecting more representati
 
 ## Overview
 
-The Communicative Development Inventory (CDI) is a standardized assessment tool used to study early language development in children aged 8 to 30 months. Originally developed by Fenson et al. (1994), the CDI provides a reliable and general method for evaluating both vocabulary comprehension and production based on parent reports. This chapter revisits the strengths and limitations of CDI, its psychometric properties, and the reliability of the instrument in longitudinal studies.
+The Communicative Development Inventory (CDI) is a standardized assessment tool used to study early language development in children aged 8 to 30 months. Originally developed by @citewordbankproject, the CDI provides a reliable and general method for evaluating both vocabulary comprehension and production based on parent reports. This chapter revisits the strengths and limitations of CDI, its psychometric properties, and the reliability of the instrument in longitudinal studies.
 
 ## Target population, frame, and sample
 
