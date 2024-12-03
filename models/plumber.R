@@ -15,9 +15,7 @@ variables <- list(
   is_norming = "Whether the child is part of the norming group, binary (0 or 1).",
   birth_order = "The birth order of the child, numeric value.",
   caregiver_education = "Education level of the caregiver, categorical.",
-  race = "Race of the child, categorical.",
-  sex = "Sex of the child, numeric value (e.g., 0 for Male, 1 for Female).",
-  monolingual = "Whether the child is monolingual, binary (0 or 1)."
+  race = "Race of the child, categorical."
 )
 
 #* @param age
