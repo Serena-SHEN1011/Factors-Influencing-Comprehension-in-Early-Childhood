@@ -1,4 +1,4 @@
-# Factors-Influencing-Comprehension-in-Early-Childhood
+# Factors Influencing Early Childhood Comprehension of American English
 
 ## Overview
 
@@ -20,3 +20,10 @@ The repo is structured as:
 ## Statement on LLM usage
 
 The ChatGPT-4 model assisted with data validation, test creation, data cleaning, simulation generation, plot generation, and the polishing of wording. The entire chat history is available in `other/llm_usage/usage.txt`.
+
+
+------------------------------------------------------------------------
+
+*Note: The dataset used in this analysis was downloaded from the [Worldbank Database](https://wordbank.stanford.edu/) using the Data Export Tools. Due to the deprecation of the wordbankr package, it was not possible to install and use this package directly. Additionally, the alternative approach of reading datasets directly from the Worldbank website did not meet the specific requirements of this analysis. Therefore, the dataset was downloaded from the Worldbank database and saved as `data/01-raw_data`.
+
+------------------------------------------------------------------------
