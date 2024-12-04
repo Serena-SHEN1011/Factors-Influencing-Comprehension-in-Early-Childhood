@@ -5,7 +5,7 @@
 # Contact: ziyuan.shen@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: 
-#   - The `tidyverse`, `ggplot2` and `ggridges` packages must be installed and loaded
+#   - The `tidyverse`, `ggplot2`, `ggridges` and `arrow` packages must be installed and loaded
 #   - 03-clean_data.R must have been run
 # Any other information needed? Make sure you are in the `Factors_Influencing_Early_Childhood_Comprehension_of_American_English` rproj
 
@@ -14,9 +14,10 @@
 library(tidyverse)
 library(ggplot2)
 library(ggridges)
+library(arrow)
 
 #### Read data ####
-analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
+analysis_data <- read_parquet("data/02-analysis_data/analysis_data.parquet")
 
 ## Set theme for better aesthetics
 theme_set(theme_minimal())
@@ -44,7 +45,7 @@ ggplot(analysis_data, aes(x = comprehension)) +
 ggplot(analysis_data, aes(x = production)) +
   geom_histogram(bins = 20, fill = "skyblue", color = "black") +
   labs(
-    title = "Distribution of Comprehension",
+    title = "Distribution of production",
     x = "production",
     y = "Count"
   )
