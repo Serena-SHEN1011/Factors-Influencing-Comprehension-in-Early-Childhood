@@ -438,7 +438,7 @@ Future research should address these limitations by collecting more representati
 
 # Appendix {-}
 
-# CDI methodology overview and assessment
+# CDI methodology overview and improvement
 
 ## Overview
 
@@ -521,7 +521,7 @@ To further improve the reliability and representativeness of CDI findings, Bayes
 
 Simulations can also be extended to a variety of sampling methods using Bayesian modelling to estimate the impact of sampling bias, such as over-representation of certain demographic characteristics or under-sampling of key groups. Generating synthetic datasets containing these underrepresented groups would illustrate how these populations might affect language development patterns, and updates to the Bayesian model would adjust the model to reflect observed trends in the data over time. 
 
-## Survey implementation and Structure
+## Survey Implementation and Structure
 To reach a diverse audience of caregivers, multiple distribution channels will be used. The link to the survey will be distributed via email invitations, community events, and targeted social media advertisements. The link to the survey is [here](https://forms.gle/2qVDdWk764dy16Jc6).
 
 ### Budget Allocation
@@ -556,64 +556,100 @@ As a thank you for your participation, you will be entered into a raffle to win 
 
 **Part 1: Eligibility and Consent**
 
-1. Is your child between the ages of 8 and 36 months?\
-* Yes / No\
-2. Are you the primary caregiver of the child?\
-* Yes / No\
-3. Are you willing to provide information about your child’s language development?\
-* Yes / No
+1.Is your child between the ages of 8 and 36 months?
+
+*Yes / No
+
+2.Are you the primary caregiver of the child?
+
+*Yes / No
+
+3.Are you willing to provide information about your child’s language development?
+
+*Yes / No
 
 **Part 2: Demographics**
 
-4. How old is your child?\
-* 8-12 months / 13-24 months / 25-36 months\
-5. What is your child's gender?\
-* Boy / Girl / Prefer not to say\
-6. What is your child’s race or ethnicity? (Other, please specify)\
-* White / Black / African American / Hispanic or Latino / Asian / Other\
-7. What is your highest level of education?(Other, please specify)\
-* Primary / Secondary / Some College / Bachelor’s Degree / Graduate Degree / Other\
-8. What is your current employment status? (Other, please specify)\
-* Employed / Unemployed / Student / Homemaker/ Other\
-9. What is your household income level?\
-* Less than $30,000 / $30,000-$59,999 / $60,000-$99,999 / Greater than $100,000 / Prefer not to say\
-10. How many language(s) do you speak at home?\
-* Monolingual (One language) / Bilingual (Two languages) / Multilingual (Three or more languages)\
+4.How old is your child?
+
+*8-12 months / 13-24 months / 25-36 months
+
+5.What is your child's gender?
+
+*Boy / Girl / Prefer not to say
+
+6.What is your child’s race or ethnicity? (Other, please specify)
+
+*White / Black / African American / Hispanic or Latino / Asian / Other
+
+7.What is your highest level of education?(Other, please specify)
+
+*Primary / Secondary / Some College / Bachelor’s Degree / Graduate Degree / Other
+
+8.What is your current employment status? (Other, please specify)
+
+*Employed / Unemployed / Student / Homemaker/ Other
+
+9.What is your household income level?
+
+*Less than $30,000 / $30,000-$59,999 / $60,000-$99,999 / Greater than $100,000 / Prefer not to say
+
+10.How many language(s) do you speak at home?
+
+*Monolingual (One language) / Bilingual (Two languages) / Multilingual (Three or more languages)
 
 **Part 3: Child's Language Development**
 
-11. At what age did your child start saying their first word?\
-* 8-12 months / 13-24 months / 25-36 months\
-12. How often does your child use words or phrases (like “mama”, “more”)?\
-* Frequently (several times a day) / Occasionally (once or twice a day) / Rarely / Not yet\
-13. Does your child use gestures (like waving, pointing) to communicate?\
-* Yes, often / Occasionally / No\
-14. How would you rate your child’s vocabulary comprehension?\
-* Understands basic words (like names of family members) / Understands common household objects (like cup, ball) / Understands more complex phrases (like “Give me the red ball”) / Does not yet understand any words
+11.At what age did your child start saying their first word?
+
+*8-12 months / 13-24 months / 25-36 months
+
+12.How often does your child use words or phrases (such as “mama”, “more”)?
+
+*Frequently (several times a day) / Occasionally (once or twice a day) / Rarely / Not yet
+
+13.Does your child use gestures (such as waving, pointing) to communicate?
+
+*Yes, often / Occasionally / No
+
+14.How would you rate your child’s vocabulary comprehension?
+
+*Understands basic words (such as names of family members) / Understands common household objects (such as cup, ball) / Understands more complex phrases (such as “Give me the red ball”) / Does not yet understand any words
 
 
 **Part 4: Child's Language Environment**
 
-15. How often do you engage in activities that promote language development (like reading, or singing songs)?\
-* Daily / Several times a week / Once a week or less / Never\
-16. Do you use any of the following methods to support your child’s language development? (Check all that apply)\
-* Reading books aloud / Singing songs / Playing interactive games (like peek-a-boo) / Speaking to the child in multiple languages / None of the above\
-17. How often does your child interact with other children?\
-* Frequently / Occasionally / Rarely / Does not interact with other children
+15.How often do you engage in activities that promote language development (such as reading, or singing songs)?
+
+*Daily / Several times a week / Once a week or less / Never
+
+16.Do you use any of the following methods to support your child’s language development? (Check all that apply)
+
+*Reading books aloud / Singing songs / Playing interactive games (such as peek-a-boo) / Speaking to the child in multiple languages / None of the above
+
+17.How often does your child interact with other children?
+
+*Frequently / Occasionally / Rarely / Does not interact with other children
 
 **Part 5: Additional Information**
 
-18. Do you believe there are any factors that have particularly influenced your child’s language development? (Such as: socioeconomic status, exposure to multiple languages, developmental disorders)\
-* Yes / No\
-19. Do you have any concerns about your child’s language development?\
-* Yes / No
+18.Do you believe there are any factors that have particularly influenced your child’s language development? (Such as: socioeconomic status, exposure to multiple languages, developmental disorders)
+
+*Yes / No
+
+19.Do you have any concerns about your child’s language development?
+
+*Yes / No
 
 **Part 6: Verify**
 
-20. Please select 'Agree' to verify that you are paying attention.\
-* Agree / Disagree\
-21. Do you agree to participate in this survey? Your responses will be kept confidential and used only for research purposes.\
-* Yes / No
+20.Please select 'Agree' to verify that you are paying attention.
+
+*Agree / Disagree
+
+21.Do you agree to participate in this survey? Your responses will be kept confidential and used only for research purposes.
+
+*Yes / No
 
 **End Part**
 
