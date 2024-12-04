@@ -324,6 +324,9 @@ Existing research in developmental psychology and linguistics suggests that fact
 Bayesian linear regression modeling was chosen to predict comprehension because the outcome variables are continuous and can reasonably be assumed to follow a normal distribution. Linear regression is suitable for quantifying the relationship between multiple predictors and continuous outcomes, which provide interpretable coefficients for each independent variable. Bayesian methods allow us to incorporate a priori knowledge into the model and are particularly useful in situations where existing research provides information on expected effects. In addition, the bayesian inference method provides a way to quantify the uncertainty of parameter estimates, which provides us with a deeper understanding of the modeled relationships.
 
 
+## Create API for the Reduced Model
+
+To make the reduced model more practical and usable, we created an API that provides real-time predictions of comprehension based on user-provided inputs. Researchers can input variables like a child's age, production score and caregiver's education to receive predictions with credible intervals. By using the \texttt{plumber} [@citeplumber], the API ensures usability and integration into various workflows.
 
 
 # Results{#sec-result}
@@ -443,11 +446,23 @@ The Communicative Development Inventory (CDI) is a standardized assessment tool 
 
 ## Target population, frame, and sample
 
-* Target Population: Infants and toddlers aged 8 to 30 months whose parents are willing to report on their child's language development.
+* Target Population: Infants and toddlers aged 8 to 36 months whose parents are willing to report on their child's language development.
 
 * Sample Frame: The target sample includes children from different demographic backgrounds to capture a diverse representation of language development. Recruitment was conducted across pediatric clinics, childcare centers, and online forums targeting parents, ensuring participants come from various socioeconomic, educational, and geographic contexts.
 
 * Sample Size: The study collected data from approximately 2,000 parents. A sample size of this scale ensures generalizability while maintaining a margin of error within ±3% at a 95% confidence level, thereby enhancing the robustness of findings.
+
+### Variables
+
+* Age Groups: 8-12 months, 13-24 months, 25-36 months
+* Gender: Boy, Girl
+* Caregiver Education Level: Primary, Secondary, Some College, Bachelor’s, Graduate, Other
+* Household Income Level: <$30,000, $30,000-$59,999, $60,000-$99,999, >$100,000
+* Caregiver Employment Status: Employed, Unemployed, Student, Homemaker
+* Language at Home: Monolingual, Bilingual, Multilingual
+* Geographic Region: Urban, Suburban, Rural
+* Race: White, Black/African American, Hispanic/Latino, Asian, Native, Other
+
 
 ## Sample recruitment
 
@@ -484,7 +499,7 @@ Non-response Issues: The variability of the data is mentioned in the CDI methodo
 
 ## Longitudinal Stability of CDI Measurements
 
-Stability Across Time: Longitudinal data from CDI demonstrate high stability in early language scores. Studies like De Houwer et al. (2005) show significant correlations in CDI measurements across different ages, indicating that early language acquisition remains relatively stable over time.
+Stability Across Time: Longitudinal data from CDI demonstrate high stability in early language scores. Studies like De Houwer [@HOUWER2005], showing major correlations in CDI measurements across different ages, indicating that early language acquisition remains relatively stable over time.
 
 
 ## Psychometric Analysis and Item Response Theory (IRT)
@@ -506,14 +521,110 @@ To further improve the reliability and representativeness of CDI findings, Bayes
 
 Simulations can also be extended to a variety of sampling methods using Bayesian modelling to estimate the impact of sampling bias, such as over-representation of certain demographic characteristics or under-sampling of key groups. Generating synthetic datasets containing these underrepresented groups would illustrate how these populations might affect language development patterns, and updates to the Bayesian model would adjust the model to reflect observed trends in the data over time. 
 
+## Survey implementation and Structure
+To reach a diverse audience of caregivers, multiple distribution channels will be used. The link to the survey will be distributed via email invitations, community events, and targeted social media advertisements. The link to the survey is [here](https://forms.gle/2qVDdWk764dy16Jc6).
+
+### Budget Allocation
+
+* Survey Panel Recruitment: $20,000
+* Community Outreach: $10,000
+* Incentives (Gift Cards and Lotteries): $10,000
+* Data Cleaning and Validation: $5,000
+* Advertising on Social Media: $5,000
+
+### Survey structure
+
+**Survey introduction:**
+
+Welcome! 
+
+We are conducting a survey to better understand the language development of children aged 8 to 36 months. Your participation is crucial in helping us gain valuable insights into early language acquisition and the factors that influence it.
+
+Please note:
+
+* All responses are confidential and will be used for research purposes only.
+* This survey will take approximately 10 minutes to complete.
+* Your participation is entirely voluntary, and you may withdraw at any time.
+* All questions marked with an asterisk (*) are required.
+* There are no right or wrong answers, we appreciate your honest opinions.
+
+If you have any questions or concerns, please feel free to contact our research team at [winniekeai23@gmail.com](mailto:winniekeai23@gmail.com) (Ziyuan Shen).
+
+As a thank you for your participation, you will be entered into a raffle to win a grand prize of a gift card. We are deeply grateful for your participation and appreciate the time and effort that you put in.
+
+**Survey question:**
+
+**Part 1: Eligibility and Consent**
+
+1. Is your child between the ages of 8 and 36 months?\
+* Yes / No\
+2. Are you the primary caregiver of the child?\
+* Yes / No\
+3. Are you willing to provide information about your child’s language development?\
+* Yes / No
+
+**Part 2: Demographics**
+
+4. How old is your child?\
+* 8-12 months / 13-24 months / 25-36 months\
+5. What is your child's gender?\
+* Boy / Girl / Prefer not to say\
+6. What is your child’s race or ethnicity? (Other, please specify)\
+* White / Black / African American / Hispanic or Latino / Asian / Other\
+7. What is your highest level of education?(Other, please specify)\
+* Primary / Secondary / Some College / Bachelor’s Degree / Graduate Degree / Other\
+8. What is your current employment status? (Other, please specify)\
+* Employed / Unemployed / Student / Homemaker/ Other\
+9. What is your household income level?\
+* Less than $30,000 / $30,000-$59,999 / $60,000-$99,999 / Greater than $100,000 / Prefer not to say\
+10. How many language(s) do you speak at home?\
+* Monolingual (One language) / Bilingual (Two languages) / Multilingual (Three or more languages)\
+
+**Part 3: Child's Language Development**
+
+11. At what age did your child start saying their first word?\
+* 8-12 months / 13-24 months / 25-36 months\
+12. How often does your child use words or phrases (like “mama”, “more”)?\
+* Frequently (several times a day) / Occasionally (once or twice a day) / Rarely / Not yet\
+13. Does your child use gestures (like waving, pointing) to communicate?\
+* Yes, often / Occasionally / No\
+14. How would you rate your child’s vocabulary comprehension?\
+* Understands basic words (like names of family members) / Understands common household objects (like cup, ball) / Understands more complex phrases (like “Give me the red ball”) / Does not yet understand any words
+
+
+**Part 4: Child's Language Environment**
+
+15. How often do you engage in activities that promote language development (like reading, or singing songs)?\
+* Daily / Several times a week / Once a week or less / Never\
+16. Do you use any of the following methods to support your child’s language development? (Check all that apply)\
+* Reading books aloud / Singing songs / Playing interactive games (like peek-a-boo) / Speaking to the child in multiple languages / None of the above\
+17. How often does your child interact with other children?\
+* Frequently / Occasionally / Rarely / Does not interact with other children
+
+**Part 5: Additional Information**
+
+18. Do you believe there are any factors that have particularly influenced your child’s language development? (Such as: socioeconomic status, exposure to multiple languages, developmental disorders)\
+* Yes / No\
+19. Do you have any concerns about your child’s language development?\
+* Yes / No
+
+**Part 6: Verify**
+
+20. Please select 'Agree' to verify that you are paying attention.\
+* Agree / Disagree\
+21. Do you agree to participate in this survey? Your responses will be kept confidential and used only for research purposes.\
+* Yes / No
+
+**End Part**
+
+Thank you for participating! 
+
+Your responses are valuable to our research on early language development. If you have any questions or would like more information about our research, please feel free to contact us at [winniekeai23@gmail.com](mailto:winniekeai23@gmail.com)(Ziyuan Shen).
+
 
 ## Conclusion
 
 The CDI method, while not without its challenges, provides a generalized approach to understanding early language development through parental reports. The stratified sampling methodology used in CDI studies allows for a more representative understanding of language development across demographic contexts, thus mitigating potential biases in traditional parent-report measures. The CDI has been used in some studies to assess language development in children and adolescents. Although there are some limitations, such as potential bias in parent reports and subjectivity in assessing comprehension, the CDI has demonstrated strong reliability and utility in psychometric assessments, making it an important tool for researchers of child language development.
-
-
-
-
 
 
 
