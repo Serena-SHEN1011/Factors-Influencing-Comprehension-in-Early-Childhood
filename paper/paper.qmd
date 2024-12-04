@@ -14,13 +14,13 @@ bibliography: references.bib
 ---
 
 ```{r}
+#| echo: false
 #| include: false
 #| warning: false
 #| message: false
 
 library(tidyverse)
 library(dplyr)
-library(here)
 library(ggplot2)
 library(modelsummary)
 library(rstanarm)
@@ -30,6 +30,8 @@ library(kableExtra)
 library(ggridges)
 library(car)
 library(broom.mixed)
+
+analysis_data <- read_parquet(here::here("data/02-analysis_data/analysis_data.parquet"))
 ```
 
 
@@ -47,12 +49,15 @@ The structure of this paper is organized as follows: after this introduction, @s
 
 # Data {#sec-data}
 
+## Data Source
+The dataset used for this analysis is from the World Database of Children’s Vocabulary Growth [@citedata], specifically focusing on American English children. The dataset used in this study provides different data on the language comprehension skills of young children among American English language learners. The original dataset consists of 14,826 rows and 22 columns covering a range of early childhood developmental variables such as comprehension, output and caregiver education.
+
+
 ## Data Overview
 
-We used the statistical programming language R [@citeR] to retrieve, simulate, clean, analyze, and test early childhood language comprehension data. The dataset used for this analysis is from the Wordbank database of children’s vocabulary growth [@citedata], specifically focusing on American English children. It contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], we 
-discover how different predictors affect language comprehension in early childhood.
+We used the statistical programming language R [@citeR] to retrieve, simulate, clean, analyze, and test early childhood language comprehension data. The dataset contains comprehension and a variety of predictors, which include developmental, demographic, and environmental factors. Following the methodology discussed in “Telling Stories with Data” [@tellingstories], we discover how different predictors affect language comprehension in early childhood.
 
-The dataset used in this study provides different data on the language comprehension skills of young children among American English language learners. The dataset consists of 14,826 rows and 22 columns covering a range of early childhood developmental attributes such as comprehension, output and parental education. To ensure the validity of the analysis, we filtered the data to include children whose comprehension assessments and caregiver information were complete, which would ensure a general, unbiased representation of the target population. This cleaning allowed us to focus on high-quality, well-integrated cases, which provided reliable results in young children's comprehension skills. For key operations, please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.
+To ensure the validity of the analysis, we filtered the original dataset to include children whose comprehension assessments and caregiver information were complete, which would ensure a general, unbiased representation of the target population. This cleaning allowed us to focus on high-quality, well-integrated cases, which provided reliable results in young children's comprehension skills. For key operations, please refer to [Appendix -@sec-data-cleaning] for detailed data processing steps.
 
 
 ## Data Measurement
@@ -74,7 +79,7 @@ In the data cleaning process, we prepared the raw election data for analysis by 
 * `broom.mixed`[@citebroom]: Provides functions to convert statistical model outputs, particularly from mixed-effects models into tidy data frames. 
 
 
-## Outcome variables
+## Outcome Variables
 
 ### Comprehension(Number of Words Understand By Children)
 
@@ -87,8 +92,6 @@ The primary outcome variable was the child's comprehension of American English, 
 #| warning: false
 #| fig.width: 7
 #| fig.height: 4
-
-analysis_data <- read.csv(here::here("data/02-analysis_data/analysis_data.csv"))
 
 ggplot(analysis_data, aes(x = comprehension)) +
   geom_histogram(bins = 30, fill = "skyblue", color = "black") +
@@ -105,7 +108,7 @@ The histogram shows a right-skewed distribution, with a higher frequency of chil
 
 
 
-## Predictor variables
+## Predictor Variables
 There are eight predictor variables for my study after cleaning. The Descriptions of Each Predictor Variable is in @tbl-Predictor shows at [Appendix -@sec-data-descriptions].
 
 
@@ -272,7 +275,7 @@ kable(loo_comparison,
 
 
 
-## Model set-up
+## Model Set-up
 
 ### Reduced Model
 The reduced model was developed by removing non-significant variables `sex` and `monolingual` from the full model. This reduced model simplifies interpretation and potentially improves model performance without losing significant explanatory power.
@@ -336,7 +339,7 @@ To make the reduced model more practical and usable, we created an API that prov
 We predicted comprehension scores using our test dataset, but due to missing data for certain groups such as some levels of caregiver education or race categories, our model could not make predictions for all children. To address these gaps, we examined demographic trends from similar children in the dataset; if a group showed consistent patterns in linguistic development, we assumed that trend would continue and used it to estimate missing comprehension values. This limitation arises because groups with missing values are not represented in the model, preventing accurate forecasts for those individuals. Further discussion on this limitation can be found in @sec-discussion. 
 
 
-## Model results and interpretation
+## Model Results and Interpretation
 
 The bayesian linear regression model built using our training dataset, which consists of 2,457 data points, estimated the factors that influence comprehension levels in children. For brevity, @tbl-summary-model shows only the first ten rows of the reduced model’s coefficients, while the full reduced model summary is provided in [Appendix -@sec-model-details]. The intercept is estimated at 77.564, representing the baseline comprehension level when all predictors are at their reference levels. The model achieved an $R^2$ value of 0.936, indicating that 93.6% of the variance in comprehension outcomes is explained by the predictors included. The adjusted $R^2$ value of 0.936 further confirms that the model captures the relationships between variables effectively without overfitting.
 
@@ -417,7 +420,7 @@ This study provides an in-depth study of early childhood language comprehension 
 
 An important finding of this study is that caregiver education plays an important role in early childhood language comprehension. Children show better comprehension with caregivers who are more educated, which highlights the great importance of a rich home environment in early language development. This suggests that caregiver education can provide an important representation of language exposure, socioeconomic status, and access to resources that work together to create a favourable learning environment for children.
 
-## Effect of birth order on language comprehension
+## Effect of Birth Order on Language Comprehension
 
 Another finding was the subtle effect of birth order on comprehension. The results showed that first-born children generally had better comprehension skills compared to their siblings. This may be because they receive more one-on-one attention from their caregivers before subsequent siblings are born. The effect of birth order suggests that parental dynamics and family structure play a key role in shaping early language skills, which suggests that attention needs to be more equitably distributed among children in a multi-child family.
 
@@ -438,13 +441,13 @@ Future research should address these limitations by collecting more representati
 
 # Appendix {-}
 
-# CDI methodology overview and improvement
+# CDI Methodology Overview and Improvement
 
 ## Overview
 
 The Communicative Development Inventory (CDI) is a standardized assessment tool used to study early language development in children aged 8 to 30 months. Originally developed by [@citewordbankproject], the CDI provides a reliable and general method for evaluating both vocabulary comprehension and production based on parent reports. This chapter revisits the strengths and limitations of CDI, its psychometric properties, and the reliability of the instrument in longitudinal studies.
 
-## Target population, frame, and sample
+## Target population, Frame, and Sample
 
 * Target Population: Infants and toddlers aged 8 to 36 months whose parents are willing to report on their child's language development.
 
@@ -464,7 +467,7 @@ The Communicative Development Inventory (CDI) is a standardized assessment tool 
 * Race: White, Black/African American, Hispanic/Latino, Asian, Native, Other
 
 
-## Sample recruitment
+## Sample Recruitment
 
 **Recruitment Methods:**
 
@@ -472,7 +475,7 @@ The Communicative Development Inventory (CDI) is a standardized assessment tool 
 
 * Online Panel Use: An additional recruitment method involved using an online panel to increase the diversity of the sample. This panel was instrumental in reaching parents from areas with limited in-person outreach capabilities.
 
-## Sampling approach and trade-offs
+## Sampling Approach and Trade-offs
 
 **Sampling Approach:**
 
@@ -487,7 +490,7 @@ The Communicative Development Inventory (CDI) is a standardized assessment tool 
 * Disadvantages: The sampling method is not necessarily representative due to reliance on convenience samples, which leads to biases depending on how researchers choose or access participants. Moreover, inconsistent administration methods such as electronic, paper and in-person lead to potential variability in data quality, affecting comparability between studies.
 
 
-## Non-response handling
+## Non-response Handling
 
 Non-response Issues: The variability of the data is mentioned in the CDI methodology and is sometimes described as a “difficult dataset” where inconsistent or surprising results occur. This may indicate that non-response issues or participant misunderstanding of the questions affected data quality.
 
@@ -532,9 +535,9 @@ To reach a diverse audience of caregivers, multiple distribution channels will b
 * Data Cleaning and Validation: $5,000
 * Advertising on Social Media: $5,000
 
-### Survey structure
+### Survey Structure
 
-**Survey introduction:**
+**Survey Introduction:**
 
 Welcome! 
 
@@ -552,7 +555,7 @@ If you have any questions or concerns, please feel free to contact our research 
 
 As a thank you for your participation, you will be entered into a raffle to win a grand prize of a gift card. We are deeply grateful for your participation and appreciate the time and effort that you put in.
 
-**Survey question:**
+**Survey Question:**
 
 **Part 1: Eligibility and Consent**
 
@@ -767,7 +770,7 @@ kable(model_summary)
 
 
 
-## Model summary {#sec-model-summary}
+## Model Summary {#sec-model-summary}
 
 @tbl-summary presents the coefficients from our model analyzing factors that influence comprehension in early childhood. The `intercept` value is 78.522, represents the baseline level of comprehension when all other predictors are at their reference levels. Key variables include `isnorming` with a positive coefficient indicating that children included in the norming sample tend to have higher comprehension scores. Different caregiver education levels show varying effects. For example, `"`caregivereducationPrimary` has a positive coefficient of 10.214, suggesting that having a caregiver with primary education is associated with increased comprehension. On the other hand, `caregivereducationSome Secondary` has a negative coefficient, indicating a potential decrease in comprehension scores for children whose caregivers have some secondary education.
 
@@ -788,7 +791,7 @@ modelsummary(
 
 ## Diagnostics
 
-### Posterior predictive check
+### Posterior Predictive Check
 
 In @tbl-pp, we present a posterior predictive check by comparing the distribution of comprehension scores (denoted by $y$) across different age groups. The ridgeline plot illustrates the distribution of the observed comprehension scores for each age group and their corresponding replicated scores generated by the model (denoted by $y_{rep}$). In a well-fitting model, the replicated data should closely overlap with the observed data.
 
@@ -831,7 +834,7 @@ kable(vif_df)
 
 
 \newpage
-### Gelman-Rubin diagnosis
+### Gelman-Rubin Diagnosis
 
 @fig-rhat is a visualization of the Gelman-Rubin diagnosis (often denoted as R-hat) for evaluating the convergence of Markov chain Monte Carlo (MCMC) samples in Bayesian models.  The plot illustrates the R-hat values for various parameters. An R-hat value near 1 indicates that the MCMC chains have mixed well and are effectively sampling from the same posterior distribution. In @fig-rhat, all parameters exhibit an R-hat value at or below 1.05, suggesting that the model has reached adequate convergence, and the resulting parameter estimates are reliable for interpretation.
 
